@@ -1,0 +1,82 @@
+@import "/bemExample/main.scss";
+
+.header{
+    &__container{
+        display: flex;
+        align-items:center;
+        justify-content:space-around;
+        margin: 0 auto;
+        width:1440px;
+        height: 70px;
+    }
+    &__right{
+        display: flex;
+
+        align-items: center;
+        padding-right: 20px;
+    }
+}
+.logo{
+    display: flex;
+    &__text{
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        margin-left: 12px;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        i{
+            font-size: 14.0px;
+        }
+    }
+}
+
+.menu{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 17px;
+
+    &__item{
+        display: inline-block;
+        padding: 0 16px;
+        list-style: none;
+        color: rgba(31, 32, 65, .5);
+        i{
+            margin-left: 7px;
+        }
+        &:hover{
+            font-weight: bold;
+            color: rgba(31, 32, 65, .75);
+        }
+    }
+}
+.menu__item_active{
+  font-weight: bold;
+  color: rgba(31, 32, 65, .75);
+}
+
+.button{
+    font-family: Montserrat;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 15px;
+
+    height: 34px;
+    padding: 5px 17px;
+    margin-left: 17px;
+
+    text-transform: uppercase;
+
+    color: #bc9cff;
+    border: 2px solid #bc9cff;
+    border-radius: 22px;
+    background: none;
+}
+
+.button_reverse{
+    color: white;
+    background: #bc9cff;
+}

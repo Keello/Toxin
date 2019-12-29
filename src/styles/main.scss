@@ -1,19 +1,58 @@
 @import "/bemExample/main.scss";
 
+@font-face {
+    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+    font-family: "Montserrat"; 
+    // адрес шрифта и тип 
+    src: url("../fonts/Montserrat-Medium.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+
+@font-face {
+    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+    font-family: "MontserratBold"; 
+    // адрес шрифта и тип 
+    src: url("../fonts/Montserrat-Bold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+
+
 .header{
     &__container{
         display: flex;
         align-items:center;
-        justify-content:space-around;
         margin: 0 auto;
         width:1440px;
         height: 70px;
     }
+    &__left{
+        width: 26.85%;
+        display: flex;
+        justify-content: center;
+    }
     &__right{
         display: flex;
 
-        align-items: center;
+        box-sizing: border-box;
+        width: 73.15%;
         padding-right: 20px;
+        padding-left: 7.1%;
+
+        align-items: center;
+    }
+
+    &__button{
+        margin-right: 20px;
+    }
+
+    &__userText{
+        padding-left: 29px;
+        color: rgba(31, 32, 65, .5);
+        border-left: 1px solid rgba(31, 32, 65, .1);
+        height: 30px;
+        line-height: 30px;
     }
 }
 .logo{
@@ -31,30 +70,42 @@
     }
 }
 
-.menu{
+nav{
     font-family: Montserrat;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: normal;
     font-style: normal;
     line-height: 17px;
+    letter-spacing: -.09px;
+    color: rgba(31, 32, 65, .5);
+}
+.menu{
 
     &__item{
         display: inline-block;
-        padding: 0 16px;
+        position: relative;
+        padding: 0 14px;
         list-style: none;
-        color: rgba(31, 32, 65, .5);
         i{
-            margin-left: 7px;
+            display: inline-block;
+            vertical-align: bottom;
+            font-size: 18px;
+            margin-left: 5px;
+
         }
         &:hover{
             font-weight: bold;
             color: rgba(31, 32, 65, .75);
         }
     }
-}
-.menu__item_active{
-  font-weight: bold;
-  color: rgba(31, 32, 65, .75);
+    &__item:last-child{
+        padding-right: 29px;
+    }
+
+    &__item_active{
+        font-family: MontserratBold;
+        color: rgba(31, 32, 65, .75);
+    }
 }
 
 .button{
@@ -65,8 +116,7 @@
     line-height: 15px;
 
     height: 34px;
-    padding: 5px 17px;
-    margin-left: 17px;
+    padding: 5px 18px;
 
     text-transform: uppercase;
 

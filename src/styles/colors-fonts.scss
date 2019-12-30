@@ -1,0 +1,103 @@
+//------------------Шрифты---------------------
+@font-face {
+    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+    font-family: "Quicksand"; 
+    // адрес шрифта и тип 
+    src: url("../fonts/Quicksand-Regular.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+
+@font-face {
+    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+    font-family: "QuicksandBold"; 
+    // адрес шрифта и тип 
+    src: url("../fonts/Quicksand-Bold.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: bold; 
+}
+
+@font-face {
+    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+    font-family: "Montserrat"; 
+    // адрес шрифта и тип 
+    src: url("../fonts/Montserrat-Medium.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+
+@font-face {
+    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+    font-family: "MontserratBold"; 
+    // адрес шрифта и тип 
+    src: url("../fonts/Montserrat-Bold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: bold; 
+}
+
+//------------------Текст и заголовки---------------------
+
+body{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+h1{
+    font-family: QuicksandBold;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+h2{
+    font-family: QuicksandBold;
+    font-size: 19px;
+    line-height: 24px;
+}
+
+h3{
+    font-family: MontserratBold;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+
+//------------------Цвета---------------------
+$dark100:  rgba(31, 32, 65, 1);
+$dark75:  rgba(31, 32, 65, .75);
+$dark50:  rgba(31, 32, 65, .5);
+$dark25:  rgba(31, 32, 65, .25);
+$dark5:  rgba(31, 32, 65, .05);
+$purple: #BC9CFF;
+$green:  #6FCF97;
+
+div[class^="colorDiv"]{
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.colorDiv1{
+    background: $dark100;
+}
+.colorDiv2{
+    background: $dark75;
+}
+.colorDiv3{
+    background: $dark50;
+}
+.colorDiv4{
+    background: $dark25;
+}
+.colorDiv5{
+    background: $dark5;
+}
+.colorDiv6{
+    background: $purple;
+}
+.colorDiv7{
+    background: $green;
+}

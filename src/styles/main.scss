@@ -1,23 +1,5 @@
 @import "/bemExample/main.scss";
-
-@font-face {
-    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
-    font-family: "Montserrat"; 
-    // адрес шрифта и тип 
-    src: url("../fonts/Montserrat-Medium.ttf") format("truetype"); 
-    font-style: normal; 
-    font-weight: normal; 
-}
-
-@font-face {
-    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
-    font-family: "MontserratBold"; 
-    // адрес шрифта и тип 
-    src: url("../fonts/Montserrat-Bold.ttf") format("truetype"); 
-    font-style: normal; 
-    font-weight: normal; 
-}
-
+@import "/styles/colors-fonts.scss";
 
 .header{
     &__container{

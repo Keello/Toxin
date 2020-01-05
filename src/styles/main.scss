@@ -48,6 +48,7 @@
         letter-spacing: 1px;
         i{
             font-size: 14.0px;
+            transform:scaleX(-1);
         }
     }
 }
@@ -69,8 +70,10 @@ nav{
         padding: 0 14px;
         list-style: none;
         i{
+            position: relative;
             display: inline-block;
             vertical-align: bottom;
+            transform:translateY(2px);
             font-size: 18px;
             margin-left: 5px;
 
@@ -90,7 +93,9 @@ nav{
     }
 }
 
+$border: 2px;
 .button{
+    position: relative;
     font-family: Montserrat;
     font-weight: bold;
     font-style: normal;
@@ -101,14 +106,31 @@ nav{
     padding: 5px 18px;
 
     text-transform: uppercase;
+    outline: none;
+    cursor:pointer;
 
-    color: #bc9cff;
-    border: 2px solid #bc9cff;
+    color: $purple;
+    border: $border solid transparent;
     border-radius: 22px;
-    background: none;
+    background: white;
+    background-clip: padding-box;
+
+    &_disabled{
+        opacity: .5;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: -$border; right: -$border; bottom: -$border; left: -$border;
+        border-radius: inherit;
+        z-index: -1;
+        background: $purple;
+    }
 }
 
-.button_reverse{
+.button_colorful{
     color: white;
-    background: #bc9cff;
+    background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+    background-clip: padding-box;
 }

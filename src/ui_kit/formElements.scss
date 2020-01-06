@@ -1,3 +1,5 @@
+@import "/blocks/button/button.scss";
+
 .input{
     padding: 10px;
 
@@ -88,7 +90,7 @@
         width: 12px;
         height: 12px;
         border-radius: 50%;
-        background: $purple;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         opacity: 0;
         transition: .2s;
       }
@@ -147,7 +149,7 @@
       }
       &:checked + &Text:after {
         left: 26px;
-        background: $purple;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
       }
     }
     &__toggleText{
@@ -181,3 +183,63 @@
 }
 
 /*--------------------------------------------------------*/
+.likeButton{
+    display: flex;
+    position: relative;
+    align-items:center;
+    box-sizing:border-box;
+    padding: 0 5px;
+
+    height: 20px;
+    width: 40px;
+    border: 1px solid $purple;
+    border-radius: 20px;
+    text-align: center;
+    vertical-align: middle;
+    color: $purple;
+
+    &:before{
+      position: absolute;
+      top:-2.3px;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: bold;
+      content: "\f004";
+      font-size: 9px;
+    }
+
+    &__text{
+      font-size: 10px;
+      line-height: 12px;
+      margin-left: 15px;
+      color: $purple;
+    }
+
+    &_disabled{
+      border: 1px solid $dark25;
+      color: $dark25;
+    }
+    &_disabled > .text{
+      color: $dark25;
+    }
+}
+
+
+.rateButton{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  &__item{
+    position: relative;
+    color: $purple;
+    font-weight: bold;
+    &:before{
+      font-family:'Font Awesome 5 Free';
+      content: "\f005";
+      font-size: 24px;
+      line-height: 20px;
+    }
+  }
+  &_empty{
+    font-weight: normal;
+  }
+}

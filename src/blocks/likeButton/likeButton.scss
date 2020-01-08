@@ -1,0 +1,39 @@
+.likeButton{
+    display: flex;
+    position: relative;
+    align-items:center;
+    box-sizing:border-box;
+    padding: 0 5px;
+
+    height: 20px;
+    width: 40px;
+    border: 1px solid $purple;
+    border-radius: 20px;
+    text-align: center;
+    vertical-align: middle;
+    color: $purple;
+
+    &:before{
+      position: absolute;
+      top:-2.3px;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: bold;
+      content: "\f004";
+      font-size: 9px;
+    }
+
+    &__text{
+      font-size: 10px;
+      line-height: 12px;
+      margin-left: 15px;
+      color: $purple;
+    }
+
+    &_disabled{
+      border: 1px solid $dark25;
+      color: $dark25;
+    }
+    &_disabled > .text{
+      color: $dark25;
+    }
+}

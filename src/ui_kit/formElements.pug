@@ -23,12 +23,11 @@ form.form
   input.form__toggle(type="checkbox" id="checkbox")
   label.form__toggleText.text(for="checkbox") Я переключаю чекбокс
 
-  //Оживить
   label.form__label like button
-  .likeButton.likeButton_disabled
-    span.likeButton__text.text 2
-  .likeButton
-    span.likeButton__text.text 12
+  label.likeButton 
+    input.likeButton__input(type="checkbox" name="checkbox" id="like-1")
+    span.likeButton__text 12
+
   label.form__label rate button
   .rateButton
     .rateButton__item
@@ -50,3 +49,6 @@ form.form
 
   label.form__label submit
   button.button.button_colorful.form__submit Перейти к оплате
+
+  label.form__label subscription text field
+  input.form__input.input(type="textfield" placeholder="Email")

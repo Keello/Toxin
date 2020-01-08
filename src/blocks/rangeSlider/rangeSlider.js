@@ -6,7 +6,7 @@ $(function() {
     min: 10000,
     max: 100000,
     step: 500,
-    values: [45000, 75000]
+    values: [10000, 50000]
   });
 
   // Apply initial values to the range container

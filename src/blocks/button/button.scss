@@ -1,8 +1,7 @@
 $border: 2px;
 .button{
     position: relative;
-    font-family: Montserrat;
-    font-weight: bold;
+    font-family: MontserratBold;
     font-style: normal;
     font-size: 12px;
     line-height: 15px;
@@ -36,6 +35,22 @@ $border: 2px;
 
 .button_colorful{
     color: white;
-    background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+    background: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
     background-clip: padding-box;
+}
+
+.link{
+    font-family: MontserratBold;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 15px;
+
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: $purple;
+    &_disabled{
+        color: $dark50;
+    }
 }

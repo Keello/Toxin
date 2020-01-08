@@ -196,6 +196,24 @@
             background: $dark25;
         }
     }
+
+    &__subscription{
+        display: block;
+    }
+    &__subscription-arrow{
+        position: relative;
+        cursor: pointer;
+        &:after{
+            position: absolute;
+            font-family: 'Font Awesome 5 Free';
+            content: '\f061';
+            font-size: 18px;
+            font-weight: bold;
+            top: -2px;
+            right: 15px;
+            color: $purple;
+        }
+    }
 }
 /*--------------------------------------------------------*/
 @import '/blocks/input/input.scss';

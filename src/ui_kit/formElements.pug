@@ -23,6 +23,15 @@ form.form
   label.form__checkboxText.form__checkboxText_rich.text(for="rich-checkbox-2") Помощник для инвалидов
     p.form__richCheckboxText  На 1 этаже вас встретит специалист и проводит до номера.
 
+  label.form__label.expandable-list expandable checkbox list
+  .expandable-list__items
+    input.form__checkbox(type="checkbox" name="checkbox" id="checkbox-4")
+    label.form__checkboxText.text(for="checkbox-4") Телевизор
+    input.form__checkbox(type="checkbox" name="checkbox" id="checkbox-5")
+    label.form__checkboxText.text(for="checkbox-5") Телевизор
+    input.form__checkbox(type="checkbox" name="checkbox" id="checkbox-6")
+    label.form__checkboxText.text(for="checkbox-6") Телевизор
+
   label.form__label radio buttons
   input.form__radio(type="radio" name="radio" id="radio-1")
   label.form__radioText.text(for="radio-1") Мужчина
@@ -65,3 +74,6 @@ form.form
     li.bullet-list__item Нельзя с питомцами
     li.bullet-list__item Без вечеринок и мероприятий
     li.bullet-list__item Время прибытия — после 13:00, а выезд до 12:00
+
+script(src="js/jquery.min.js")
+script(src="ui_kit/formElements.js")

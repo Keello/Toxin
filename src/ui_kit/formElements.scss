@@ -16,7 +16,7 @@
 
         display: block;
 
-        margin: 10px 0 5px 0;
+        margin: 10px 0 15px 0;
 
         text-transform: uppercase;
 
@@ -25,6 +25,7 @@
     &__input{
         width: 320px;
         height: 44px;
+        margin-top: -10px;
     }
 
     &__submit{
@@ -235,6 +236,7 @@
             color: $purple;
         }
     }
+
 }
 /*--------------------------------------------------------*/
 @import '/blocks/input/input.scss';
@@ -242,3 +244,4 @@
 @import '/blocks/likeButton/likeButton.scss';
 @import '/blocks/rateButton/rateButton.scss';
 @import "/blocks/rangeSlider/rangeSlider.scss";
+@import "/blocks/bullet-list/bullet-list.scss";

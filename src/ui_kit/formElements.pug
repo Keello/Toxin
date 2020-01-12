@@ -3,7 +3,9 @@ form.form
   input.form__input.input(type="textfield" placeholder="Email")
 
   label.form__label subscription text field
-  input.form__input.input(type="textfield" placeholder="Email")
+  .form__subscription
+    input.form__input.input(type="textfield" placeholder="Email")
+    a.form__subscription-arrow(href="#")
 
   label.form__label checkbox buttons
   input.form__checkbox(type="checkbox" name="checkbox" id="checkbox-1")
@@ -12,6 +14,14 @@ form.form
   label.form__checkboxText.text(for="checkbox-2") Можно с питомцами
   input.form__checkbox(type="checkbox" name="checkbox" id="checkbox-3")
   label.form__checkboxText.text(for="checkbox-3") Можно пригласить гостей (до 10 человек)
+
+  label.form__label rich checkbox buttons
+  input.form__checkbox(type="checkbox" name="checkbox" id="rich-checkbox-1")
+  label.form__checkboxText.form__checkboxText_rich.text(for="rich-checkbox-1") Широкий корридор
+    p.form__richCheckboxText  Ширина коридоров в номере не менее 91 см.
+  input.form__checkbox(type="checkbox" name="checkbox" id="rich-checkbox-2")
+  label.form__checkboxText.form__checkboxText_rich.text(for="rich-checkbox-2") Помощник для инвалидов
+    p.form__richCheckboxText  На 1 этаже вас встретит специалист и проводит до номера.
 
   label.form__label radio buttons
   input.form__radio(type="radio" name="radio" id="radio-1")
@@ -49,8 +59,3 @@ form.form
 
   label.form__label submit
   button.button.button_colorful.form__submit Перейти к оплате
-
-  label.form__label subscription text field
-  .form__subscription
-    input.form__input.input(type="textfield" placeholder="Email")
-    a.form__subscription-arrow(href="#")

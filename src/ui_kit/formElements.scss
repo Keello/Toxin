@@ -3,7 +3,6 @@
     font-size: 14px;
     font-weight: normal;
     font-style: normal;
-    line-height: 24px;
 
     color: $dark50;
 }
@@ -30,7 +29,8 @@
 
     &__submit{
         position: relative;
-        width: 100%;
+        min-width: 220px;
+        width: 22%;
         &:before{
             font-family: 'Font Awesome 5 Free';
             content: '\f061';
@@ -58,6 +58,7 @@
         position: relative;
         margin-right: 10px;
         padding: 0 0 0 30px;
+        line-height: 24px;
         cursor: pointer;
 
         &:before{
@@ -96,7 +97,7 @@
         position: absolute;
         z-index: -1;
 
-        margin: 6px 0 0 5px;
+        margin: 3px 0 0 5px;
 
         opacity: 0;
         &:checked + &Text:after{
@@ -105,9 +106,12 @@
     }
     &__checkboxText{
         position: relative;
+        display: block;
 
         margin-right: 10px;
+        margin-bottom: 10px;
         padding: 0 0 0 30px;
+        line-height: 18px;
 
         cursor: pointer;
 
@@ -142,7 +146,23 @@
             border-right: 2px solid $purple;
             border-bottom: 2px solid $purple;
         }
+
+        &_rich{
+            font-weight: bold;
+            color: $dark75;
+        }
     }
+
+    &__richCheckboxText{
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 14px;
+
+        margin: 7px 0;
+
+        color: $dark50;
+    }
+
 
     &__toggle{
         position: absolute;
@@ -164,6 +184,7 @@
         position: relative;
 
         padding: 0 0 0 50px;
+        color: $dark75;
 
         cursor: pointer;
 

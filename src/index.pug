@@ -4,8 +4,9 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        link(rel="stylesheet", href="fonts/font-awesome/css/all.css")
+        link(rel="stylesheet", href="fonts/material-icons/material-icons.css")
         link(rel="stylesheet", href="main.scss")
+        include fonts/material-icons/svg/all-icons.svg
         title FSD Site
     body
       header.header
@@ -13,14 +14,14 @@ html(lang="ru")
           .header__left
             .logo
               img(src="img/logo.svg" class="logo__img")
-              p.logo__text T<i class="fa fa-ban"></i>xin
+              p.logo__text T<i class="icon-not_interested"></i>xin
           .header__right
             nav.menu
               ul
                 li.menu__item.menu__item_active Home
                 li.menu__item About Us
                 li.menu__item Services
-                  i.fa.fa-angle-down
+                  i.icon-expand_more
                 li.menu__item Careers
                 li.menu__item News
                 li.menu__item Documentation

@@ -8,3 +8,4 @@ $('.expandable-list').click(function(){
         $('.expandable-list').addClass('expandable-list_opened');
     }
 });
+

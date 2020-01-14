@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?cc0gu0');
+  src:  url('fonts/icomoon.eot?cc0gu0#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?cc0gu0') format('truetype'),
+    url('fonts/icomoon.woff?cc0gu0') format('woff'),
+    url('fonts/icomoon.svg?cc0gu0#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-not_interested:before {
+  content: "\e900";
+}
+.icon-arrow_forward:before {
+  content: "\e901";
+}
+.icon-expand_more:before {
+  content: "\e902";
+}
+.icon-favorite:before {
+  content: "\e903";
+}
+.icon-favorite_border:before {
+  content: "\e904";
+}
+.icon-insert_emoticon:before {
+  content: "\e905";
+}
+.icon-location_city:before {
+  content: "\e906";
+}
+.icon-star:before {
+  content: "\e907";
+}
+.icon-star_border:before {
+  content: "\e908";
+}
+.icon-star_half:before {
+  content: "\e909";
+}

@@ -5,7 +5,8 @@ form.form
   label.form__label subscription text field
   .form__subscription
     input.form__input.input(type="textfield" placeholder="Email")
-    a.form__subscription-arrow(href="#")
+    svg.form__subscription-icon
+      use(xlink:href="#icon-arrow_forward")
 
   label.form__label checkbox buttons
   input.form__checkbox(type="checkbox" name="checkbox" id="checkbox-1")
@@ -43,7 +44,7 @@ form.form
   label.form__toggleText.text(for="checkbox") Я переключаю чекбокс
 
   label.form__label like button
-  label.likeButton 
+  label.likeButton.likeButton_active
     input.likeButton__input(type="checkbox" name="checkbox" id="like-1")
     span.likeButton__text 12
 
@@ -55,7 +56,7 @@ form.form
     .rateButton__item.rateButton_empty
     .rateButton__item.rateButton_empty
   label.form__label range slider
-  include /blocks/rangeSlider/rangeSlider.pug
+  include /blocks/range-slider/range-slider.pug
 
   label.form__label buttons
   button.button click me
@@ -76,11 +77,13 @@ form.form
     li.bullet-list__item Время прибытия — после 13:00, а выезд до 12:00
 
 .room-info
-  svg.room-info__icon 
+  svg.room-info__icon
+    use(xlink:href="#icon-insert_emoticon")
   p.room-info__title Комфорт
   p.room-info__text Шумопоглощающие стены
 .room-info
-  svg.room-info__icon 
+  svg.room-info__icon
+    use(xlink:href="#icon-location_city")
   p.room-info__title Удобство
   p.room-info__text Окно в каждой из спален
 

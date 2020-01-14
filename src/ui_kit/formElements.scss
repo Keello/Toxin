@@ -1,3 +1,11 @@
+@import '/blocks/input/input.scss';
+@import "/blocks/expandable-list/expandable-list.scss";
+@import '/blocks/like-button/like-button.scss';
+@import '/blocks/rate-button/rate-button.scss';
+@import "/blocks/range-slider/range-slider.scss";
+@import '/blocks/button/button.scss';
+@import "/blocks/bullet-list/bullet-list.scss";
+
 .text{
     font-family: Montserrat;
     font-size: 14px;
@@ -28,70 +36,20 @@
         margin-top: -10px;
     }
 
-    &__submit{
-        position: relative;
-        min-width: 220px;
-        width: 22%;
-        &:before{
-            font-family: 'Font Awesome 5 Free';
-            content: '\f061';
-            font-size: 18px;
-            font-weight: bold;
-            position: absolute;
-            top: 8px;
-            right: 10px;
-        }
-    }
+    &__subscription{
+        display: flex;
+        &-icon{
+            position: relative;
 
-    &__radio{
-        position: absolute;
-        z-index: -1;
-        margin: 6px 0 0 5px;
-        opacity: 0;
-        &:checked + &Text:after{
-            opacity: 1;
-        }
-        &:checked + &Text{
-            color: $dark75;
-        }
-    }
-    &__radioText{
-        position: relative;
-        margin-right: 10px;
-        padding: 0 0 0 30px;
-        line-height: 24px;
-        cursor: pointer;
+            width: 34px;
+            height: 34px;
+            margin-left: -35px;
 
-        &:before{
-            position: absolute;
-            top: -2px;
-            left: 0;
+            cursor: pointer;
 
-            width: 20px;
-            height: 20px;
-
-            content: '';
-
-            border: 1px solid $purple;
-            border-radius: 50%;
-            background: #fff;
+            fill: $purple;
         }
 
-        &:after{
-            position: absolute;
-            top: 3px;
-            left: 5px;
-
-            width: 12px;
-            height: 12px;
-
-            content: '';
-            transition: .2s;
-
-            opacity: 0;
-            border-radius: 50%;
-            background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-        }
     }
 
     &__checkbox{
@@ -164,6 +122,56 @@
         color: $dark50;
     }
 
+    &__radio{
+        position: absolute;
+        z-index: -1;
+        margin: 6px 0 0 5px;
+        opacity: 0;
+        &:checked + &Text:after{
+            opacity: 1;
+        }
+        &:checked + &Text{
+            color: $dark75;
+        }
+    }
+    &__radioText{
+        position: relative;
+        margin-right: 10px;
+        padding: 0 0 0 30px;
+        line-height: 24px;
+        cursor: pointer;
+
+        &:before{
+            position: absolute;
+            top: -2px;
+            left: 0;
+
+            width: 20px;
+            height: 20px;
+
+            content: '';
+
+            border: 1px solid $purple;
+            border-radius: 50%;
+            background: #fff;
+        }
+
+        &:after{
+            position: absolute;
+            top: 3px;
+            left: 5px;
+
+            width: 12px;
+            height: 12px;
+
+            content: '';
+            transition: .2s;
+
+            opacity: 0;
+            border-radius: 50%;
+            background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+        }
+    }
 
     &__toggle{
         position: absolute;
@@ -219,30 +227,21 @@
         }
     }
 
-    &__subscription{
-        display: block;
-    }
-    &__subscription-arrow{
+    &__submit{
         position: relative;
-        cursor: pointer;
-        &:after{
-            position: absolute;
-            font-family: 'Font Awesome 5 Free';
-            content: '\f061';
-            font-size: 18px;
-            font-weight: bold;
-            top: -2px;
-            right: 15px;
-            color: $purple;
-        }
-    }
+        min-width: 220px;
+        &:before{
+            font-family: 'Material icons';
+            font-size: 20px;
+            line-height: 15px;
 
+            position: absolute;
+            right: 8px;
+
+            content: '\e901';
+        }
+
+    }
 }
 
 /*--------------------------------------------------------*/
-@import '/blocks/input/input.scss';
-@import '/blocks/button/button.scss';
-@import '/blocks/likeButton/likeButton.scss';
-@import '/blocks/rateButton/rateButton.scss';
-@import "/blocks/rangeSlider/rangeSlider.scss";
-@import "/blocks/bullet-list/bullet-list.scss";

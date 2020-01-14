@@ -5,15 +5,16 @@
   &__item{
     position: relative;
     color: $purple;
-    font-weight: bold;
     &:before{
-      font-family:'Font Awesome 5 Free';
-      content: "\f005";
+      font-family:'Material icons';
+      content: "\e907";
       font-size: 24px;
       line-height: 20px;
     }
   }
   &_empty{
-    font-weight: normal;
+    &:before{
+      content: "\e908";
+    }
   }
 }

@@ -9,6 +9,9 @@
 
     &:checked + .likeButton__text{
       color: $purple;
+      &:after{
+        content: '\e903';
+      }
     }
     &:checked + .likeButton__text:before{
       border: 1px solid $purple;
@@ -40,7 +43,7 @@
     }
 
     &:after{
-      font-family: 'Font Awesome 5 Free';
+      font-family: 'Material icons';
       font-size: 9px;
       font-weight: bold;
 
@@ -48,7 +51,7 @@
       top: 0px;
       left: 6px;
 
-      content: '\f004';
+      content: '\e904';
       cursor: pointer;
     }
   }

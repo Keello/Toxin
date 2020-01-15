@@ -76,18 +76,7 @@ form.form
     li.bullet-list__item Без вечеринок и мероприятий
     li.bullet-list__item Время прибытия — после 13:00, а выезд до 12:00
 
-  .room-info
-    svg.room-info__icon
-      use(xlink:href="#icon-insert_emoticon")
-    p.room-info__text.text
-      span.room-info__text-title Комфорт
-      |Шумопоглощающие стены
-  .room-info
-    svg.room-info__icon
-      use(xlink:href="#icon-location_city")
-    p.room-info__text.text
-      span.room-info__text-title Удобство
-      |Окно в каждой из спален
-
+  include /blocks/room-info/room-info.pug
+  
 script(src="js/jquery.min.js")
 script(src="ui_kit/formElements.js")

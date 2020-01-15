@@ -6,19 +6,19 @@
     }
 
     &:before{
-        font-family: 'Font Awesome 5 Free';
+        font-family: 'Material icons';
         font-weight: bold;
 
         position: absolute;
         left: 240px;
 
-        content: '\f107';
+        content: '\e902';
         color: $dark50;
         font-size: 18px;
     }
     &_opened{
         &:before{
-            content: '\f106';
+            content: '\e901';
         }
     }
 }

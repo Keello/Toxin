@@ -1,0 +1,21 @@
+.room-info{
+  display: flex;
+  align-items:center;
+  border-bottom: 1px solid $dark25;
+
+  &__icon{
+    width: 48px;
+    height: 48px;
+    fill: $purple;
+    margin-right: 10px;
+  }
+
+  &__text{
+    color: $dark75;
+    line-height: 24px;
+    &-title{
+      font-weight: bold;
+      display: block;
+    }
+  }
+}

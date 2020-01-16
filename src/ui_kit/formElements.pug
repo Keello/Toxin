@@ -18,10 +18,12 @@ form.form
 
   label.form__label rich checkbox buttons
   input.form__checkbox(type="checkbox" name="checkbox" id="rich-checkbox-1")
-  label.form__checkboxText.form__checkboxText_rich.text(for="rich-checkbox-1") Широкий корридор
+  label.form__checkboxText.text(for="rich-checkbox-1")
+    span.text__title.form__checkboxText-title Широкий корридор
     p.form__richCheckboxText  Ширина коридоров в номере не менее 91 см.
   input.form__checkbox(type="checkbox" name="checkbox" id="rich-checkbox-2")
-  label.form__checkboxText.form__checkboxText_rich.text(for="rich-checkbox-2") Помощник для инвалидов
+  label.form__checkboxText.text(for="rich-checkbox-2")
+    span.text__title Помощник для инвалидов
     p.form__richCheckboxText  На 1 этаже вас встретит специалист и проводит до номера.
 
   label.form__label.expandable-list expandable checkbox list
@@ -41,7 +43,7 @@ form.form
 
   label.form__label toggle
   input.form__toggle(type="checkbox" id="checkbox")
-  label.form__toggleText.text(for="checkbox") Я переключаю чекбокс
+  label.form__toggleText.text(for="checkbox") Получать спецпредложения
 
   label.form__label like button
   label.likeButton.likeButton_active
@@ -77,6 +79,8 @@ form.form
     li.bullet-list__item Время прибытия — после 13:00, а выезд до 12:00
 
   include /blocks/room-info/room-info.pug
-  
+  include /blocks/feedback/feedback.pug
+
+
 script(src="js/jquery.min.js")
 script(src="ui_kit/formElements.js")

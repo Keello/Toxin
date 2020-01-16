@@ -9,8 +9,6 @@ form.form
       <use xlink:href="#icon-arrow_forward"></use>
     </svg>
 
-  include /blocks/pagination/pagination.pug
-
   label.form__label checkbox buttons
   input.form__checkbox(type="checkbox" name="checkbox" id="checkbox-1")
   label.form__checkboxText.text(for="checkbox-1") Можно курить
@@ -72,6 +70,8 @@ form.form
   label.form__label submit
   button.button.button_colorful.form__submit Перейти к оплате
 
+  include /blocks/pagination/pagination.pug
+
   label.form__label bullet list
   ul.form__bullet-list.bullet-list
     li.bullet-list__item Нельзя с питомцами
@@ -81,6 +81,5 @@ form.form
   include /blocks/room-info/room-info.pug
   include /blocks/feedback/feedback.pug
 
-
-script(src="js/jquery.min.js")
 script(src="ui_kit/formElements.js")
+

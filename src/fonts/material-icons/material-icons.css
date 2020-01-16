@@ -57,3 +57,6 @@
 .icon-star_half:before {
   content: "\e90a";
 }
+.icon-arrow_back:before {
+  content: "\e90b";
+}

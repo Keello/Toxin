@@ -25,6 +25,7 @@
 @import "/blocks/bullet-list/bullet-list.scss";
 @import "/blocks/room-info/room-info.scss";
 @import "/blocks/feedback/feedback.scss";
+@import "/blocks/pagination/pagination.scss";
 
 .form{
     &__label{
@@ -42,13 +43,16 @@
         color: $dark100;
     }
     &__input{
+        display: flex;
+        align-items:center;
         width: 320px;
         height: 44px;
-        margin-top: -10px;
     }
 
     &__subscription{
         display: flex;
+        align-items:center;
+
         &-icon{
             position: relative;
 

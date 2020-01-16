@@ -5,8 +5,9 @@ form.form
   label.form__label subscription text field
   .form__subscription
     input.form__input.input(type="textfield" placeholder="Email")
-    svg.form__subscription-icon
-      use(xlink:href="#icon-arrow_forward")
+    <svg class="form__subscription-icon">
+      <use xlink:href="#icon-arrow_forward"></use>
+    </svg>
 
   include /blocks/pagination/pagination.pug
 
@@ -54,6 +55,7 @@ form.form
 
   label.form__label rate button
   include /blocks/rate-button/rate-button.pug
+  +rateButton(2.5,5)
 
   label.form__label range slider
   include /blocks/range-slider/range-slider.pug

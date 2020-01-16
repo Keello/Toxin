@@ -12,7 +12,12 @@
       line-height: 20px;
     }
   }
-  &_empty{
+  &_item-half{
+    &:before{
+      content: "\e90a";
+    }
+  }
+  &_item-empty{
     &:before{
       content: "\e909";
     }

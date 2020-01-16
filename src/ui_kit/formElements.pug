@@ -8,6 +8,8 @@ form.form
     svg.form__subscription-icon
       use(xlink:href="#icon-arrow_forward")
 
+  include /blocks/pagination/pagination.pug
+
   label.form__label checkbox buttons
   input.form__checkbox(type="checkbox" name="checkbox" id="checkbox-1")
   label.form__checkboxText.text(for="checkbox-1") Можно курить
@@ -51,12 +53,8 @@ form.form
     span.likeButton__text 12
 
   label.form__label rate button
-  .rateButton
-    .rateButton__item
-    .rateButton__item
-    .rateButton__item
-    .rateButton__item.rateButton_empty
-    .rateButton__item.rateButton_empty
+  include /blocks/rate-button/rate-button.pug
+
   label.form__label range slider
   include /blocks/range-slider/range-slider.pug
 

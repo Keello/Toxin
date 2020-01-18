@@ -1,16 +1,28 @@
+//name - надпись в label
+//type - тип инпута
+//placeholder - текст в пустом инпуте
+
+mixin input(name, type, placeholder)
+  label.form__label= name
+  case type
+    when "textfield"
+      input.form__input.input(type=type placeholder=placeholder)
+    when "subscription"
+      .form__subscription
+        input.form__input.input(type=type placeholder=placeholder)
+        <svg class="form__subscription-icon">
+          <use xlink:href="#icon-arrow_forward"></use>
+        </svg>
+    when "dropdown"
+      include /blocks/dropdown/dropdown.pug
+      +dropdown(type, placeholder)
+
+
 form.form
-  label.form__label text field
-  input.form__input.input(type="textfield" placeholder="Email")
-
-  label.form__label subscription text field
-  .form__subscription
-    input.form__input.input(type="textfield" placeholder="Email")
-    <svg class="form__subscription-icon">
-      <use xlink:href="#icon-arrow_forward"></use>
-    </svg>
-
-  label.form__label dropdown
-  s
+  .form__container
+    +input("text field", "textfield", "Email")
+    +input("subscription text field", "subscription", "Email")
+    +input("dropdown", "dropdown", "Сколько гостей")
 
   label.form__label checkbox buttons
   input.form__checkbox(type="checkbox" name="checkbox" id="checkbox-1")
@@ -31,13 +43,8 @@ form.form
     p.form__richCheckboxText  На 1 этаже вас встретит специалист и проводит до номера.
 
   label.form__label.expandable-list expandable checkbox list
-  .expandable-list__items
-    input.form__checkbox(type="checkbox" name="checkbox" id="checkbox-4")
-    label.form__checkboxText.text(for="checkbox-4") Телевизор
-    input.form__checkbox(type="checkbox" name="checkbox" id="checkbox-5")
-    label.form__checkboxText.text(for="checkbox-5") Телевизор
-    input.form__checkbox(type="checkbox" name="checkbox" id="checkbox-6")
-    label.form__checkboxText.text(for="checkbox-6") Телевизор
+  include /blocks/expandable-list/expandable-list.pug
+
 
   label.form__label radio buttons
   input.form__radio(type="radio" name="radio" id="radio-1")

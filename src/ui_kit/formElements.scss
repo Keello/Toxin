@@ -28,6 +28,10 @@
 @import "/blocks/pagination/pagination.scss";
 
 .form{
+    &__container{
+        width: 25%;
+    }
+
     &__label{
         font-family: MontserratBold;
         font-size: 12px;
@@ -45,7 +49,7 @@
     &__input{
         display: flex;
         align-items:center;
-        width: 320px;
+        width: 100%;
         height: 44px;
     }
 
@@ -257,4 +261,5 @@
     }
 }
 
+@import '/blocks/dropdown/dropdown.scss';
 /*--------------------------------------------------------*/

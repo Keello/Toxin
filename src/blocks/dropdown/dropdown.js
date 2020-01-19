@@ -10,14 +10,17 @@ $(function(){
     }
   });
   $('.dropdown__counter-button-minus').click(function(){
-    val = $('.dropdown__number').val();
-    if(val==1)
+    val = $(this.nextSibling).val();
+    val -=1;
+    if(val==0)
       this.setAttribute('disabled', 'disabled');
-    $('.dropdown__number').val(+val-1);
+    $(this.nextSibling).val(val);
   });
   $('.dropdown__counter-button-plus').click(function(){
-    val = $('.dropdown__number').val();
-    $('.dropdown__counter-button-minus').removeAttr('disabled');
-    $('.dropdown__number').val(+val+1);
+    val = $(this.previousSibling).val();
+    val++;
+    $(this.previousSibling).val(val);
+    if(val>0)
+      $(this.previousSibling.previousSibling).removeAttr('disabled');
   });
 });

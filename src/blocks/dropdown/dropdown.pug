@@ -1,23 +1,21 @@
-mixin dropdown(type, placeholder)
+//values - массив значений выпадающего меню,
+//где первое значение это placeholder
+
+mixin dropdown(values)
   .dropdown
-    .form__subscription
-      input.dropdown__input.input(type=type placeholder=placeholder)
+    .dropdown__wrapper.form__subscription
+      input.dropdown__input.input(type="dropdown" placeholder=values[0])
       <svg class="dropdown__icon form__subscription-icon">
         <use xlink:href="#icon-expand_more"></use>
       </svg>
     .dropdown__submenu.input
-      .dropdown__submenu-item
-        p.dropdown__text спальни
-        .dropdown__submenu-item-counter
-          button.dropdown__counter-button-minus(type="button") -
-          input.dropdown__number(type="number" value="1")
-          button.dropdown__counter-button-plus(type="button") +
-      .dropdown__submenu-item
-        p.dropdown__text кровати
-        .dropdown__submenu-item-counter
-          button.dropdown__counter-button-minus(type="button") -
-          input.dropdown__number(type="number" value="1")
-          button.dropdown__counter-button-plus(type="button") +
+      -for(var i=1; i<values.length; i++)
+        .dropdown__submenu-item
+          p.dropdown__text= values[i]
+          .dropdown__submenu-item-counter
+            button.dropdown__counter-button-minus(type="button") -
+            input.dropdown__number(type="number" value="1")
+            button.dropdown__counter-button-plus(type="button") +
 
 
 script(src="blocks/dropdown/dropdown.js")

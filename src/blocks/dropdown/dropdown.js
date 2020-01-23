@@ -1,5 +1,5 @@
 $(function(){
-  $('.dropdown__input').click(function(){
+  $('.dropdown__wrapper').click(function(){
     if($('.dropdown__submenu').is(':visible')){
         $('.dropdown__submenu').slideUp(200);
         //$('').removeClass('');

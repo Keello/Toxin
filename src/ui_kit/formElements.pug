@@ -15,7 +15,7 @@ mixin input(name, type, placeholder)
         </svg>
     when "dropdown"
       include /blocks/dropdown/dropdown.pug
-      +dropdown(type, placeholder)
+      +dropdown(['Сколько гостей', 'спальни', 'кровати', 'ванные комнаты'])
 
 
 form.form

@@ -1,15 +1,15 @@
-//values - массив значений выпадающего меню,
-//где первое значение это placeholder
+//placeholder - текст если ничего не выбрано
+//values - массив значений выпадающего меню
 
-mixin dropdown(values)
+mixin dropdown(placeholder, values)
   .dropdown
     .dropdown__wrapper.form__subscription
-      input.dropdown__input.input(type="dropdown" placeholder=values[0])
+      input.dropdown__input.input(type="dropdown" placeholder=placeholder)
       <svg class="dropdown__icon form__subscription-icon">
         <use xlink:href="#icon-expand_more"></use>
       </svg>
     .dropdown__submenu.input
-      -for(var i=1; i<values.length; i++)
+      -for(var i=0; i<values.length; i++)
         .dropdown__submenu-item
           p.dropdown__text= values[i]
           .dropdown__submenu-item-counter

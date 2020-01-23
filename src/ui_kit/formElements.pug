@@ -1,8 +1,9 @@
 //name - надпись в label
 //type - тип инпута
 //placeholder - текст в пустом инпуте
+//values - массив значений для dropdown
 
-mixin input(name, type, placeholder)
+mixin input(name, type, placeholder, values)
   label.form__label= name
   case type
     when "textfield"
@@ -15,14 +16,14 @@ mixin input(name, type, placeholder)
         </svg>
     when "dropdown"
       include /blocks/dropdown/dropdown.pug
-      +dropdown(['Сколько гостей', 'спальни', 'кровати', 'ванные комнаты'])
+      +dropdown(placeholder, values)
 
 
 form.form
   .form__container
     +input("text field", "textfield", "Email")
     +input("subscription text field", "subscription", "Email")
-    +input("dropdown", "dropdown", "Сколько гостей")
+    +input("dropdown", "dropdown", "Сколько гостей", ['спальни', 'кровати', 'ванные комнаты'] )
 
   label.form__label checkbox buttons
   input.form__checkbox(type="checkbox" name="checkbox" id="checkbox-1")

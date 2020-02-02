@@ -22,18 +22,16 @@ html(lang="ru")
               img(src="img/logo.svg" class="logo__img")
               p.logo__text T<i class="icon-not_interested"></i>xin
           .header__right
-            nav.menu
-              ul
-                li.menu__item.menu__item_active Home
-                li.menu__item About Us
-                li.menu__item Services
-                  i.icon-expand_more
-                li.menu__item Careers
-                li.menu__item News
-                li.menu__item Documentation
-            //p.header__userText Cosmin Negoita
-            button.header__button.button Login
-            button.header__button.button.button_colorful Register
+            include blocks/menu/menu.pug
+            +menu(
+              {'Home':[""],
+              'About Us':[""],
+              'Services':["1"],
+              'Careers':[""],
+              'News':[""],
+              'Documentation':[""]},
+              false
+            )
       main
         .container
           include ui_kit/formElements.pug

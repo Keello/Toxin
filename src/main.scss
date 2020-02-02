@@ -15,23 +15,22 @@
         height: 70px;
     }
     &__left{
-        width: 26.85%;
         display: flex;
         justify-content: center;
     }
     &__right{
         display: flex;
-
+        flex:1;
         box-sizing: border-box;
-        width: 73.15%;
-        padding-right: 20px;
-        padding-left: 7.1%;
 
         align-items: center;
     }
 
     &__button{
         margin-right: 20px;
+    }
+    &__button:last-child{
+        margin-right: 0px;
     }
 
     &__userText{

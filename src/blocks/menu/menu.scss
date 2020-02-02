@@ -1,4 +1,7 @@
 .menu{
+    display: flex;
+    flex:1;
+    justify-content: flex-end;
     font-family: Montserrat;
     font-size: 14px;
     font-weight: normal;
@@ -23,8 +26,8 @@
 
         }
         &:hover{
-            font-weight: bold;
             color: rgba(31, 32, 65, .75);
+            text-shadow: 0 0 .8px rgba(31, 32, 65, .75), 0 0 .8px rgba(31, 32, 65, .75);
         }
     }
     &__item:last-child{

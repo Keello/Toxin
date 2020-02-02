@@ -1,38 +1,48 @@
 //------------------Шрифты---------------------
 @font-face {
-    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
-    font-family: "Quicksand"; 
-    // адрес шрифта и тип 
-    src: url("/fonts/Quicksand-Regular.otf") format("truetype"); 
-    font-style: normal; 
-    font-weight: normal; 
+    font-family: "Quicksand";
+    src: url("/fonts/Quicksand-Regular.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }
 
 @font-face {
-    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
-    font-family: "QuicksandBold"; 
-    // адрес шрифта и тип 
-    src: url("/fonts/Quicksand-Bold.otf") format("truetype"); 
-    font-style: normal; 
-    font-weight: bold; 
+    font-family: "Quicksand";
+    src: url("/fonts/Quicksand-Bold.otf") format("truetype");
+    font-style: normal;
+    font-weight: bold;
 }
 
 @font-face {
-    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
-    font-family: "Montserrat"; 
-    // адрес шрифта и тип 
-    src: url("/fonts/Montserrat-Medium.ttf") format("truetype"); 
-    font-style: normal; 
-    font-weight: normal; 
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }
 
 @font-face {
-    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
-    font-family: "MontserratBold"; 
-    // адрес шрифта и тип 
-    src: url("/fonts/Montserrat-Bold.ttf") format("truetype"); 
-    font-style: normal; 
-    font-weight: bold; 
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: "OpenSans";
+    src: url("/fonts/OpenSans-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "OpenSans";
+    src: url("/fonts/OpenSans-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: bold;
 }
 
 //------------------Текст и заголовки---------------------
@@ -46,19 +56,22 @@ body{
 }
 
 h1{
-    font-family: QuicksandBold;
+    font-family: Quicksand;
+    font-weight: bold;
     font-size: 24px;
     line-height: 30px;
 }
 
 h2{
-    font-family: QuicksandBold;
+    font-family: Quicksand;
+    font-weight: bold;
     font-size: 19px;
     line-height: 24px;
 }
 
 h3{
-    font-family: MontserratBold;
+    font-family: Montserrat;
+    font-weight: bold;
     font-size: 12px;
     line-height: 15px;
 }

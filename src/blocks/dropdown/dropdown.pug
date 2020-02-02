@@ -1,7 +1,9 @@
+//label - надпись над элементом
 //placeholder - текст если ничего не выбрано
 //values - массив значений выпадающего меню
 
-mixin dropdown(placeholder, values)
+mixin dropdown(label, placeholder, values)
+  label.form__label= label
   .dropdown
     .dropdown__wrapper.form__subscription
       input.dropdown__input.input(type="dropdown" placeholder=placeholder)
@@ -17,6 +19,51 @@ mixin dropdown(placeholder, values)
             input.dropdown__number(type="number" value="1")
             button.dropdown__counter-button-plus(type="button") +
 
+
+//range =true - выбрать диапазон дат, =false - выбрать 1 дату
+//dateformat - формат отображения даты. Например "dd-M-yyyy"
+mixin dropdown-date(label, range, dateformat)
+  .dropdown-container
+    if(label.length == 2)
+      -for (var i = 0; i < label.length; i++)
+        label.form__label= label[i]
+        .dropdown
+            .form__subscription
+              if(i==0)
+                input.dropdown__input.input.start_date.datepicker-here(
+                  type="dropdown"
+                  placeholder="ДД.ММ.ГГГГ"
+                  data-position="bottom left"
+                  data-range= "true"
+                  data-multiple-dates-separator=" - "
+                  data-date-format= dateformat)
+                <svg class="dropdown__icon form__subscription-icon">
+                  <use xlink:href="#icon-expand_more"></use>
+                </svg>
+              if(i==1)
+                input.dropdown__input.input.end_date(
+                  type="dropdown"
+                  placeholder="ДД.ММ.ГГГГ")
+                <svg class="dropdown__icon form__subscription-icon">
+                  <use xlink:href="#icon-expand_more"></use>
+                </svg>
+    else
+      label.form__label= label
+      .dropdown
+          .form__subscription
+            input.dropdown__input.input.datepicker-here(
+              type="dropdown"
+              placeholder="ДД.ММ.ГГГГ"
+              data-position="right top"
+              data-range= range ? "true" : "false"
+              data-multiple-dates-separator=" - "
+              data-date-format= dateformat)
+            <svg class="dropdown__icon form__subscription-icon">
+              <use xlink:href="#icon-expand_more"></use>
+            </svg>
+
+mixin dropdown-test()
+  .dropdown-container
 
 script(src="blocks/dropdown/dropdown.js")
 

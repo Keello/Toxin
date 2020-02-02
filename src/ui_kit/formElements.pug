@@ -3,6 +3,7 @@
 //placeholder - текст в пустом инпуте
 //values - значение или массив значений
 
+include /blocks/dropdown/dropdown.pug
 mixin input(label, type, placeholder, values)
   if(type == "expandable")
     label.form__label.expandable-list expandable checkbox list
@@ -18,9 +19,6 @@ mixin input(label, type, placeholder, values)
         <svg class="form__subscription-icon">
           <use xlink:href="#icon-arrow_forward"></use>
         </svg>
-    when "dropdown"
-      include /blocks/dropdown/dropdown.pug
-      +dropdown(placeholder, values)
     when "checkbox"
       each val in values
         label.form__checkbox-label
@@ -52,18 +50,23 @@ mixin input(label, type, placeholder, values)
     when "submit"
       button.button.button_colorful.form__submit= placeholder
 
+// ----------------------------------------------------------------
 form.form
   .form__container
     +input("text field", "textfield", "Email")
     +input("subscription text field", "subscription", "Email")
-    +input("dropdown", "dropdown", "Сколько гостей",
+    +dropdown("dropdown", "Сколько гостей",
       [
       'спальни',
       'кровати',
       'ванные комнаты'
       ])
-    label.form__label filter date dropdown
-    include /blocks/calendar/calendar.pug
+    +dropdown-date(['masked text field'], false)
+
+    +dropdown-date(['date dropdown','date dropdown'])
+    //------------------------------
+    +dropdown-date(['filter date dropdown'], true, "dd M")
+
   +input("checkbox buttons", "checkbox", "",
       [
       'Можно курить',
@@ -119,5 +122,6 @@ form.form
   include /blocks/room-info/room-info.pug
   include /blocks/feedback/feedback.pug
 
+script(src="blocks/calendar/datepicker.js")
 script(src="ui_kit/formElements.js")
 

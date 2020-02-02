@@ -1,13 +1,17 @@
 $(function(){
   $('.dropdown__wrapper').click(function(){
     var elem = this.nextSibling;
+    var values = $('.dropdown__submenu-item-counter').children('.dropdown__number');
+    var quantity = 0;
+    for (var i = 0; i < values.length; i++) {
+      quantity = quantity + +$(values[i]).val();
+    }
+    $(this).children('.dropdown__input').val(quantity);
     if($(elem).is(':visible')){
         $(elem).slideUp(200);
-        //$('').removeClass('');
     }
     if($(elem).is(':hidden')){
         $(elem).slideDown(200);
-        //$('').addClass('');
     }
   });
   $('.dropdown__counter-button-minus').click(function(){

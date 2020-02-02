@@ -40,9 +40,17 @@ $border: 2px;
 }
 
 .link{
-    font-family: MontserratBold;
+    background: none;
+    border:none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+
+    font-family: Montserrat;
     font-size: 12px;
     font-style: normal;
+    font-weight: bold;
     line-height: 15px;
 
     cursor: pointer;

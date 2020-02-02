@@ -1954,6 +1954,7 @@ $('.start_date').datepicker({
     onSelect: function (fd, d, picker) {
       $(picker.$el).val(fd.split("-")[0]);
       let parent = $(picker.$el).closest(".dropdown-container");
+      console.log(parent);
       parent.find(".end_date").val(fd.split("-")[1]);
     }
 });

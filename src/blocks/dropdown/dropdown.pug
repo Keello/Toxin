@@ -18,6 +18,9 @@ mixin dropdown(label, placeholder, values)
             button.dropdown__counter-button-minus(type="button") -
             input.dropdown__number(type="number" value="1")
             button.dropdown__counter-button-plus(type="button") +
+      .dropdown__submenu-buttons
+        button.dropdown_clear.link.link_disabled очистить
+        button.dropdown_confirm.link применить
 
 
 //range =true - выбрать диапазон дат, =false - выбрать 1 дату

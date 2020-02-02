@@ -4,51 +4,7 @@
 //values - значение или массив значений
 
 include /blocks/dropdown/dropdown.pug
-mixin input(label, type, placeholder, values)
-  if(type == "expandable")
-    label.form__label.expandable-list expandable checkbox list
-  else
-    label.form__label= label
-
-  case type
-    when "textfield"
-      input.form__input.input(type=type placeholder=placeholder)
-    when "subscription"
-      .form__subscription
-        input.form__input.input(type=type placeholder=placeholder)
-        <svg class="form__subscription-icon">
-          <use xlink:href="#icon-arrow_forward"></use>
-        </svg>
-    when "checkbox"
-      each val in values
-        label.form__checkbox-label
-          input.form__checkbox(type=type name=type)
-          .form__checkbox-text.text= val
-    when "radio"
-      each val in values
-        label.form__radio-label
-          input.form__radio(type=type name=type)
-          .form__radio-text.text= val
-    when "rich-checkbox"
-      each val,key in values
-        label.form__checkbox-label
-          input.form__checkbox(type="checkbox" name="checkbox")
-          .form__checkbox-text.text
-            span.text__title= key
-            p.form__richCheckboxText= val
-    when "expandable"
-      .expandable-list__items
-        each val in values
-          label.form__checkbox-label
-            input.form__checkbox(type="checkbox" name=type)
-            .form__checkbox-text.text= val
-      script(src="blocks/expandable-list/expandable-list.js")
-    when "toggle"
-      label.form__toggle-label
-        input.form__toggle(type="checkbox")
-        .form__toggle-text.text= values
-    when "submit"
-      button.button.button_colorful.form__submit= placeholder
+include /blocks/input/input.pug
 
 // ----------------------------------------------------------------
 form.form

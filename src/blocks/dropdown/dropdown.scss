@@ -21,13 +21,18 @@
 
     border:1px solid $dark50;
     box-sizing: border-box;
-    padding: 0px 7px 7px 7px;
+    padding: 0px 7px 10px 15px;
 
     &-item{
       display: flex;
       align-items:center;
       justify-content: space-between;
       margin-top: 10px;
+    }
+    &-buttons{
+      display: flex;
+      justify-content: space-between;
+      padding-top: 25px;
     }
   }
 

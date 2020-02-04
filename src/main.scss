@@ -1,47 +1,26 @@
+@import "reset.scss";
 /*-----------------UI_KIT---------------------*/
 @import "/ui_kit/colors&type.scss";
 @import "/ui_kit/formElements.scss";
 
 /*-----------------Header---------------------*/
+.body__wrapper{
+    display: flex;
+    flex-direction:column;
+    min-height: 100%;
+}
+
 .container{
     margin: 0 auto;
     width:1440px;
 }
 
-.header{
-    &__container{
-        display: flex;
-        align-items:center;
-        height: 70px;
-    }
-    &__left{
-        display: flex;
-        justify-content: center;
-    }
-    &__right{
-        display: flex;
-        flex:1;
-        box-sizing: border-box;
-
-        align-items: center;
-    }
-
-    &__button{
-        margin-right: 20px;
-    }
-    &__button:last-child{
-        margin-right: 0px;
-    }
-
-    &__userText{
-        padding-left: 29px;
-        color: rgba(31, 32, 65, .5);
-        border-left: 1px solid rgba(31, 32, 65, .1);
-        height: 30px;
-        line-height: 30px;
-    }
+.main{
+    flex:1 1 auto;
 }
 
+@import "/blocks/header/header.scss";
+@import "/blocks/footer/footer.scss";
 @import "/blocks/logo/logo.scss";
 @import "/blocks/menu/menu.scss";
 /*------------------------------------------------*/

@@ -9,29 +9,18 @@ html(lang="ru")
         link(rel="stylesheet", href="main.scss")
 
         include fonts/material-icons/svg/all-icons.svg
+        include fonts/font-awesome/svg/all-icons.svg
 
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js")
 
         title FSD Site
     body
-      header.header
-        .header__container.container
-          .header__left
-            .logo
-              img(src="img/logo.svg" class="logo__img")
-              p.logo__text T<i class="icon-not_interested"></i>xin
-          .header__right
-            include blocks/menu/menu.pug
-            +menu(
-              {'Home':[""],
-              'About Us':[""],
-              'Services':["1"],
-              'Careers':[""],
-              'News':[""],
-              'Documentation':[""]},
-              false
-            )
-      main
-        .container
-          include ui_kit/formElements.pug
+      .body__wrapper
+        header.header
+          include blocks/header/header.pug
+        main.main
+          .container
+            //include ui_kit/formElements.pug
+        footer.footer
+          include blocks/footer/footer.pug

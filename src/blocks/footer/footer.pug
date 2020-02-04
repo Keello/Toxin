@@ -1,0 +1,33 @@
+mixin list(title, items)
+  .footer__list
+    h3.footer__title= title
+    each val in items
+      p.footer__list-item.text= val
+
+
+
+.footer__container.container
+  .footer__description
+    .logo
+        img(src="img/logo.svg" class="logo__img")
+        p.logo__text T<i class="icon-not_interested"></i>xin
+    p.footer__description-text.text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+  +list("Navigation",['About Us','News','Support','Products'])
+  +list("About Us",['Who we are','Our team','Careers','Investors'])
+  +list("Support",['Documentation','Community','Get in Touch'])
+  .footer__subscribe
+    h3.footer__title Subscribe to our newsletter
+    p.footer__subscribe-text.text Receive our latest news and promotions in your inbox!
+    .footer__subscribe-input
+      include /blocks/input/input.pug
+      +input("", "subscription", "Your email address")
+.footer__copyright
+  .footer__copyright-container.container
+    p.footer__copyright-text.text Copyright © 2018 Toxin UI Kit. All rights reserved.
+    .footer__icons
+      svg.footer__icon
+          use(xlink:href="#icon-twitter")
+      svg.footer__icon
+        use(xlink:href="#icon-facebook-square")
+      svg.footer__icon
+        use(xlink:href="#icon-instagram")

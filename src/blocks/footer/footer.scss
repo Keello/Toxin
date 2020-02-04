@@ -17,6 +17,18 @@
             color: $dark75;
         }
     }
+    &__creative{
+        display: flex;
+        flex-direction:column;
+        align-items:center;
+        width: 40%;
+        margin: 0 auto;
+        &-text{
+            margin: 20px 0;
+            text-align: center;
+        }
+    }
+
     &__list{
         width: 12%;
         &-item{

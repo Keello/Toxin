@@ -1,8 +1,10 @@
 mixin input(label, type, placeholder, values)
-  if(type == "expandable")
-    label.form__label.expandable-list expandable checkbox list
-  else
-    label.form__label= label
+  if(label != "")
+    if(type == "expandable")
+      label.form__label.expandable-list expandable checkbox list
+    else
+      label.form__label= label
+
   case type
     when "textfield"
       input.form__input.input(type=type placeholder=placeholder)

@@ -1,7 +1,8 @@
 @import "reset.scss";
 /*-----------------UI_KIT---------------------*/
-@import "/ui_kit/colors&type.scss";
-@import "/ui_kit/formElements.scss";
+@import "/ui_kit/colors&type/colors&type.scss";
+@import "/ui_kit/formElements/formElements.scss";
+@import "/ui_kit/cards/cards.scss";
 
 /*-----------------Header---------------------*/
 .body__wrapper{

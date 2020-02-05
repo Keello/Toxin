@@ -1,4 +1,4 @@
-.card-registration
+.card-sign-up
   h1.card-title Регистрация аккаунта
   +input("", "textfield", "Имя")
   +input("", "textfield", "Фамилия")
@@ -7,7 +7,8 @@
   +input("данные для входа в сервис", "textfield", "Email")
   +input("", "textfield", "Пароль")
   +input("", "toggle", "", "Получать спецпредложения")
-  +input("", "submit", "Перейти к оплате")
-  .card-registration-sign-in
+  .card__button
+    +input("", "submit", "Перейти к оплате")
+  .card-sign-up-sign-in
     p Уже есть аккаунт на Toxin
     button.button Войти

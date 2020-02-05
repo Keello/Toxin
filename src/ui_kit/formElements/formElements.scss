@@ -40,7 +40,7 @@
 
         display: block;
 
-        margin: 20px 0 5px 0;
+        margin: 20px 0 0 0;
 
         text-transform: uppercase;
 
@@ -118,8 +118,8 @@
             top: 6px;
             left: 7px;
 
-            width: 5px;
-            height: 7px;
+            width: 6px;
+            height: 8px;
 
             content: '';
             transition: .2s;
@@ -181,8 +181,8 @@
 
         &:after{
             position: absolute;
-            top: 5px;
-            left: 5px;
+            top: 4px;
+            left: 4px;
 
             width: 12px;
             height: 12px;
@@ -209,7 +209,7 @@
             border: 1px solid $purple;
         }
         &:checked + &-text:after{
-            left: 26px;
+            left: 24px;
 
             background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
         }
@@ -239,7 +239,7 @@
         }
         &:after{
             position: absolute;
-            top: 5px;
+            top: 4px;
             left: 4px;
 
             width: 12px;

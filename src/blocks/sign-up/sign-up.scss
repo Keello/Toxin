@@ -7,7 +7,7 @@
   }
 }
 
-*[class*="form__"]{
+.form__subscription, .form__input, .form__radio-text, .form__toggle-text, .form__checkbox-text{
   margin-top: 10px;
 }
 

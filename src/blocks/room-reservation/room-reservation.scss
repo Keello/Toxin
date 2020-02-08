@@ -1,0 +1,123 @@
+.card-room-reservation{
+  padding-top: 10px;
+}
+
+.room-reservation__header{
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.room-reservation__number{
+    font-family: OpenSans;
+    font-size: 22px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 17px;
+    color: $dark100;
+    &:before{
+      content: "\2116";
+      font-size: 14px;
+      margin-right: 5px;
+      font-family: Montserrat;
+    }
+}
+.room-reservation__type{
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 15px;
+    margin-left: 5px;
+
+    text-transform: uppercase;
+
+    color: $purple;
+}
+
+.price{
+  &:after{
+    content: "\20BD";
+    font-family: Montserrat;
+  }
+  &_bold{
+    font-weight: bold;
+  }
+}
+
+.room-reservation__header-price-body{
+  color: $dark50;
+}
+.room-reservation__header-price-text{
+  margin-left: 5px;
+  font-size: 12px;
+
+}
+.room-reservation__price-body{
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 15px;
+
+    color: $dark75;
+}
+
+.room-reservation__price-text{
+  display: flex;
+  justify-content: space-between;
+  width: 77%;
+}
+
+.room-reservation__price-text_info{
+  &:after{
+    display: flex;
+    box-sizing: border-box;
+    margin-left: 5px;
+    min-width: 20px;
+    height: 20px;
+
+    content: 'i';
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    color: $dark25;
+
+    border: 1px solid $dark25;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+.room-reservation__total{
+    font-family: Opensans;
+    font-size: 19px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 24px;
+
+    display: flex;
+
+    margin-top: 30px;
+
+    justify-content: space-between;
+}
+.room-reservation__total-price{
+  font-family: Montserrat;
+  font-weight: bold;
+}
+
+.room-reservation__total-separator{
+    box-sizing: border-box;
+    border-bottom: 1px dashed $dark25;
+    flex: 1 1;
+    margin: 5px;
+}
+
+.room-reservation-button{
+  margin-top: 20px;
+}
+
+

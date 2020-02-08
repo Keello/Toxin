@@ -47,6 +47,7 @@ $(function(){
       quantity = quantity + +$(values[i]).val();
     }
     let parent = $(this).closest(".dropdown");
-    $(parent).find('.dropdown__input').val(quantity);
+    if(quantity>0)
+      $(parent).find('.dropdown__input').val(quantity);
   });
 });

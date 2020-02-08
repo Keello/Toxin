@@ -259,10 +259,12 @@
         padding: 5px 2%;
         &:before{
             font-family: 'Material icons';
-            font-size: 20px;
-            line-height: 15px;
+            font-size: 24px;
+            line-height: 24px;
+            font-weight: normal;
 
             position: absolute;
+            top: 9px;
             right: 8px;
 
             content: '\e900';

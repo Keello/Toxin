@@ -1,0 +1,35 @@
+.card-room-reservation
+  .room-reservation__header
+    .room-reservation__title
+      span.room-reservation__number 888
+      span.room-reservation__type люкс
+    .room-reservation__header-price-body
+      span.price.price_bold 9 990
+      span.room-reservation__header-price-text в сутки
+  +dropdown-date(['прибытие','выезд'])
+  +dropdown("Гости", "Сколько гостей",
+  [
+  'Взрослые',
+  'дети',
+  'младенцы'
+  ])
+  .room-reservation__price-body
+    .room-reservation__price-text
+      |9 990₽ х 4 суток
+    span.room-reservation__price.price 39 960
+  .room-reservation__price-body
+    .room-reservation__price-text.room-reservation__price-text_info
+      |Сбор за услуги: скидка 2 179₽
+    span.room-reservation__price.price 0
+  .room-reservation__price-body
+    .room-reservation__price-text.room-reservation__price-text_info
+      |Сбор за дополнительные услуги
+    span.room-reservation__price.price 300
+  .room-reservation__total
+    .room-reservation__total-text
+      |Итого
+    .room-reservation__total-separator
+    .room-reservation__total-price.price
+      |38 081
+  .card__button.room-reservation-button
+    +input("", "submit", "Забронировать")

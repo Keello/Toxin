@@ -1,0 +1,22 @@
+.card{
+  padding-bottom: 20px;
+}
+.card-room__feedbacks{
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(31, 32, 65, 0.1);
+  margin-top: 10px;
+  padding-top: 8px;
+}
+
+.card-room__feedbacks-text{
+  font-family: Montserrat;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: $dark50;
+  &_bold{
+    font-weight: bold;
+    margin-right: 5px;
+  }
+}

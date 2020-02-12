@@ -1,11 +1,12 @@
-.card{
-  padding-bottom: 20px;
+.card-room-body{
+  padding: 20px;
 }
+
 .card-room__feedbacks{
   display: flex;
   justify-content: space-between;
   border-top: 1px solid rgba(31, 32, 65, 0.1);
-  margin-top: 10px;
+  margin-top: 8px;
   padding-top: 8px;
 }
 

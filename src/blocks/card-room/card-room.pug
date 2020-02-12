@@ -1,13 +1,16 @@
-.card-room
-  .room-reservation__header
-    .room-reservation__title
-      span.room-reservation__number 888
-      span.room-reservation__type люкс
-    .room-reservation__header-price-body
-      span.price.price_bold 9 990
-      span.room-reservation__header-price-text в сутки
-  .card-room__feedbacks
-    +rateButton(5,5)
-    .card-room__feedbacks-text
-      span.card-room__feedbacks-text_bold 145
-      |отзывов
+mixin card-room(options)
+  .card-room
+    include /blocks/carousel/carousel.pug
+    .card-room-body
+      .room-reservation__header
+        .room-reservation__title
+          span.room-reservation__number= options.number
+          span.room-reservation__type= options.type
+        .room-reservation__header-price-body
+          span.price.price_bold= options.price
+          span.room-reservation__header-price-text в сутки
+      .card-room__feedbacks
+        +rateButton(options.rate, options.maxRate)
+        .card-room__feedbacks-text
+          span.card-room__feedbacks-text_bold= options.feedbacks
+          |отзывов

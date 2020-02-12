@@ -1,7 +1,10 @@
 include /blocks/input/input.pug
 include /blocks/dropdown/dropdown.pug
 include /blocks/rate-button/rate-button.pug
+
+include /blocks/card-room/card-room.pug
 //----------------------------------------------------------------
+
 .cards-container
   .card
     include /blocks/find-room/find-room.pug
@@ -13,6 +16,6 @@ include /blocks/rate-button/rate-button.pug
     include /blocks/sign-in/sign-in.pug
   .datepicker-here
   .card
-    include /blocks/card-room/card-room.pug
+    +card-room({number:888, type:"люкс", price:"9 990", rate:5, maxRate:5, feedbacks:145 })
   .card
-
+    +card-room({number:840, price:"9 900", rate:4, maxRate:5, feedbacks:65 })

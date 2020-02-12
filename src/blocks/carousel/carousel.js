@@ -184,6 +184,8 @@ var slideShow = (function () {
   }
 }());
 
-$('.slider').each(function(){
-  slideShow(this);
-})
+$(function(){
+  $('.slider').each(function(){
+    slideShow(this);
+  });
+});

@@ -5,6 +5,7 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: $card-border-radius $card-border-radius 0 0;
 }
 
 /* стили для обёртки, в которой заключены слайды */
@@ -16,6 +17,7 @@
 /* стили для контейнера слайдов */
 .slider__items {
   display: flex;
+  max-height: 150px;
   transition: transform 0.6s ease;
 }
 
@@ -23,13 +25,14 @@
 .slider__item {
   flex: 0 0 100%;
   max-width: 100%;
-  height: 250px;
+
   background: blue;
   color: white;
 }
 
 /* стили для кнопок "вперед" и "назад" */
 .slider__control {
+  font-family: "Material icons";
   position: absolute;
   top: 50%;
   display: flex;
@@ -37,10 +40,11 @@
   justify-content: center;
   width: 44px;
   height: 44px;
+  font-size: 24px;
+  line-height: 24px;
   color: #fff;
   text-align: center;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
 }
 
 .slider__control:hover,
@@ -69,43 +73,39 @@
 }
 
 .slider__control_prev::before {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+  content: "\e90c";
 }
 
 .slider__control_next::before {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+  content: "\e90d";
 }
 
 /* стили для индикаторов */
 .slider__indicators {
   position: absolute;
-  right: 0;
-  bottom: 10px;
-  left: 0;
+  right: 15px;
+  bottom: 15px;
   z-index: 15;
   display: flex;
   justify-content: center;
   padding-left: 0;
-  margin-right: 15%;
-  margin-left: 15%;
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
 }
 
 .slider__indicators li {
-  box-sizing: content-box;
+  box-sizing: border-box;
   flex: 0 1 auto;
-  width: 30px;
-  height: 4px;
+  width: 8px;
+  height: 8px;
   margin-right: 3px;
   margin-left: 3px;
   text-indent: -999px;
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.5);
-  background-clip: padding-box;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
+  background-color: none;
+  border:1px solid white;
+  border-radius: 50%;
 }
 
 .slider__indicators li.active {

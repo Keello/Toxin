@@ -1,6 +1,7 @@
 include /blocks/input/input.pug
 include /blocks/dropdown/dropdown.pug
 include /blocks/rate-button/rate-button.pug
+include /blocks/carousel/carousel.pug
 
 include /blocks/card-room/card-room.pug
 //----------------------------------------------------------------
@@ -16,6 +17,18 @@ include /blocks/card-room/card-room.pug
     include /blocks/sign-in/sign-in.pug
   .datepicker-here
   .card
-    +card-room({number:888, type:"люкс", price:"9 990", rate:5, maxRate:5, feedbacks:145 })
+    +card-room({
+      photos:["img1.jpg", "img2.jpg", "img3.jpg", "img2.jpg"],
+      number:888,
+      type:"люкс",
+      price:"9 990",
+      rate:5, maxRate:5,
+      feedbacks:145 })
   .card
-    +card-room({number:840, price:"9 900", rate:4, maxRate:5, feedbacks:65 })
+    +card-room({
+      photos:["img2.jpg", "img3.jpg", "img2.jpg"],
+      number:840,
+      type:"",
+      price:"9 900",
+      rate:4, maxRate:5,
+      feedbacks:65 })

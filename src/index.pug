@@ -1,31 +1,32 @@
 doctype html
 html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
 
-        link(rel="stylesheet", href="fonts/material-icons/material-icons.css")
-        link(href="blocks/calendar/datepicker.css" rel="stylesheet" type="text/css")
-        link(rel="stylesheet", href="main.scss")
+    link(rel="stylesheet", href="fonts/material-icons/material-icons.css")
+    link(href="blocks/calendar/datepicker.css" rel="stylesheet" type="text/css")
+    link(rel="stylesheet", href="main.scss")
 
-        include fonts/material-icons/svg/all-icons.svg
-        include fonts/font-awesome/svg/all-icons.svg
+    include fonts/material-icons/svg/all-icons.svg
+    include fonts/font-awesome/svg/all-icons.svg
 
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js")
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js")
 
-        title FSD Site
-    body
-      .body__wrapper
-        header.header
-          include blocks/header/header.pug
-        main.main
-          .container
-            //include ui_kit/formElements/formElements.pug
-            include ui_kit/cards/cards.pug
-        footer.footer
-          include blocks/footer/footer.pug
+    title FSD Site
+
+  body
+    .body__wrapper
+      header.header
+        include blocks/header/header.pug
+      main.main
+        .container
+          //include ui_kit/formElements/formElements.pug
+          include ui_kit/cards/cards.pug
+      footer.footer
+        include blocks/footer/footer.pug
 
 
 script(src="blocks/calendar/datepicker.js")

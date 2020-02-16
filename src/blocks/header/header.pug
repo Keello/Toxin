@@ -1,18 +1,16 @@
-.header__container.container
-  .header__left
-    .logo
-      img(src="img/logo.svg" class="logo__img")
-      p.logo__text T<i class="icon-not_interested"></i>xin
-  .header__right
-    include /blocks/menu/menu.pug
-    +menu(
-      {'Home':[""],
-      'About Us':[""],
-      'Services':["1"],
-      'Careers':[""],
-      'News':[""],
-      'Documentation':[""]},
-      false
-    )
+mixin header(options)
+  .header__container.container
+    .header__left
+      .logo
+        img(src="img/logo.svg" class="logo__img")
+        p.logo__text T<i class="icon-not_interested"></i>xin
+    .header__right
+      include /blocks/menu/menu.pug
+      +menu(options.menu)
+      if(options.user != "")
+        p.header__user-text= options.user
+      else
+        button.header__button.button Login
+        button.header__button.button.button_colorful Register
 
 script(src="blocks/menu/menu.js")

@@ -1,15 +1,10 @@
-mixin menu(values,authen)
-    nav.menu
-      ul
-        each val,key in values
-            if(val=="")
-                li.menu__item
-                    a= key
-            else
-                li.menu__item= key
-                    i.icon-expand_more
-    if(authen == true)
-        p.header__userText Cosmin Negoita
-    else
-        button.header__button.button Login
-        button.header__button.button.button_colorful Register
+mixin menu(values)
+  nav.menu
+    ul
+      each val,key in values
+        if(val=="")
+          li.menu__item
+            a= key
+        else
+          li.menu__item= key
+            i.icon-expand_more

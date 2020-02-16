@@ -4,6 +4,8 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="keywords", content="")
+    meta(name="description", content="")
 
     link(rel="stylesheet", href="fonts/material-icons/material-icons.css")
     link(href="blocks/calendar/datepicker.css" rel="stylesheet" type="text/css")
@@ -21,9 +23,17 @@ html(lang="ru")
     .body__wrapper
       header.header
         include blocks/header/header.pug
+        +header({
+          menu:{"Home":[""],
+            "About Us":[""],
+            "Services":["1"],
+            "Careers":[""],
+            "News":[""],
+            "Documentation":[""]},
+          user:""})
       main.main
         .container
-          //include ui_kit/formElements/formElements.pug
+          include ui_kit/formElements/formElements.pug
           include ui_kit/cards/cards.pug
       footer.footer
         include blocks/footer/footer.pug

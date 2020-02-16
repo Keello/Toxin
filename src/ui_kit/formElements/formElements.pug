@@ -13,32 +13,32 @@ form.form
     +input("subscription text field", "subscription", "Email")
     +dropdown("dropdown", "Сколько гостей",
       [
-      'спальни',
-      'кровати',
-      'ванные комнаты'
+      "спальни",
+      "кровати",
+      "ванные комнаты"
       ])
-    +dropdown-date(['masked text field'], false)
+    +dropdown-date(["masked text field"], false)
 
-    +dropdown-date(['date dropdown','date dropdown'])
+    +dropdown-date(["date dropdown","date dropdown"])
     //------------------------------
-    +dropdown-date(['filter date dropdown'], true, "dd M")
+    +dropdown-date(["filter date dropdown"], true, "dd M")
 
   +input("checkbox buttons", "checkbox", "",
       [
-      'Можно курить',
-      'Можно с питомцами',
-      'Можно пригласить гостей (до 10 человек)'
+      "Можно курить",
+      "Можно с питомцами",
+      "Можно пригласить гостей (до 10 человек)"
       ])
   +input("rich checkbox buttons", "rich-checkbox", "",
       {
-      'Широкий корридор':'Ширина коридоров в номере не менее 91 см.',
-      'Помощник для инвалидов': 'На 1 этаже вас встретит специалист и проводит до номера.',
+      "Широкий корридор":"Ширина коридоров в номере не менее 91 см.",
+      "Помощник для инвалидов": "На 1 этаже вас встретит специалист и проводит до номера.",
       })
-  +input("expandable checkbox list", "expandable", "", ['Телевизор', 'Завтрак', 'Кроватка'])
+  +input("expandable checkbox list", "expandable", "", ["Телевизор", "Завтрак", "Кроватка"])
   +input("radio buttons", "radio", "",
       [
-      'Мужчина',
-      'Женщина',
+      "Мужчина",
+      "Женщина",
       ])
   +input("toggle", "toggle", "", "Получать спецпредложения")
 

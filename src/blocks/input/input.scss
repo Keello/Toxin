@@ -1,27 +1,24 @@
 .input{
-    padding: 10px 15px;
+  padding: 10px 15px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: $dark75;
+  background: #FFFFFF;
+  border: 1px solid $dark25;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
 
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
+  &::placeholder{
+    color: $dark25;
+  }
+  &:hover, &:focus{
+    border: 1px solid $dark50;
+  }
+  &:hover::placeholder, &:focus::placeholder{
     color: $dark75;
-
-    background: #FFFFFF;
-    border: 1px solid $dark25;
-    box-sizing: border-box;
-    border-radius: 4px;
-    outline: none;
-
-    &::placeholder{
-      color: $dark25;
-    }
-
-    &:hover, &:focus{
-      border: 1px solid $dark50;
-    }
-    &:hover::placeholder, &:focus::placeholder{
-      color: $dark75;
-    }
+  }
 }

@@ -24,32 +24,32 @@ form.form
     +dropdown-date(["filter date dropdown"], true, "dd M")
 
   +input("checkbox buttons", "checkbox", "",
-      [
-      "Можно курить",
-      "Можно с питомцами",
-      "Можно пригласить гостей (до 10 человек)"
-      ])
+    [
+    "Можно курить",
+    "Можно с питомцами",
+    "Можно пригласить гостей (до 10 человек)"
+    ])
   +input("rich checkbox buttons", "rich-checkbox", "",
-      {
-      "Широкий корридор":"Ширина коридоров в номере не менее 91 см.",
-      "Помощник для инвалидов": "На 1 этаже вас встретит специалист и проводит до номера.",
-      })
+    {
+    "Широкий корридор":"Ширина коридоров в номере не менее 91 см.",
+    "Помощник для инвалидов": "На 1 этаже вас встретит специалист и проводит до номера.",
+    })
   +input("expandable checkbox list", "expandable", "", ["Телевизор", "Завтрак", "Кроватка"])
   +input("radio buttons", "radio", "",
-      [
-      "Мужчина",
-      "Женщина",
-      ])
+    [
+    "Мужчина",
+    "Женщина",
+    ])
   +input("toggle", "toggle", "", "Получать спецпредложения")
 
   label.form__label like button
-  label.likeButton
-    input.likeButton__input(type="checkbox" name="checkbox")
-    span.likeButton__text 12
+  label.like-button
+    input.like-button__input(type="checkbox" name="checkbox")
+    span.like-button__text 12
 
   label.form__label rate button
   include /blocks/rate-button/rate-button.pug
-  +rateButton(2.5,5)
+  +rate-button(2.5,5)
 
   label.form__label range slider
   include /blocks/range-slider/range-slider.pug

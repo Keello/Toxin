@@ -1,12 +1,12 @@
-mixin rateButton(rate, max_rate)
+mixin rate-button(rate, max_rate)
   -var i = 1;
-  .rateButton
+  .rate-button
     while i<=max_rate
       if(i<=Math.floor(rate))
-        .rateButton__item
+        .rate-button__item
       else
         if((i-rate)>0)&&((i-rate)<1)
-          .rateButton__item.rateButton_item-half
+          .rate-button__item.rate-button_item-half
         else
-          .rateButton__item.rateButton_item-empty
+          .rate-button__item.rate-button_item-empty
       -i++

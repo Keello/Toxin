@@ -5,12 +5,11 @@ mixin list(title, items)
       p.footer__list-item.text= val
 
 
-
 .footer__container.container
   .footer__description
     .logo
-        img(src="img/logo.svg" class="logo__img")
-        p.logo__text T<i class="icon-not_interested"></i>xin
+      img(src="img/logo.svg" class="logo__img")
+      p.logo__text T<i class="icon-not_interested"></i>xin
     p.footer__description-text.text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
   +list("Navigation",['About Us','News','Support','Products'])
   +list("About Us",['Who we are','Our team','Careers','Investors'])
@@ -26,7 +25,7 @@ mixin list(title, items)
     p.footer__copyright-text.text Copyright © 2018 Toxin UI Kit. All rights reserved.
     .footer__icons
       svg.footer__icon
-          use(xlink:href="#icon-twitter")
+        use(xlink:href="#icon-twitter")
       svg.footer__icon
         use(xlink:href="#icon-facebook-square")
       svg.footer__icon

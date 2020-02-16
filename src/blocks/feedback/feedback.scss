@@ -2,29 +2,24 @@
   display: grid;
   grid-template-columns: 1fr 30fr;
   grid-gap:10px;
-
   &__user-logo{
     box-sizing: border-box;
     width: 48px;
     height: 48px;
-
     border: 2px solid #fff;
     border-radius: 32px;
     background: url(img/user-logo.png);
     background-size: cover;
     box-shadow: 0 10px 20px rgba(31, 32, 65, .1);
   }
-
   &__user-name{
     color: $dark75;
     margin: 0;
   }
-
   &__like-button{
     margin-left: auto;
     margin-right: auto;
   }
-
   &__body{
     &-text{
       margin: 0;

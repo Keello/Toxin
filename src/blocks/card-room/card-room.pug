@@ -10,7 +10,7 @@ mixin card-room(options)
           span.price.price_bold= options.price
           span.room-reservation__header-price-text в сутки
       .card-room__feedbacks
-        +rateButton(options.rate, options.maxRate)
+        +rate-button(options.rate, options.maxRate)
         .card-room__feedbacks-text
           span.card-room__feedbacks-text_bold= options.feedbacks
           |отзывов

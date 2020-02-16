@@ -1,65 +1,55 @@
 $border: 2px;
 .button{
-    position: relative;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-
-    height: 44px;
-    padding: 5px 18px;
-
-    text-transform: uppercase;
-    outline: none;
-    cursor:pointer;
-
-    color: $purple;
-    border: $border solid transparent;
-    border-radius: 22px;
-    background: white;
-    background-clip: padding-box;
-
-    &_disabled{
-        opacity: .5;
-    }
-
-    &:after {
-        content: '';
-        position: absolute;
-        top: -$border; right: -$border; bottom: -$border; left: -$border;
-        border-radius: inherit;
-        z-index: -1;
-        background: $purple;
-    }
+  position: relative;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  height: 44px;
+  padding: 5px 18px;
+  text-transform: uppercase;
+  outline: none;
+  cursor:pointer;
+  color: $purple;
+  border: $border solid transparent;
+  border-radius: 22px;
+  background: white;
+  background-clip: padding-box;
+  &_disabled{
+    opacity: .5;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: -$border; right: -$border; bottom: -$border; left: -$border;
+    border-radius: inherit;
+    z-index: -1;
+    background: $purple;
+  }
 }
-
 .button_colorful{
-    color: white;
-    background: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
-    background-clip: padding-box;
+  color: white;
+  background: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
+  background-clip: padding-box;
 }
-
 .link{
-    background: none;
-    border:none;
-    margin: 0;
-    padding: 0;
-    outline: none;
-    cursor: pointer;
-
-    font-family: Montserrat;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: bold;
-    line-height: 15px;
-
-    cursor: pointer;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    color: $purple;
-    &_disabled{
-        color: $dark50;
-    }
+  background: none;
+  border:none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $purple;
+  &_disabled{
+    color: $dark50;
+  }
 }

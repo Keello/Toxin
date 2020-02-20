@@ -7,7 +7,7 @@ mixin header(options)
     .header__right
       include /blocks/menu/menu.pug
       +menu(options.menu)
-      if(options.user != "")
+      if(options.user != "" && options.user != null)
         p.header__user-text= options.user
       else
         button.header__button.button Login

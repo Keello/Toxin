@@ -1,14 +1,15 @@
-.card-sign-up
-  h1.card-title Регистрация аккаунта
-  +input("", "textfield", "Имя")
-  +input("", "textfield", "Фамилия")
-  +input("", "radio", "",['Мужчина','Женщина',])
-  +dropdown-date(['дата рождения'], false)
-  +input("данные для входа в сервис", "textfield", "Email")
-  +input("", "textfield", "Пароль")
-  +input("", "toggle", "", "Получать спецпредложения")
-  .card__button
-    +input("", "submit", "Перейти к оплате")
-  .card-sign-up-sign-in
-    p Уже есть аккаунт на Toxin
-    button.button Войти
+mixin sign-up(title, button)
+  .card-sign-up
+    h1.card-title= title
+    +input("", "textfield", "Имя")
+    +input("", "textfield", "Фамилия")
+    +input("", "radio", "",['Мужчина','Женщина',])
+    +dropdown-date(['дата рождения'], false)
+    +input("данные для входа в сервис", "textfield", "Email")
+    +input("", "textfield", "Пароль")
+    +input("", "toggle", "", "Получать спецпредложения")
+    .card__button
+      +input("", "submit", button)
+    .card-sign-up-sign-in
+      p Уже есть аккаунт на Toxin
+      button.button Войти

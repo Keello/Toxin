@@ -1,35 +1,36 @@
-.card-room-reservation
-  .room-reservation__header
-    .room-reservation__title
-      span.room-reservation__number 888
-      span.room-reservation__type люкс
-    .room-reservation__header-price-body
-      span.price.price_bold 9 990
-      span.room-reservation__header-price-text в сутки
-  +dropdown-date(['прибытие','выезд'])
-  +dropdown("Гости", "Сколько гостей",
-  [
-  'Взрослые',
-  'дети',
-  'младенцы'
-  ])
+mixin reservation-option(options)
   .room-reservation__price-body
-    .room-reservation__price-text
-      |9 990₽ х 4 суток
-    span.room-reservation__price.price 39 960
-  .room-reservation__price-body
-    .room-reservation__price-text.room-reservation__price-text_info
-      |Сбор за услуги: скидка 2 179₽
-    span.room-reservation__price.price 0
-  .room-reservation__price-body
-    .room-reservation__price-text.room-reservation__price-text_info
-      |Сбор за дополнительные услуги
-    span.room-reservation__price.price 300
-  .room-reservation__total
-    .room-reservation__total-text
-      |Итого
-    .room-reservation__total-separator
-    .room-reservation__total-price.price
-      |38 081
-  .card__button.room-reservation-button
-    +input("", "submit", "Забронировать")
+    if(options.theme == "info")
+      .room-reservation__price-text.room-reservation__price-text_info= options.name
+      span.room-reservation__price.price= options.price
+    else
+      .room-reservation__price-text= options.name
+      span.room-reservation__price.price= options.price
+
+mixin room-reservation(options)
+  .card-room-reservation
+    .room-reservation__header
+      .room-reservation__title
+        span.room-reservation__number= options.number
+        span.room-reservation__type= options.type
+      .room-reservation__header-price-body
+        span.price.price_bold= options.price
+        span.room-reservation__header-price-text в сутки
+    +dropdown-date(['прибытие','выезд'])
+    +dropdown("Гости", "Сколько гостей",
+    [
+    'Взрослые',
+    'дети',
+    'младенцы'
+    ])
+    +reservation-option({name:"9 990₽ х 4 суток", price:"39 960"})
+    +reservation-option({name:"Сбор за услуги: скидка 2 179₽", price:"0", theme:"info"})
+    +reservation-option({name:"Сбор за дополнительные услуги", price:"300", theme:"info"})
+    .room-reservation__total
+      .room-reservation__total-text
+        |Итого
+      .room-reservation__total-separator
+      .room-reservation__total-price.price
+        |38 081
+    .card__button.room-reservation-button
+      +input("", "submit", "Забронировать")

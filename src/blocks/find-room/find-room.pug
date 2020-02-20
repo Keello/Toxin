@@ -1,11 +1,12 @@
-.card-find-room
-  h1.find-room-title.card-title Найдём номера под ваши пожелания
-  +dropdown-date(['прибытие','выезд'])
-  +dropdown("Гости", "Сколько гостей",
-    [
-    'Взрослые',
-    'дети',
-    'младенцы'
-    ])
-  .card__button.find-room-button
-    +input("", "submit", "Подобрать номер")
+mixin find-room(title, button)
+  .card-find-room
+    h1.find-room-title.card-title= title
+    +dropdown-date(['прибытие','выезд'])
+    +dropdown("Гости", "Сколько гостей",
+      [
+      'Взрослые',
+      'дети',
+      'младенцы'
+      ])
+    .card__button.find-room-button
+      +input("", "submit", button)

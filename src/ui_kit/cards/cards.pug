@@ -9,12 +9,20 @@ include /blocks/card-room/card-room.pug
 .cards-container
   .card
     include /blocks/find-room/find-room.pug
+    +find-room("Найдем номера под ваши пожелания", "Подобрать номер")
   .card
     include /blocks/sign-up/sign-up.pug
+    +sign-up("Регистрация аккаунта", "Перейти к оплате")
   .card
     include /blocks/room-reservation/room-reservation.pug
+    +room-reservation({
+      number:888,
+      type:"люкс",
+      price:"9 990",
+      })
   .card
     include /blocks/sign-in/sign-in.pug
+    +sign-in("Войти", "Войти")
   .datepicker-here
   .card
     +card-room({

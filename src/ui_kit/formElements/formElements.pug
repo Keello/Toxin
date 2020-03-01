@@ -43,9 +43,8 @@ form.form
     +input("toggle", "toggle", "", "Получать спецпредложения")
 
     label.form__label like button
-    label.like-button
-      input.like-button__input(type="checkbox" name="checkbox")
-      span.like-button__text 12
+    include /blocks/like-button/like-button.pug
+    +like-button(12)
 
     label.form__label rate button
     include /blocks/rate-button/rate-button.pug
@@ -55,13 +54,14 @@ form.form
     include /blocks/range-slider/range-slider.pug
 
     label.form__label buttons
-    button.button click me
-    button.button.button_colorful click me
-    button.button.button_colorful.button_disabled click me
+    include /blocks/button/button.pug
+    +button({name:"click me"})
+    +button({name:"click me", theme:"colorful"})
+    +button({name:"click me", theme:"colorful", active:"false"})
 
     label.form__label links
-    a.link(href="#") click me
-    a.link.link_disabled(href="#") click me
+    +link({name:"click me"})
+    +link({name:"click me", active:"false"})
 
     +input("submit", "submit", "Перейти к оплате")
 
@@ -70,10 +70,11 @@ form.form
     +pagination(10)
 
     label.form__label bullet list
-    ul.form__bullet-list.bullet-list
-      li.bullet-list__item Нельзя с питомцами
-      li.bullet-list__item Без вечеринок и мероприятий
-      li.bullet-list__item Время прибытия — после 13:00, а выезд до 12:00
+    include /blocks/bullet-list/bullet-list.pug
+    +bullet-list([
+        "Нельзя с питомцами",
+        "Без вечеринок и мероприятий",
+        "Время прибытия — после 13:00, а выезд до 12:00"])
 
     include /blocks/room-info/room-info.pug
   include /blocks/feedback/feedback.pug

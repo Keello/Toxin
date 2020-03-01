@@ -1,0 +1,17 @@
+mixin button(options)
+  if(options.active=="false")
+    if(options.theme=="colorful")
+      button.button.button_colorful.button_disabled click me
+    else
+      //p неактивная с белым фоном
+  else
+    if(options.theme=="colorful")
+      button.button.button_colorful click me
+    else
+      button.button= options.name
+
+mixin link(options)
+  if(options.active == "false")
+    a.link.link_disabled(href="#") click me
+  else
+    a.link(href="#")= options.name

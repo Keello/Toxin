@@ -1,0 +1,6 @@
+mixin like-button(number)
+  -if(number>999)
+    -number= (number-number%1000)/1000+"k"
+  label.like-button
+    input.like-button__input(type="checkbox" name="checkbox")
+    span.like-button__text= number

@@ -7,6 +7,8 @@
   padding: 0;
   color: $dark75;
   list-style: none;
+  max-width: 100%;
+  overflow: hidden;
   &__item{
     margin-bottom: 5px;
     &:before{

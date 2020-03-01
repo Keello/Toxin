@@ -5,10 +5,14 @@
   &__icon{
     width: 48px;
     height: 48px;
+    min-width: 48px;
+    min-height: 48px;
     fill: $purple;
     margin-right: 10px;
   }
   &__text{
+    max-width: 100%;
+    overflow: hidden;
     color: $dark75;
     line-height: 24px;
   }

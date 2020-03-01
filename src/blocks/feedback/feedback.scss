@@ -1,7 +1,8 @@
 .feedback{
   display: grid;
-  grid-template-columns: 1fr 30fr;
+  grid-template-columns: min-content minmax(10%, 30fr);
   grid-gap:10px;
+  overflow: hidden;
   &__user-logo{
     box-sizing: border-box;
     width: 48px;

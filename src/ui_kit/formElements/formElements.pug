@@ -23,59 +23,59 @@ form.form
     //------------------------------
     +dropdown-date(["filter date dropdown"], true, "dd M")
 
-  +input("checkbox buttons", "checkbox", "",
-    [
-    "Можно курить",
-    "Можно с питомцами",
-    "Можно пригласить гостей (до 10 человек)"
-    ])
-  +input("rich checkbox buttons", "rich-checkbox", "",
-    {
-    "Широкий корридор":"Ширина коридоров в номере не менее 91 см.",
-    "Помощник для инвалидов": "На 1 этаже вас встретит специалист и проводит до номера.",
-    })
-  +input("expandable checkbox list", "expandable", "", ["Телевизор", "Завтрак", "Кроватка"])
-  +input("radio buttons", "radio", "",
-    [
-    "Мужчина",
-    "Женщина",
-    ])
-  +input("toggle", "toggle", "", "Получать спецпредложения")
+    +input("checkbox buttons", "checkbox", "",
+      [
+      "Можно курить",
+      "Можно с питомцами",
+      "Можно пригласить гостей (до 10 человек)"
+      ])
+    +input("rich checkbox buttons", "rich-checkbox", "",
+      {
+      "Широкий корридор":"Ширина коридоров в номере не менее 91 см.",
+      "Помощник для инвалидов": "На 1 этаже вас встретит специалист и проводит до номера.",
+      })
+    +input("expandable checkbox list", "expandable", "", ["Телевизор", "Завтрак", "Кроватка"])
+    +input("radio buttons", "radio", "",
+      [
+      "Мужчина",
+      "Женщина",
+      ])
+    +input("toggle", "toggle", "", "Получать спецпредложения")
 
-  label.form__label like button
-  label.like-button
-    input.like-button__input(type="checkbox" name="checkbox")
-    span.like-button__text 12
+    label.form__label like button
+    label.like-button
+      input.like-button__input(type="checkbox" name="checkbox")
+      span.like-button__text 12
 
-  label.form__label rate button
-  include /blocks/rate-button/rate-button.pug
-  +rate-button(2.5,5)
+    label.form__label rate button
+    include /blocks/rate-button/rate-button.pug
+    +rate-button(2.5,5)
 
-  label.form__label range slider
-  include /blocks/range-slider/range-slider.pug
+    label.form__label range slider
+    include /blocks/range-slider/range-slider.pug
 
-  label.form__label buttons
-  button.button click me
-  button.button.button_colorful click me
-  button.button.button_colorful.button_disabled click me
+    label.form__label buttons
+    button.button click me
+    button.button.button_colorful click me
+    button.button.button_colorful.button_disabled click me
 
-  label.form__label links
-  a.link(href="#") click me
-  a.link.link_disabled(href="#") click me
+    label.form__label links
+    a.link(href="#") click me
+    a.link.link_disabled(href="#") click me
 
-  +input("submit", "submit", "Перейти к оплате")
+    +input("submit", "submit", "Перейти к оплате")
 
-  label.form__label pagination
-  include /blocks/pagination/pagination.pug
-  +pagination(10)
+    label.form__label pagination
+    include /blocks/pagination/pagination.pug
+    +pagination(10)
 
-  label.form__label bullet list
-  ul.form__bullet-list.bullet-list
-    li.bullet-list__item Нельзя с питомцами
-    li.bullet-list__item Без вечеринок и мероприятий
-    li.bullet-list__item Время прибытия — после 13:00, а выезд до 12:00
+    label.form__label bullet list
+    ul.form__bullet-list.bullet-list
+      li.bullet-list__item Нельзя с питомцами
+      li.bullet-list__item Без вечеринок и мероприятий
+      li.bullet-list__item Время прибытия — после 13:00, а выезд до 12:00
 
-  include /blocks/room-info/room-info.pug
+    include /blocks/room-info/room-info.pug
   include /blocks/feedback/feedback.pug
 
 script(src="ui_kit/formElements/formElements.js")

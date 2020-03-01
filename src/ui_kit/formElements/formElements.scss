@@ -30,19 +30,22 @@
   &__label{
     font-family: Montserrat;
     font-size: 12px;
-    font-style: normal;
     font-weight: bold;
+    font-style: normal;
     line-height: 15px;
     display: block;
+    overflow: hidden;
     margin: 20px 0 0 0;
     text-transform: uppercase;
     color: $dark100;
   }
+
   &__input{
     display: flex;
     align-items:center;
     width: 100%;
     height: 44px;
+    padding-right: 40px;
   }
   &__subscription{
     display: flex;
@@ -52,6 +55,7 @@
       width: 28px;
       height: 28px;
       margin-left: -40px;
+      margin-top: 7px;
       cursor: pointer;
       fill: $purple;
     }
@@ -76,6 +80,7 @@
     line-height: 24px;
     text-transform: none;
     cursor: pointer;
+    overflow: hidden;
     &:before{
       position: absolute;
       top: 1px;
@@ -106,6 +111,7 @@
     font-weight: normal;
     line-height: 14px;
     margin: 7px 0;
+    overflow: hidden;
   }
   &__radio{
     position: absolute;
@@ -124,10 +130,12 @@
   &__radio-text{
     position: relative;
     display: inline-block;
+    max-width: 100%;
     margin-right: 10px;
     padding: 0 0 0 30px;
     line-height: 24px;
     cursor: pointer;
+    overflow: hidden;
     &:before{
       position: absolute;
       top: 0px;
@@ -173,6 +181,7 @@
     color: $dark75;
     line-height: 24px;
     cursor: pointer;
+    overflow: hidden;
     &:before{
       position: absolute;
       top: 0px;

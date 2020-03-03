@@ -1,12 +1,7 @@
-.room-info
-  svg.room-info__icon
-    use(xlink:href="#icon-insert_emoticon")
-  p.room-info__text.text
-    span.text__title Комфорт
-    |Шумопоглощающие стены
-.room-info
-  svg.room-info__icon
-    use(xlink:href="#icon-location_city")
-  p.room-info__text.text
-    span.text__title Удобство
-    |Окно в каждой из спален
+mixin room-info(options)
+  .room-info
+    svg.room-info__icon
+      use(xlink:href="#icon-" + options.icon)
+    p.room-info__text.text
+      span.text__title= options.title
+      =options.text

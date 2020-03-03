@@ -77,6 +77,8 @@ form.form
         "Время прибытия — после 13:00, а выезд до 12:00"])
 
     include /blocks/room-info/room-info.pug
+    +room-info({icon:"insert_emoticon" ,title:"Комфорт", text:"Шумопоглощающие стены"})
+    +room-info({icon:"location_city" ,title:"Удобство", text:"Окно в каждой из спален"})
   include /blocks/feedback/feedback.pug
 
 script(src="ui_kit/formElements/formElements.js")

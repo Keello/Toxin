@@ -1,0 +1,31 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="keywords", content="")
+    meta(name="description", content="")
+
+    link(rel="stylesheet", href="fonts/material-icons/material-icons.css")
+    link(href="blocks/calendar/datepicker.css" rel="stylesheet" type="text/css")
+    link(rel="stylesheet", href="main.scss")
+
+    title FSD Site
+
+  body
+    .body__wrapper
+      header.header
+        include blocks/header/header.pug
+        +header({
+          menu:{"Home":[""],
+            "About Us":[""],
+            "Services":["1"],
+            "Careers":[""],
+            "News":[""],
+            "Documentation":[""]},
+          user:""})
+      main.main
+        .container
+          h1 Пустая страница
+          a(href="index.pug") Вернуться к сайту

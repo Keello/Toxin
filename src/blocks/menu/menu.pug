@@ -4,7 +4,8 @@ mixin menu(values)
       each val,key in values
         if(val=="")
           li.menu__item
-            a= key
+            a.menu__link(href="empty.pug")= key
         else
-          li.menu__item= key
+          li.menu__item
+            a.menu__link(href="empty.pug")= key
             i.icon-expand_more

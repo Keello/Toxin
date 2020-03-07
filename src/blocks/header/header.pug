@@ -2,7 +2,8 @@ mixin header(options)
   .header__container.container
     .header__left
       .logo
-        img(src="img/logo.svg" class="logo__img")
+        a(href="index.pug")
+          img(src="img/logo.svg" class="logo__img" alt="logo")
         p.logo__text T<i class="icon-not_interested"></i>xin
     .header__right
       include /blocks/menu/menu.pug

@@ -2,8 +2,11 @@ mixin slider(options)
   .slider
     .slider__wrapper
       .slider__items
-        each photo in options.photos
-          img.slider__item(src="/blocks/card-room/img/"+photo)
+        each photo,number in options.photos
+          if(options.alt[number]==null)
+            img.slider__item(src="/blocks/card-room/img/"+photo, alt="фото номера")
+          else
+            img.slider__item(src="/blocks/card-room/img/"+photo, alt= options.alt[number])
     a.slider__control.slider__control_prev(href="#" role="button")
     a.slider__control.slider__control_next.slider__control_show(href="#" role="button")
 

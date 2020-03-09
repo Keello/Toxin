@@ -12,6 +12,6 @@ mixin button(options)
 
 mixin link(options)
   if(options.active == "false")
-    a.link.link_disabled(href="#") click me
+    a.link.link_disabled(href="empty.pug") click me
   else
-    a.link(href="#")= options.name
+    a.link(href="empty.pug")= options.name

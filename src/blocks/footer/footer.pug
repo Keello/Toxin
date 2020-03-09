@@ -24,9 +24,12 @@ mixin list(title, items)
   .footer__copyright-container.container
     p.footer__copyright-text.text Copyright © 2018 Toxin UI Kit. All rights reserved.
     .footer__icons
-      svg.footer__icon
-        use(xlink:href="#icon-twitter")
-      svg.footer__icon
-        use(xlink:href="#icon-facebook-square")
-      svg.footer__icon
-        use(xlink:href="#icon-instagram")
+      a(href="https://twitter.com/" target="_blank" rel="noopener noreferrer")
+        svg.footer__icon
+          use(xlink:href="#icon-twitter")
+      a(href="https://ru-ru.facebook.com/" target="_blank" rel="noopener noreferrer")
+        svg.footer__icon
+          use(xlink:href="#icon-facebook-square")
+      a(href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer")
+        svg.footer__icon
+          use(xlink:href="#icon-instagram")

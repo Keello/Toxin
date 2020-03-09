@@ -7,7 +7,7 @@ mixin slider(options)
             img.slider__item(src="/blocks/card-room/img/"+photo, alt="фото номера")
           else
             img.slider__item(src="/blocks/card-room/img/"+photo, alt= options.alt[number])
-    a.slider__control.slider__control_prev(href="#" role="button")
-    a.slider__control.slider__control_next.slider__control_show(href="#" role="button")
+    a.slider__control.slider__control_prev(role="button")
+    a.slider__control.slider__control_next.slider__control_show(role="button")
 
 script(src="/blocks/carousel/carousel.js")

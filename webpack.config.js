@@ -2,7 +2,30 @@ const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const MiniCssExctractPlugin = require('mini-css-extract-plugin')
+const OptimizeCssAssetPlugin = require('optimize-css-assets-webpack-plugin')
+const TerserWebpackPlugin = require('terser-webpack-plugin')
 
+const isDev = process.env.NODE_ENV === 'development'
+const isProd = !isDev
+console.log('IS DEV:', isDev)
+
+const optimization = () => {
+  const config = {
+    splitChunks: {
+      chunks: 'all',
+    }
+  }
+
+  if(isProd){
+    config.minimizer = [
+      new OptimizeCssAssetPlugin(),
+      new TerserWebpackPlugin(),
+    ]
+  }
+
+  return config
+}
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -20,11 +43,7 @@ module.exports = {
       '@blocks': path.resolve(__dirname, 'src/blocks/'),
     }
   },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    }
-  },
+  optimization: optimization(),
   devServer:{
     port: 4200
   },
@@ -39,12 +58,15 @@ module.exports = {
         to: path.resolve(__dirname, 'dist/img')
       }]
     }),
+    new MiniCssExctractPlugin({
+      filename: '[name].[contenthash].css',
+    })
   ],
   module:{
     rules:[
       {
         test:/\.css$/,
-        use:['style-loader', 'css-loader']
+        use:[MiniCssExctractPlugin.loader, 'css-loader']
       },
       {
         test: /\.s[a|c]ss$/,

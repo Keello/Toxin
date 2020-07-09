@@ -27,6 +27,8 @@ const optimization = () => {
   return config
 }
 
+const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
+
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
@@ -35,7 +37,7 @@ module.exports = {
     main: './index.js',
   },
   output: {
-    filename: '[name].[contenthash].js',
+    filename: filename('js'),
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
@@ -59,7 +61,7 @@ module.exports = {
       }]
     }),
     new MiniCssExctractPlugin({
-      filename: '[name].[contenthash].css',
+      filename: filename('css'),
     })
   ],
   module:{
@@ -70,7 +72,7 @@ module.exports = {
       },
       {
         test: /\.s[a|c]ss$/,
-        use: ['css-loader','sass-loader']
+        use: [MiniCssExctractPlugin.loader,'css-loader','sass-loader']
       },
       {
         test:/\.(ttf|woff|woff2|eot|otf)$/,

@@ -50,11 +50,12 @@ module.exports = {
   resolve: {
     alias: {
       '@blocks': path.resolve(__dirname, 'src/blocks/'),
+      //images: path.resolve(__dirname, 'src/img/'),
     }
   },
   optimization: optimization(),
   devServer:{
-    port: 4200
+    port: 8080
   },
   plugins: [
     new HTMLWebpackPlugin({
@@ -63,8 +64,12 @@ module.exports = {
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns:[{
-        from: path.resolve(__dirname, 'src/img/logo.svg'),
+        from: path.resolve(__dirname, 'src/img'),
         to: path.resolve(__dirname, 'dist/img')
+      },
+      {
+        from: path.resolve(__dirname, 'src/fonts'),
+        to: path.resolve(__dirname, 'dist/fonts')
       }]
     }),
     new MiniCssExctractPlugin({
@@ -83,11 +88,17 @@ module.exports = {
       },
       {
         test:/\.(ttf|woff|woff2|eot|otf)$/,
-        use:['file-loader']
+        loader:'file-loader',
+        options: {
+          name: 'fonts/[name].[ext]',
+        },
       },
       {
         test:/\.(png|jpg|svg|gif|)$/,
-        use:['file-loader']
+        loader:'file-loader',
+        options: {
+          name: 'img/[name].[ext]',
+        },
       },
       {
         test: /\.pug$/,

@@ -30,7 +30,27 @@ const optimization = () => {
 const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
 
 const cssLoaders = preproc => {
-  const loaders = [MiniCssExctractPlugin.loader, 'css-loader']
+  const loaders = [
+    {
+      loader: MiniCssExctractPlugin.loader,
+      options: {
+        hmr: isDev,
+      },
+    },
+    {
+      loader: 'css-loader',
+      options: {
+        sourceMap:true
+      },
+    },
+    {
+      loader: 'postcss-loader',
+      options: {
+        sourceMap:true,
+        config:{path: 'src/js/postcss.config.js'}
+      },
+    },
+  ]
   if(preproc)
     loaders.push(preproc)
   return loaders
@@ -41,7 +61,7 @@ module.exports = {
   mode: 'development',
   entry: {
     jquery: './js/jquery.min.js',
-    main: './index.js',
+    index: './index.js',
   },
   output: {
     filename: filename('js'),
@@ -55,7 +75,9 @@ module.exports = {
   },
   optimization: optimization(),
   devServer:{
-    port: 8080
+    port: 8080,
+    overlay: true,
+    hot: isDev,
   },
   plugins: [
     new HTMLWebpackPlugin({
@@ -79,12 +101,27 @@ module.exports = {
   module:{
     rules:[
       {
+        test:/\.js$/,
+        exclude: '/node_modules/',
+        loader: {
+          loader: 'babel-loader',
+          options:{
+            presets:[
+              '@babel/preset-env',
+            ]
+          }
+        }
+      },
+      {
         test:/\.css$/,
         use: cssLoaders()
       },
       {
         test: /\.s[a|c]ss$/,
-        use: cssLoaders('sass-loader')
+        use: cssLoaders({
+          loader: 'sass-loader',
+          options: {sourceMap:true}
+        })
       },
       {
         test:/\.(ttf|woff|woff2|eot|otf)$/,

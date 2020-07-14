@@ -105,7 +105,7 @@ module.exports = {
   mode: 'development',
   entry: {
     jquery: './js/jquery.min.js',
-    index: PATHS.src,
+    index: './index.js',
   },
   output: {
     filename: `js/${filename('js')}`,

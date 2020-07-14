@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
@@ -9,6 +10,12 @@ const TerserWebpackPlugin = require('terser-webpack-plugin')
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
 console.log('IS DEV:', isDev)
+
+const PATHS = {
+  src: path.join(__dirname, './src'),
+  dist: path.join(__dirname, './dist'),
+  blocks: path.join(__dirname, './blocks'),
+}
 
 const optimization = () => {
   const config = {
@@ -56,48 +63,65 @@ const cssLoaders = preproc => {
   return loaders
 }
 
-module.exports = {
-  context: path.resolve(__dirname, 'src'),
-  mode: 'development',
-  entry: {
-    jquery: './js/jquery.min.js',
-    index: './index.js',
-  },
-  output: {
-    filename: filename('js'),
-    path: path.resolve(__dirname, 'dist')
-  },
-  resolve: {
-    alias: {
-      '@blocks': path.resolve(__dirname, 'src/blocks/'),
-      //images: path.resolve(__dirname, 'src/img/'),
-    }
-  },
-  optimization: optimization(),
-  devServer:{
-    port: 8080,
-    overlay: true,
-    hot: isDev,
-  },
-  plugins: [
+const joinPlugins = () => {
+  const plugins = [
     new HTMLWebpackPlugin({
       template: './test.pug',
     }),
     new CleanWebpackPlugin(),
+    new MiniCssExctractPlugin({
+      //filename: `css/${filename('css')}`, не подключает иконки
+      filename: `${filename('css')}`,
+    }),
     new CopyWebpackPlugin({
       patterns:[{
-        from: path.resolve(__dirname, 'src/img'),
-        to: path.resolve(__dirname, 'dist/img')
+        from: `${PATHS.src}/img`,
+        to: `${PATHS.dist}/img`,
       },
       {
-        from: path.resolve(__dirname, 'src/fonts'),
-        to: path.resolve(__dirname, 'dist/fonts')
+        from: `${PATHS.src}/fonts`,
+        to: `${PATHS.dist}/fonts`,
       }]
     }),
-    new MiniCssExctractPlugin({
-      filename: filename('css'),
-    })
-  ],
+  ]
+
+
+  if (isDev) {
+    plugins.push(
+      new webpack.SourceMapDevToolPlugin({
+        filename:'[file].map',
+      })
+    )
+  }
+  return plugins
+}
+
+module.exports = {
+
+  externals: {
+    paths: PATHS
+  },
+  context: PATHS.src,
+  mode: 'development',
+  entry: {
+    jquery: './js/jquery.min.js',
+    index: PATHS.src,
+  },
+  output: {
+    filename: `js/${filename('js')}`,
+    path: PATHS.dist
+  },
+  optimization: optimization(),
+  devtool: 'cheap-module-eval-source-map',
+  devServer:{
+    port: 8081,
+    overlay:{
+      warnings: true,
+      errors: true,
+    },
+    hot: isDev,
+  },
+  plugins: joinPlugins(),
   module:{
     rules:[
       {

@@ -66,14 +66,14 @@ const cssLoaders = preproc => {
 const joinPlugins = () => {
   const plugins = [
     new HTMLWebpackPlugin({
-      template: './test.pug',
+      template: './index.pug',
     }),
     new CleanWebpackPlugin(),
     new MiniCssExctractPlugin({
       //filename: `css/${filename('css')}`, не подключает иконки
       filename: `${filename('css')}`,
     }),
-    new CopyWebpackPlugin({
+    /*new CopyWebpackPlugin({
       patterns:[{
         from: `${PATHS.src}/img`,
         to: `${PATHS.dist}/img`,
@@ -82,7 +82,7 @@ const joinPlugins = () => {
         from: `${PATHS.src}/fonts`,
         to: `${PATHS.dist}/fonts`,
       }]
-    }),
+    }),*/
   ]
 
 
@@ -152,13 +152,16 @@ module.exports = {
         loader:'file-loader',
         options: {
           name: 'fonts/[name].[ext]',
+          outputPath: 'fonts/'
         },
       },
       {
         test:/\.(png|jpg|svg|gif|)$/,
         loader:'file-loader',
         options: {
-          name: 'img/[name].[ext]',
+          name: '[name].[ext]',
+          outputPath: 'img/',
+          publicPath: './img',
         },
       },
       {

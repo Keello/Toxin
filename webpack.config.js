@@ -73,16 +73,13 @@ const joinPlugins = () => {
       //filename: `css/${filename('css')}`, не подключает иконки
       filename: `${filename('css')}`,
     }),
-    /*new CopyWebpackPlugin({
-      patterns:[{
-        from: `${PATHS.src}/img`,
-        to: `${PATHS.dist}/img`,
-      },
+    new CopyWebpackPlugin({
+      patterns:[
       {
         from: `${PATHS.src}/fonts`,
         to: `${PATHS.dist}/fonts`,
       }]
-    }),*/
+    }),
   ]
 
 

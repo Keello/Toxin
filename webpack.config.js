@@ -54,7 +54,7 @@ const cssLoaders = preproc => {
       loader: 'postcss-loader',
       options: {
         sourceMap:true,
-        config:{path: 'src/js/postcss.config.js'}
+        config:{path: 'src/postcss.config.js'}
       },
     },
   ]
@@ -79,6 +79,12 @@ const joinPlugins = () => {
         from: `${PATHS.src}/fonts`,
         to: `${PATHS.dist}/fonts`,
       }]
+    }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery'",
+      "window.$": "jquery"
     }),
   ]
 
@@ -118,6 +124,17 @@ module.exports = {
     },
     hot: isDev,
   },
+
+  resolve:{
+    alias:{
+      '~': 'src',
+      '~blocks': path.resolve(__dirname, 'src/blocks'),
+      '~fonts': path.resolve(__dirname, 'src/fonts'),
+      "jquery-ui": "jquery-ui/jquery-ui.js",
+      modules: path.join(__dirname, "node_modules"),
+    }
+  },
+
   plugins: joinPlugins(),
   module:{
     rules:[

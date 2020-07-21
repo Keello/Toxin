@@ -20,11 +20,11 @@ $card-border-radius: 4px;
   margin-bottom: 20px;
 }
 
-@import "/blocks/find-room/find-room.scss";
-@import "/blocks/sign-up/sign-up.scss";
-@import "/blocks/sign-in/sign-in.scss";
-@import "/blocks/room-reservation/room-reservation.scss";
-@import "/blocks/card-room/card-room.scss";
-@import "/blocks/carousel/carousel.scss"
+@import "./../../blocks/find-room/find-room.scss";
+@import "./../../blocks/sign-up/sign-up.scss";
+@import "./../../blocks/sign-in/sign-in.scss";
+@import "./../../blocks/room-reservation/room-reservation.scss";
+@import "./../../blocks/card-room/card-room.scss";
+@import "./../../blocks/carousel/carousel.scss"
 
 

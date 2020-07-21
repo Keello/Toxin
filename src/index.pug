@@ -7,15 +7,10 @@ html(lang="ru")
     meta(name="keywords", content="")
     meta(name="description", content="")
 
-    link(rel="stylesheet", href="fonts/material-icons/material-icons.css")
-    link(href="blocks/calendar/datepicker.css" rel="stylesheet" type="text/css")
-    link(rel="stylesheet", href="main.scss")
 
     include fonts/material-icons/svg/all-icons.svg
     include fonts/font-awesome/svg/all-icons.svg
 
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js")
 
     title FSD Site
 
@@ -34,9 +29,6 @@ html(lang="ru")
       main.main
         .container
           include ui_kit/formElements/formElements.pug
-          include ui_kit/cards/cards.pug
+          //include ui_kit/cards/cards.pug
       footer.footer
         include blocks/footer/footer.pug
-
-
-script(src="blocks/calendar/datepicker.js")

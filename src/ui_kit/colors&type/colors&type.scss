@@ -87,31 +87,132 @@ $dark5:  rgba(31, 32, 65, .05);
 $purple: #BC9CFF;
 $green:  #6FCF97;
 
-div[class^="colorDiv"]{
-    width: 70px;
-    height: 70px;
-    margin-bottom: 10px;
-    border-radius: 10px;
+
+.blocks{
+  display: flex;
+  margin: auto;
+  width: 80%;
+  padding: 145px 0px;
+
+  &__row{
+    display: flex;
+    flex: 1 1 100%;
+    justify-content:space-around
+  }
+  &__two-col{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 50%;
+  }
 }
 
-.colorDiv1{
-    background: $dark100;
-}
-.colorDiv2{
-    background: $dark75;
-}
-.colorDiv3{
-    background: $dark50;
-}
-.colorDiv4{
-    background: $dark25;
-}
-.colorDiv5{
-    background: $dark5;
-}
-.colorDiv6{
-    background: $purple;
-}
-.colorDiv7{
-    background: $green;
+.item{
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  align-items:flex-start;
+  &__preview-color{
+    width: 70px;
+    min-width: 70px;
+    height: 70px;
+    min-height: 70px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    &_dark100{
+      background: $dark100;
+    }
+    &_dark75{
+      background: $dark75;
+    }
+    &_dark50{
+      background: $dark50;
+    }
+    &_dark25{
+      background: $dark25;
+    }
+    &_dark5{
+      background: $dark5;
+    }
+    &_purple{
+      background: $purple;
+    }
+    &_green{
+      background: $green;
+    }
+  }
+  &__preview-text{
+    display: block;
+    min-width: 70px;
+    width: 70px;
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    color: $dark25;
+    text-align: right;
+    &_h1{
+      font-size: 24px;
+      line-height: 30px;
+    }
+    &_h2{
+      font-size: 19px;
+      line-height: 24px;
+    }
+    &_h3{
+      font-size: 12px;
+      line-height: 15px;
+    }
+    &_body{
+      font-size: 14px;
+      line-height: 24px;
+      text-transform: capitalize;
+    }
+  }
+  &__description-color{
+    height: 70px;
+    font-family: Quicksand;
+    font-size: 19px;
+    font-style: normal;
+    line-height: 29px;
+    margin-left: 40px;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+  }
+
+  &__description-text{
+    font-family: Quicksand;
+    font-weight: bold;
+    font-style: normal;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    color: $dark100;
+    &_h1{
+      font-size: 24px;
+      line-height: 30px;
+    }
+    &_h2{
+      font-size: 19px;
+      line-height: 24px;
+    }
+    &_h3{
+      font-family: Montserrat;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+    }
+    &_body{
+      font-family: Montserrat;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 24px;
+    }
+  }
+  &__text{
+    display: block;
+    width: 100%;
+    &_bold{
+      font-weight: bold;
+    }
+  }
 }

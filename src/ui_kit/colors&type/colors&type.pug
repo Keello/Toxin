@@ -1,12 +1,64 @@
-.colorDiv1
-.colorDiv2
-.colorDiv3
-.colorDiv4
-.colorDiv5
-.colorDiv6
-.colorDiv7
+mixin item(options)
+  -let previewClass= "item__preview"
+  -let descriptionClass= "item__description"
+  -let className= "item__text"
+  -if(options.color)
+    -previewClass += "-color"
+    -previewClass +=" item__preview-color"
+    -descriptionClass += "-color"
+    case options.color
+      when "dark100"
+        -previewClass += "_dark100"
+      when "dark75"
+        -previewClass += "_dark75"
+      when "dark50"
+        -previewClass += "_dark50"
+      when "dark25"
+        -previewClass += "_dark25"
+      when "dark5"
+        -previewClass += "_dark5"
+      when "purple"
+        -previewClass += "_purple"
+      when "green"
+        -previewClass += "_green"
+  -if(options.text)
+    -previewClass += "-text"
+    -previewClass += " item__preview-text"
+    -descriptionClass += "-text"
+    case options.text
+      when "h1"
+        -previewClass += "_h1"
+        -descriptionClass += " item__description-text_h1"
+      when "h2"
+        -previewClass += "_h2"
+        -descriptionClass += " item__description-text_h2"
+      when "h3"
+        -previewClass += "_h3"
+        -descriptionClass += " item__description-text_h3"
+      when "body"
+        -previewClass += "_body"
+        -descriptionClass += " item__description-text_body"
+  .item
+    div(class = previewClass)
+      -if(options.text)
+        p= options.text
+    div(class = descriptionClass)
+      p(class = options.isBold ? className+" item__text_bold" : className)= options.description
+      -if(options.subtext)
+        p(class = className)= options.subtext
 
-h1 h1 title
-h2 h2 title
-h3 h3 title
-p body text
+.blocks
+  .blocks__row
+    .blocks__two-col
+      +item({color:"dark100", description: "Dark Shade 100%", subtext: "#1F2041", isBold:true})
+      +item({color:"dark75", description: "Dark Shade 75%", subtext: "#1F2041", isBold:true})
+      +item({color:"dark50", description: "Dark Shade 50%", subtext: "#1F2041", isBold:true})
+      +item({color:"dark25", description: "Dark Shade 25%", subtext: "#1F2041", isBold:true})
+      +item({color:"dark5", description: "Dark Shade 5%", subtext: "#1F2041", isBold:true})
+      +item({color:"purple", description: "Purple", subtext: "#BC9CFF", isBold:true})
+      +item({color:"green", description: "Green", subtext: "#6FCF97", isBold:true})
+    .blocks__two-col
+      +item({text:"h1", description: "This one is the sub-section or widget title", isBold:true})
+      +item({text:"h2", description: "Next one is the item title inside widgets", isBold:true})
+      +item({text:"h3", description: "This is a label or CTA text ", isBold:true})
+      +item({text:"body", description: "This is the body text which is used for most of\u00A0the\u00A0design, like paragraphs, lists, etc."})

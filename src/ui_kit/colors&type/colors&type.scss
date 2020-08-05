@@ -97,13 +97,21 @@ $green:  #6FCF97;
   &__row{
     display: flex;
     flex: 1 1 100%;
-    justify-content:space-around
+    justify-content:space-between;
   }
   &__two-col{
     display: flex;
     flex-direction: column;
     flex: 0 0 50%;
   }
+}
+
+.color-container{
+  width: 280px;
+}
+
+.text-container{
+  width: 450px;
 }
 
 .item{

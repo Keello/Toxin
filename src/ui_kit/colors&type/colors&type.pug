@@ -49,7 +49,7 @@ mixin item(options)
 
 .blocks
   .blocks__row
-    .blocks__two-col
+    .color-container
       +item({color:"dark100", description: "Dark Shade 100%", subtext: "#1F2041", isBold:true})
       +item({color:"dark75", description: "Dark Shade 75%", subtext: "#1F2041", isBold:true})
       +item({color:"dark50", description: "Dark Shade 50%", subtext: "#1F2041", isBold:true})
@@ -57,7 +57,7 @@ mixin item(options)
       +item({color:"dark5", description: "Dark Shade 5%", subtext: "#1F2041", isBold:true})
       +item({color:"purple", description: "Purple", subtext: "#BC9CFF", isBold:true})
       +item({color:"green", description: "Green", subtext: "#6FCF97", isBold:true})
-    .blocks__two-col
+    .text-container
       +item({text:"h1", description: "This one is the sub-section or widget title", isBold:true})
       +item({text:"h2", description: "Next one is the item title inside widgets", isBold:true})
       +item({text:"h3", description: "This is a label or CTA text ", isBold:true})

@@ -8,81 +8,94 @@ include ./../../blocks/input/input.pug
 
 // ----------------------------------------------------------------
 form.form
-  .form__container
-    +input("text field", "textfield", "Email")
-    +input("subscription text field", "subscription", "Email")
-    +dropdown("dropdown", "Сколько гостей",
-      [
-      "спальни",
-      "кровати",
-      "ванные комнаты"
-      ])
-    +dropdown-date(["masked text field"], false)
-
-    +dropdown-date(["date dropdown","date dropdown"])
+  .container.form__container
+    .container__row
+      .container__three-col
+        +input("text field", "textfield", "Email")
+        +input("text field", "textfield", "This is pretty awesome")
+        +dropdown("dropdown", "Сколько гостей",
+          [
+          "спальни",
+          "кровати",
+          "ванные комнаты"
+          ])
+        +dropdown-date(["masked text field"], false)
+        +dropdown-date(["date dropdown","date dropdown"])
+        +dropdown-date(["filter date dropdown"], true, "dd M")
+        +input("subscription text field", "subscription", "Email")
+      .container__three-col
+        +input("checkbox buttons", "checkbox", "",
+          [
+          "Можно курить",
+          "Можно с питомцами",
+          "Можно пригласить гостей (до 10 человек)"
+          ])
+        +input("radio buttons", "radio", "",
+          [
+          "Мужчина",
+          "Женщина",
+          ])
+        +input("toggle", "toggle", "", "Получать спецпредложения")
+        //- ------Like button -----------
+        label.form__label like button
+        include ./../../blocks/like-button/like-button.pug
+        +like-button(12)
+        //- ------Rate button -----------
+        label.form__label rate button
+        include ./../../blocks/rate-button/rate-button.pug
+        +rate-button(2.5,5)
+        +rate-button(4,5)
+      .container__three-col
+        //- ------Range button -----------
+        label.form__label range slider
+        include ./../../blocks/range-slider/range-slider.pug
+        //- ------Buttons -----------
+        label.form__label buttons
+        include ./../../blocks/button/button.pug
+        +button({name:"click me"})
+        +button({name:"click me", theme:"colorful"})
+        +button({name:"click me", theme:"colorful", active:"false"})
+        +link({name:"click me"})
+        +link({name:"click me", active:"false"})
+        //- ------Submit -----------
+        +input("submit", "submit", "Перейти к оплате")
+        //- ------pagination -----------
+        label.form__label pagination
+        include ./../../blocks/pagination/pagination.pug
+        +pagination(10)
+    .container__row
+      .container__three-col
+        +dropdown("dropdown", "Сколько гостей",
+          [
+          "спальни",
+          "кровати",
+          "ванные комнаты"
+          ])
+        +input("expandable checkbox list", "expandable", "", ["Телевизор", "Завтрак", "Кроватка"])
+      .container__three-col
+        +input("rich checkbox buttons", "rich-checkbox", "",
+          {
+          "Широкий корридор":"Ширина коридоров в номере не менее 91 см.",
+          "Помощник для инвалидов": "На 1 этаже вас встретит специалист и проводит до номера.",
+          })
+      .container__three-col
+        label.form__label bullet list
+        include ./../../blocks/bullet-list/bullet-list.pug
+        +bullet-list([
+            "Нельзя с питомцами",
+            "Без вечеринок и мероприятий",
+            "Время прибытия — после 13:00, а выезд до 12:00"])
+    .container__row
+      .container__two-col
+        include ./../../blocks/room-info/room-info.pug
+        +room-info({icon:"insert_emoticon" ,title:"Комфорт", text:"Шумопоглощающие стены"})
+        +room-info({icon:"location_city" ,title:"Удобство", text:"Окно в каждой из спален"})
+      .container__two-col
+        include ./../../blocks/feedback/feedback.pug
+        +feedback({
+              title:"Мурад Сарафанов",
+              subtitle:"5 дней назад",
+              description:"Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
+              likes:1002})
     //------------------------------
-    +dropdown-date(["filter date dropdown"], true, "dd M")
-
-    +input("checkbox buttons", "checkbox", "",
-      [
-      "Можно курить",
-      "Можно с питомцами",
-      "Можно пригласить гостей (до 10 человек)"
-      ])
-    +input("rich checkbox buttons", "rich-checkbox", "",
-      {
-      "Широкий корридор":"Ширина коридоров в номере не менее 91 см.",
-      "Помощник для инвалидов": "На 1 этаже вас встретит специалист и проводит до номера.",
-      })
-    +input("expandable checkbox list", "expandable", "", ["Телевизор", "Завтрак", "Кроватка"])
-    +input("radio buttons", "radio", "",
-      [
-      "Мужчина",
-      "Женщина",
-      ])
-    +input("toggle", "toggle", "", "Получать спецпредложения")
-
-    label.form__label like button
-    include ./../../blocks/like-button/like-button.pug
-    +like-button(12)
-
-    label.form__label rate button
-    include ./../../blocks/rate-button/rate-button.pug
-    +rate-button(2.5,5)
-
-    label.form__label range slider
-    include ./../../blocks/range-slider/range-slider.pug
-
-    label.form__label buttons
-    include ./../../blocks/button/button.pug
-    +button({name:"click me"})
-    +button({name:"click me", theme:"colorful"})
-    +button({name:"click me", theme:"colorful", active:"false"})
-
-    label.form__label links
-    +link({name:"click me"})
-    +link({name:"click me", active:"false"})
-
-    +input("submit", "submit", "Перейти к оплате")
-
-    label.form__label pagination
-    include ./../../blocks/pagination/pagination.pug
-    +pagination(10)
-
-    label.form__label bullet list
-    include ./../../blocks/bullet-list/bullet-list.pug
-    +bullet-list([
-        "Нельзя с питомцами",
-        "Без вечеринок и мероприятий",
-        "Время прибытия — после 13:00, а выезд до 12:00"])
-
-    include ./../../blocks/room-info/room-info.pug
-    +room-info({icon:"insert_emoticon" ,title:"Комфорт", text:"Шумопоглощающие стены"})
-    +room-info({icon:"location_city" ,title:"Удобство", text:"Окно в каждой из спален"})
-  include ./../../blocks/feedback/feedback.pug
-  +feedback({
-        title:"Мурад Сарафанов",
-        subtitle:"5 дней назад",
-        description:"Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
-        likes:1002})
 

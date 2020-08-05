@@ -1,3 +1,24 @@
+/*---------------layout-----------*/
+.container{
+  margin: auto;
+  width: 100%;
+  &__row{
+    display: flex;
+    flex: 1 0 100%;
+    justify-content:space-between;
+    margin-bottom: 50px;
+  }
+  &__two-col{
+    flex: 0 0 50%;
+    margin: 0px -15px;
+  }
+  &__three-col{
+    flex: 0 0 33.333%;
+    padding: 0px 15px;
+  }
+}
+/*--------------------------------*/
+
 .text{
   font-family: Montserrat;
   font-size: 14px;

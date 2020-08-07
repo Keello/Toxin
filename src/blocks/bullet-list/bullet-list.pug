@@ -1,4 +1,5 @@
-mixin bullet-list(values)
+mixin bullet-list(param)
+  label.form__label= param.label
   ul.form__bullet-list.bullet-list
-    -for(var i=0; i<values.length; i++)
-      li.bullet-list__item= values[i]
+    -for(var i=0; i<param.value.length; i++)
+      li.bullet-list__item= param.value[i]

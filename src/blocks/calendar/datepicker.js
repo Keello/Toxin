@@ -23,6 +23,9 @@
             toggleSelected: true,
             keyboardNav: true,
 
+            confirmButton: true,
+            clearButton: true,
+
             position: 'bottom left',
             offset: 12,
 
@@ -45,8 +48,7 @@
             multipleDatesSeparator: ',',
             range: false,
 
-            confirmButton: true,
-            clearButton: true,
+
 
             showEvent: 'focus',
             autoClose: false,

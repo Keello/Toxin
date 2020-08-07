@@ -98,9 +98,8 @@
     z-index: -1;
     border-radius: 50%;
   }
-    .datepicker--cell.-selected-.-current- {
-      color: #fff; }
-  }
+  .datepicker--cell.-selected-.-current- {
+    color: #fff; }
   .datepicker--cell:empty {
     cursor: default; }
 

@@ -1,31 +1,31 @@
-mixin input(label, type, placeholder, values)
+mixin input(param)
   if(label != "")
-    if(type == "expandable")
-      label.form__label.expandable-list expandable checkbox list
+    if(param.type == "expandable")
+      label.form__label.expandable-list= param.label
     else
-      label.form__label= label
+      label.form__label= param.label
 
-  case type
+  case param.type
     when "textfield"
-      input.form__input.input(type=type placeholder=placeholder)
+      input.form__input.input(type=param.type placeholder=param.placeholder)
     when "subscription"
       .form__subscription
-        input.form__input.input(type=type placeholder=placeholder)
+        input.form__input.input(type=param.type placeholder=param.placeholder)
         <svg class="form__subscription-icon">
           <use xlink:href="#icon-arrow_forward"></use>
         </svg>
     when "checkbox"
-      each val in values
+      each val in param.value
         label.form__checkbox-label
-          input.form__checkbox(type=type name=type)
+          input.form__checkbox(type=param.type name=param.type)
           .form__checkbox-text.text= val
     when "radio"
-      each val in values
+      each val in param.value
         label.form__radio-label
-          input.form__radio(type=type name=type)
+          input.form__radio(type=param.type name=param.type)
           .form__radio-text.text= val
     when "rich-checkbox"
-      each val,key in values
+      each val,key in param.value
         label.form__checkbox-label
           input.form__checkbox(type="checkbox" name="checkbox")
           .form__checkbox-text.text
@@ -33,13 +33,13 @@ mixin input(label, type, placeholder, values)
             p.form__richCheckboxText= val
     when "expandable"
       .expandable-list__items
-        each val in values
+        each val in param.value
           label.form__checkbox-label
-            input.form__checkbox(type="checkbox" name=type)
+            input.form__checkbox(type="checkbox" name=param.type)
             .form__checkbox-text.text= val
     when "toggle"
       label.form__toggle-label
         input.form__toggle(type="checkbox")
-        .form__toggle-text.text= values
+        .form__toggle-text.text= param.value
     when "submit"
-      button.button.button_colorful.form__submit= placeholder
+      button.button.button_colorful.form__submit= param.value

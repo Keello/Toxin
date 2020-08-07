@@ -1,19 +1,19 @@
 //label - надпись над элементом
 //placeholder - текст если ничего не выбрано
-//values - массив значений выпадающего меню
+//value - массив значений выпадающего меню
 
-mixin dropdown(label, placeholder, values)
-  label.form__label= label
+mixin dropdown(param)
+  label.form__label= param.label
   .dropdown
     .dropdown__wrapper.form__subscription
-      input.dropdown__input.input(type="dropdown" placeholder=placeholder)
+      input.dropdown__input.input(type="dropdown" placeholder=param.placeholder)
       <svg class="dropdown__icon form__subscription-icon">
         <use xlink:href="#icon-expand_more"></use>
       </svg>
     .dropdown__submenu.input
-      -for(var i=0; i<values.length; i++)
+      -for(let i=0; i<param.value.length; i++)
         .dropdown__submenu-item
-          p.dropdown__text= values[i]
+          p.dropdown__text= param.value[i]
           .dropdown__submenu-item-counter
             button.dropdown__counter-button-minus(type="button") -
             input.dropdown__number(type="number" value="1")
@@ -25,11 +25,11 @@ mixin dropdown(label, placeholder, values)
 
 //range =true - выбрать диапазон дат, =false - выбрать 1 дату
 //dateformat - формат отображения даты. Например "dd-M-yyyy"
-mixin dropdown-date(label, range, dateformat)
-  if(label.length == 2)
+mixin dropdown-date(param)
+  if(param.label.length == 2)
     .dropdown-container
-      -for (var i = 0; i < label.length; i++)
-        label.form__label= label[i]
+      -for (var i = 0; i < param.label.length; i++)
+        label.form__label= param.label[i]
         .dropdown
           .form__subscription
             if(i==0)
@@ -39,7 +39,7 @@ mixin dropdown-date(label, range, dateformat)
                 data-position="bottom left"
                 data-range= "true"
                 data-multiple-dates-separator=" - "
-                data-date-format= dateformat)
+                data-date-format= param.dateformat)
               <svg class="dropdown__icon form__subscription-icon">
                 <use xlink:href="#icon-expand_more"></use>
               </svg>
@@ -51,16 +51,16 @@ mixin dropdown-date(label, range, dateformat)
                 <use xlink:href="#icon-expand_more"></use>
               </svg>
   else
-    label.form__label= label
+    label.form__label= param.label
     .dropdown
       .form__subscription
         input.dropdown__input.input.datepicker-here(
           type="dropdown"
           placeholder="ДД.ММ.ГГГГ"
           data-position="right top"
-          data-range= range ? "true" : "false"
+          data-range= param.range ? "true" : "false"
           data-multiple-dates-separator=" - "
-          data-date-format= dateformat)
+          data-date-format= param.dateformat)
         <svg class="dropdown__icon form__subscription-icon">
           <use xlink:href="#icon-expand_more"></use>
         </svg>

@@ -21,4 +21,10 @@
   &:hover::placeholder, &:focus::placeholder{
     color: $dark75;
   }
+  &_focus{
+    border: 1px solid $dark50;
+  }
+  &_focus::placeholder{
+    color: $dark75;
+  }
 }

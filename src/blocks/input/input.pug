@@ -7,7 +7,10 @@ mixin input(param)
 
   case param.type
     when "textfield"
-      input.form__input.input(type=param.type placeholder=param.placeholder)
+      if(param.focus == true)
+        input.form__input.input.input_focus(type=param.type placeholder=param.placeholder)
+      else
+        input.form__input.input(type=param.type placeholder=param.placeholder)
     when "subscription"
       .form__subscription
         input.form__input.input(type=param.type placeholder=param.placeholder)

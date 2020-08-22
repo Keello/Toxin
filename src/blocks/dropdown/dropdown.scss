@@ -7,6 +7,24 @@
 }
 .dropdown{
   position: relative;
+
+  &.open{
+    .dropdown__menu{
+      display: block;
+    }
+    .dropdown__backdrop{
+      display: block;
+    }
+  }
+  &__backdrop{
+    z-index: 100;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
   &__input{
     position: relative;
     width: 100%;
@@ -17,11 +35,14 @@
     fill:$dark50;
     margin-top: 0;
   }
-  &__submenu{
+  &__menu{
     display: none;
     position: absolute;
-    width: 100%;
-    z-index: 1;
+    left:0;
+    right: 0;
+    z-index: 999;
+    max-height: 200px;
+    overflow-y:auto;
     border:1px solid $dark50;
     box-sizing: border-box;
     padding: 0px 7px 10px 15px;
@@ -52,8 +73,7 @@
       margin: 0;
     }
   }
-  &__counter-button-minus,
-  &__counter-button-plus,{
+  &__counter-button{
     width: 30px;
     height: 30px;
     background: none;
@@ -69,6 +89,7 @@
       opacity: .5;
     }
   }
+
   &__text{
     margin: 0;
     text-transform: uppercase;

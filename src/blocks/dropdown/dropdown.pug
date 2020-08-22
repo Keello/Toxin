@@ -5,22 +5,23 @@
 mixin dropdown(param)
   label.form__label= param.label
   .dropdown
+    .dropdown__backdrop(data-type="backdrop")
     .dropdown__wrapper.form__subscription
-      input.dropdown__input.input(type="dropdown" placeholder=param.placeholder)
-      <svg class="dropdown__icon form__subscription-icon">
-        <use xlink:href="#icon-expand_more"></use>
+      input.dropdown__input.input(type="dropdown" placeholder=param.placeholder data-type="input")
+      <svg class="dropdown__icon form__subscription-icon" data-type="input">
+        <use xlink:href="#icon-expand_more" data-type="input"></use>
       </svg>
-    .dropdown__submenu.input
+    .dropdown__menu.input
       -for(let i=0; i<param.value.length; i++)
-        .dropdown__submenu-item
+        .dropdown__menu-item
           p.dropdown__text= param.value[i]
-          .dropdown__submenu-item-counter
-            button.dropdown__counter-button-minus(type="button") -
-            input.dropdown__number(type="number" value="1")
-            button.dropdown__counter-button-plus(type="button") +
-      .dropdown__submenu-buttons
-        button.dropdown_clear.link.link_disabled очистить
-        button.dropdown_confirm.link применить
+          .dropdown__menu-item-counter
+            button.dropdown__counter-button(type="button" data-type="counter-minus") -
+            input.dropdown__number(type="number" value="1" data-type="counter")
+            button.dropdown__counter-button(type="button" data-type="counter-plus") +
+      .dropdown__menu-buttons
+        button.dropdown_clear.link.link_disabled(data-type="clear") очистить
+        button.dropdown_confirm.link(data-type="confirm") применить
 
 
 //range =true - выбрать диапазон дат, =false - выбрать 1 дату

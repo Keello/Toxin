@@ -5,6 +5,7 @@ sup{
 
 .wrapper{
   display: table;
+  position: relative;
 }
 
 .slider-container{
@@ -17,7 +18,6 @@ sup{
 .slider-wrapper{
   width: 350px;
   display: inline-block;
-  position: relative;
 }
 
 .ui-slider{
@@ -36,6 +36,7 @@ sup{
 
 .ui-slider-handle{
   position: absolute;
+  box-sizing: content-box;
   z-index: 10;
   top: 50%;
   display: block;
@@ -63,7 +64,7 @@ sup{
 // Range Indicator
 .range-wrapper{
   position: absolute;
-  top: -38px;
+  top: -15px;
   right: 0;
 }
 .range{

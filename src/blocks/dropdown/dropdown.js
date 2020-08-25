@@ -1,8 +1,7 @@
 class Dropdown{
   constructor(elem){
     this.$el = elem;
-    this.clickHandler = this.clickHandler.bind(this);
-    this.$el.addEventListener('click', this.clickHandler);
+    this.setup();
   }
 
   clickHandler(){
@@ -42,8 +41,9 @@ class Dropdown{
     }
   }
 
-  open(){
-    this.$el.classList.add('open');
+  setup(){
+    this.clickHandler = this.clickHandler.bind(this);
+    this.$el.addEventListener('click', this.clickHandler);
   }
 
   close(){
@@ -68,12 +68,8 @@ class Dropdown{
     this.$el.querySelector('.dropdown__input').value = "";
   }
 
-  get isOpen(){
-    return this.$el.classList.contains('open');
-  }
-
   toggle(){
-    this.isOpen ? this.close() : this.open();
+    this.$el.classList.toggle('open');
   }
 
 }

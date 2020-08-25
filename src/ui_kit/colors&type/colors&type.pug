@@ -21,31 +21,36 @@ mixin item(options)
         -previewClass += "_purple"
       when "green"
         -previewClass += "_green"
+    .item
+      div(class = previewClass)
+      div(class = descriptionClass)
+        p(class = options.isBold ? className+" item__text_bold" : className)= options.description
+        -if(options.subtext)
+          p(class = className)= options.subtext
   -if(options.text)
     -previewClass += "-text"
-    -previewClass += " item__preview-text"
     -descriptionClass += "-text"
-    case options.text
-      when "h1"
-        -previewClass += "_h1"
-        -descriptionClass += " item__description-text_h1"
-      when "h2"
-        -previewClass += "_h2"
-        -descriptionClass += " item__description-text_h2"
-      when "h3"
-        -previewClass += "_h3"
-        -descriptionClass += " item__description-text_h3"
-      when "body"
-        -previewClass += "_body"
-        -descriptionClass += " item__description-text_body"
-  .item
-    div(class = previewClass)
-      -if(options.text)
-        p= options.text
-    div(class = descriptionClass)
-      p(class = options.isBold ? className+" item__text_bold" : className)= options.description
-      -if(options.subtext)
-        p(class = className)= options.subtext
+    .item
+      div(class = previewClass)
+        case options.text
+          when "h1"
+            h1= options.text
+          when "h2"
+            h2= options.text
+          when "h3"
+            h3= options.text
+          when "body"
+            =options.text
+      div(class = descriptionClass)
+        case options.text
+          when "h1"
+            h1= options.description
+          when "h2"
+            h2= options.description
+          when "h3"
+            h3= options.description
+          when "body"
+            =options.description
 
 .blocks
   .blocks__row
@@ -58,7 +63,7 @@ mixin item(options)
       +item({color:"purple", description: "Purple", subtext: "#BC9CFF", isBold:true})
       +item({color:"green", description: "Green", subtext: "#6FCF97", isBold:true})
     .text-container
-      +item({text:"h1", description: "This one is the sub-section or widget title", isBold:true})
-      +item({text:"h2", description: "Next one is the item title inside widgets", isBold:true})
-      +item({text:"h3", description: "This is a label or CTA text ", isBold:true})
+      +item({text:"h1", description: "This one is the sub-section or widget title"})
+      +item({text:"h2", description: "Next one is the item title inside widgets"})
+      +item({text:"h3", description: "This is a label or CTA text "})
       +item({text:"body", description: "This is the body text which is used for most of\u00A0the\u00A0design, like paragraphs, lists, etc."})

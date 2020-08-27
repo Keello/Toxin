@@ -1,7 +1,7 @@
 mixin expandable-list(param)
   .expandable-list
     .expandable-list__wrapper(data-type="input")
-      label.form__label.expandable-list__label(data-type="input")= param.label
+      label.form__label.label.expandable-list__label(data-type="input")= param.label
       svg.expandable-list__icon.form__subscription-icon(data-type="input")
         use(xlink:href="#icon-expand_more" data-type="input")
     .expandable-list__items

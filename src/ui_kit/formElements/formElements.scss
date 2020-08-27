@@ -17,6 +17,26 @@
     padding: 0px 15px;
   }
 }
+
+.buttons-container{
+  margin-top: 15px;
+  &__row{
+    display: flex;
+    margin: 0 -10px;
+    margin-bottom: 30px;
+  }
+  &__item{
+    padding: 0 10px;
+  }
+}
+
+.item-group{
+  margin-bottom: 40px;
+
+  &:first-child{
+    margin-top: 20px;
+  }
+}
 /*--------------------------------*/
 
 .text{
@@ -33,6 +53,7 @@
   }
 }
 
+@import './../../blocks/label/label.scss';
 @import './../../blocks/input/input.scss';
 @import "./../../blocks/expandable-list/expandable-list.scss";
 @import './../../blocks/like-button/like-button.scss';
@@ -49,16 +70,12 @@
     width: 25%;
   }
   &__label{
-    font-family: Montserrat;
-    font-size: 12px;
-    font-weight: bold;
-    font-style: normal;
-    line-height: 15px;
-    display: block;
-    overflow: hidden;
-    margin: 20px 0 0 0;
-    text-transform: uppercase;
-    color: $dark100;
+    margin-top: 20px;
+    margin-bottom: 16px;
+  }
+  &__input-label{
+    margin-top: 20px;
+    margin-bottom: 5px;
   }
 
   &__input{
@@ -244,4 +261,5 @@
 }
 
 @import './../../blocks/dropdown/dropdown.scss';
+@import "./../../blocks/expandable-list/expandable-list.scss";
 /*--------------------------------------------------------*/

@@ -1,10 +1,4 @@
-$('.expandable-list').click(function(){
-  if($('.expandable-list__items').is(':visible')){
-    $('.expandable-list__items').slideUp(200);
-    $('.expandable-list').removeClass('expandable-list_opened')
-  }
-  if($('.expandable-list__items').is(':hidden')){
-    $('.expandable-list__items').slideDown(200);
-    $('.expandable-list').addClass('expandable-list_opened')
-  }
-});
+import {Dropdown as List} from '../dropdown/dropdown.js';
+
+let elems = document.querySelectorAll('.expandable-list');
+elems.forEach(elem => new List(elem));

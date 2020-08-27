@@ -1,9 +1,6 @@
 mixin input(param)
   if(label != "")
-    if(param.type == "expandable")
-      label.form__label.expandable-list= param.label
-    else
-      label.form__label= param.label
+    label.form__label= param.label
 
   case param.type
     when "textfield"
@@ -34,12 +31,6 @@ mixin input(param)
           .form__checkbox-text.text
             span.text__title= key
             p.form__richCheckboxText= val
-    when "expandable"
-      .expandable-list__items
-        each val in param.value
-          label.form__checkbox-label
-            input.form__checkbox(type="checkbox" name=param.type)
-            .form__checkbox-text.text= val
     when "toggle"
       label.form__toggle-label
         input.form__toggle(type="checkbox")

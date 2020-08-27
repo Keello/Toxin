@@ -1,24 +1,27 @@
 .expandable-list{
-    position: relative;
-    &__items{
-        margin-top: 15px;
-        display: none;
+  position: relative;
+  &__wrapper{
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  &.open{
+    .expandable-list__items{
+      display: block;
     }
+  }
 
-    &:before{
-        font-family: 'Material icons';
-        font-weight: bold;
+  &__icon{
+    margin: 0;
+  }
 
-        position: absolute;
-        left: 240px;
-
-        content: '\e902';
-        color: $dark50;
-        font-size: 18px;
-    }
-    &_opened{
-        &:before{
-            content: '\e901';
-        }
-    }
+  &__items{
+    margin-top: 10px;
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: white;
+  }
 }

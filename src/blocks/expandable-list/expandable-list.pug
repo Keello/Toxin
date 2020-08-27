@@ -1,0 +1,11 @@
+mixin expandable-list(param)
+  .expandable-list
+    .expandable-list__wrapper(data-type="input")
+      label.form__label.expandable-list__label(data-type="input")= param.label
+      svg.expandable-list__icon.form__subscription-icon(data-type="input")
+        use(xlink:href="#icon-expand_more" data-type="input")
+    .expandable-list__items
+        each val in param.value
+          label.form__checkbox-label
+            input.form__checkbox(type="checkbox" name=param.type)
+            .form__checkbox-text.text= val

@@ -1,4 +1,4 @@
-class Dropdown{
+export class Dropdown{
   constructor(elem){
     this.$el = elem;
     this.setup();

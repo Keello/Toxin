@@ -1,44 +1,44 @@
 mixin input(param)
-  if(param.label != "")
-    if(param.type === "textfield" || param.type === "subscription")
-      label.form__input-label.label= param.label
+  .input
+    if(param.label)
+      if(param.type === "textfield" || param.type === "subscription")
+        label.input__label.label= param.label
 
-  case param.type
-    when "textfield"
-      if(param.focus == true)
-        input.form__input.input.input_focus(type=param.type placeholder=param.placeholder)
-      else
-        input.form__input.input(type=param.type placeholder=param.placeholder)
-    when "subscription"
-      .form__subscription
-        input.form__input.input(type=param.type placeholder=param.placeholder)
-        <svg class="form__subscription-icon">
-          <use xlink:href="#icon-arrow_forward"></use>
-        </svg>
-    when "checkbox"
-      label.form__label.label= param.label
-      each val in param.value
-        label.form__checkbox-wrapper
-          input.form__checkbox(type=param.type name=param.type)
-          .form__checkbox-text.text= val
-    when "radio"
-      label.form__label.label= param.label
-      each val in param.value
-        label.form__radio-wrapper
-          input.form__radio(type=param.type name=param.type)
-          .form__radio-text.text= val
-    when "rich-checkbox"
-      label.form__label.label= param.label
-      each val,key in param.value
-        label.form__checkbox-wrapper
-          input.form__checkbox(type="checkbox" name="checkbox")
-          .form__checkbox-text.text
-            span.text__title= key
-            p.form__richCheckboxText= val
-    when "toggle"
-      label.form__label.label= param.label
-      label.form__toggle-wrapper
-        input.form__toggle(type="checkbox")
-        .form__toggle-text.text= param.value
-    when "submit"
-      button.button.button_colorful.form__submit= param.value
+    case param.type
+      when "textfield"
+        if(param.focus == true)
+          input.input__textfield.input__textfield_focus(type=param.type placeholder=param.placeholder)
+        else
+          input.input__textfield(type=param.type placeholder=param.placeholder)
+      when "subscription"
+        .input__wrapper
+          input.input__textfield(type=param.type placeholder=param.placeholder)
+          svg.input__wrapper-icon
+            use(xlink:href="#icon-arrow_forward")
+      when "checkbox"
+        label.input__label-checkbox.label= param.label
+        each val in param.value
+          label.input__checkbox-wrapper
+            input.input__checkbox(type=param.type name=param.type)
+            .input__checkbox-text.text= val
+      when "radio"
+        label.input__label-radio.label= param.label
+        each val in param.value
+          label.input__radio-wrapper
+            input.input__radio(type=param.type name=param.type)
+            .input__radio-text.text= val
+      when "rich-checkbox"
+        label.input__label-rich.label= param.label
+        each val,key in param.value
+          label.input__checkbox-wrapper
+            input.input__checkbox(type="checkbox" name="checkbox")
+            .input__checkbox-text.text
+              span.text__title= key
+              p.input__richCheckboxText= val
+      when "toggle"
+        label.input__label-toggle.label= param.label
+        label.input__toggle-wrapper
+          input.input__toggle(type="checkbox")
+          .input__toggle-text.text= param.value
+      when "submit"
+        button.button.button_colorful.input__submit= param.value

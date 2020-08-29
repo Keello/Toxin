@@ -3,14 +3,13 @@
 //value - массив значений выпадающего меню
 
 mixin dropdown(param)
-  label.form__input-label.label= param.label
   .dropdown
     .dropdown__backdrop(data-type="backdrop")
-    .dropdown__wrapper.form__subscription
-      input.dropdown__input.input(type="dropdown" placeholder=param.placeholder data-type="input")
-      <svg class="dropdown__icon form__subscription-icon" data-type="input">
-        <use xlink:href="#icon-expand_more" data-type="input"></use>
-      </svg>
+    label.dropdown__label.label= param.label
+    .input__wrapper
+      input.dropdown__input.input__textfield(type="dropdown" placeholder=param.placeholder data-type="input")
+      svg.dropdown__icon.input__wrapper-icon(data-type="input")
+        use(xlink:href="#icon-expand_more" data-type="input")
     .dropdown__menu.input
       -for(let i=0; i<param.value.length; i++)
         .dropdown__menu-item
@@ -30,40 +29,38 @@ mixin dropdown-date(param)
   if(param.label.length == 2)
     .dropdown-container
       -for (var i = 0; i < param.label.length; i++)
-        label.form__input-label.label= param.label[i]
         .dropdown
-          .form__subscription
+          label.dropdown__label.label= param.label[i]
+          .input__wrapper
             if(i==0)
-              input.dropdown__input.input.start_date.datepicker-here(
+              input.dropdown__input.input__textfield.start_date.datepicker-here(
                 type="dropdown"
                 placeholder="ДД.ММ.ГГГГ"
                 data-position="bottom left"
                 data-range= "true"
                 data-multiple-dates-separator=" - "
                 data-date-format= param.dateformat)
-              <svg class="dropdown__icon form__subscription-icon">
-                <use xlink:href="#icon-expand_more"></use>
-              </svg>
+              svg.dropdown__icon.input__wrapper-icon(data-type="input")
+                use(xlink:href="#icon-expand_more" data-type="input")
             if(i==1)
-              input.dropdown__input.input.end_date(
+              input.dropdown__input.input__textfield.end_date(
                 type="dropdown"
                 placeholder="ДД.ММ.ГГГГ")
-              <svg class="dropdown__icon form__subscription-icon">
+              <svg class="dropdown__icon input__wrapper-icon">
                 <use xlink:href="#icon-expand_more"></use>
               </svg>
   else
-    label.form__input-label.label= param.label
     .dropdown
-      .form__subscription
-        input.dropdown__input.input.datepicker-here(
+      label.dropdown__label.label= param.label
+      .input__wrapper
+        input.dropdown__input.input__textfield.datepicker-here(
           type="dropdown"
           placeholder="ДД.ММ.ГГГГ"
           data-position="right top"
           data-range= param.range ? "true" : "false"
           data-multiple-dates-separator=" - "
           data-date-format= param.dateformat)
-        <svg class="dropdown__icon form__subscription-icon">
-          <use xlink:href="#icon-expand_more"></use>
-        </svg>
+        svg.dropdown__icon.input__wrapper-icon(data-type="input")
+          use(xlink:href="#icon-expand_more" data-type="input")
 
 

@@ -2,24 +2,18 @@
   display: flex;
   flex-direction:column;
   flex-wrap:wrap;
-  height: 1150px;
+  height: 1250px;
 }
 
-$card-border-radius: 4px;
-.card{
+.cards-wrapper{
   width: 380px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: $card-border-radius;
-  &__button{
-    margin-top: 15px;
-  }
+  margin-bottom: 40px;
 }
-.card-title{
-  margin-bottom: 20px;
+.cards-room-wrapper{
+  width: 300px;
 }
 
+@import "./../../blocks/card/card.scss";
 @import "./../../blocks/find-room/find-room.scss";
 @import "./../../blocks/sign-up/sign-up.scss";
 @import "./../../blocks/sign-in/sign-in.scss";

@@ -1,10 +1,12 @@
 mixin sign-in(title, button)
   .card-sign-in
-    h1.card-title= title
-    +input("", "textfield", "Email")
-    +input("", "textfield", "Пароль")
+    h1.card__title= title
+    .card__row
+      +input({type:"textfield", placeholder:"Email"})
+    .card__row
+      +input({type:"textfield", placeholder:"Пароль"})
     .card__button
-      +input("", "submit", button)
-    .card-sign-in-sign-up
+      +input({type:"submit", value:"Войти"})
+    .card-sign-in__sign-up
       p Нет аккаунта на Toxin?
       button.button Создать

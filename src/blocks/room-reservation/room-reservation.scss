@@ -3,36 +3,33 @@
 }
 
 .room-reservation__header{
-    display: flex;
-
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .room-reservation__number{
-    font-family: OpenSans;
-    font-size: 22px;
-    font-weight: bold;
-    font-style: normal;
-    line-height: 17px;
-    color: $dark100;
-    &:before{
-      content: "\2116";
-      font-size: 14px;
-      margin-right: 5px;
-      font-family: Montserrat;
-    }
+  font-family: OpenSans;
+  font-size: 22px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 17px;
+  color: $dark100;
+  &:before{
+    content: "\2116";
+    font-size: 14px;
+    margin-right: 5px;
+    font-family: Montserrat;
+  }
 }
 .room-reservation__type{
-    font-family: Montserrat;
-    font-size: 12px;
-    font-weight: bold;
-    font-style: normal;
-    line-height: 15px;
-    margin-left: 5px;
-
-    text-transform: uppercase;
-
-    color: $purple;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 15px;
+  margin-left: 5px;
+  text-transform: uppercase;
+  color: $purple;
 }
 
 .price{
@@ -56,9 +53,7 @@
 .room-reservation__price-body{
     display: flex;
     justify-content: space-between;
-
-    margin-top: 15px;
-
+    margin-top: 10px;
     color: $dark75;
 }
 

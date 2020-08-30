@@ -11,51 +11,59 @@ form.form
   .container.form__container
     .container__row
       .container__three-col
-        +input({label:"text field", type:"textfield", placeholder:"Email"})
-        +input({label:"text field", type:"textfield", focus:true, placeholder:"This is pretty awesome"})
-        +dropdown({label:"dropdown", placeholder:"Сколько гостей",
-          value:[
-          "спальни",
-          "кровати",
-          "ванные комнаты",
-          ]})
-        +dropdown-date({label:["masked text field"], range:false})
-        +dropdown-date({label:["date dropdown","date dropdown"]})
-        +dropdown-date({label:["filter date dropdown"], range:true, dateformat:"dd M"})
-        +input({label:"subscription text field", type:"subscription", placeholder:"Email"})
+        .form__item-input
+          +input({label:"text field", type:"textfield", placeholder:"Email"})
+        .form__item-input
+          +input({label:"text field", type:"textfield", focus:true, placeholder:"This is pretty awesome"})
+        .form__item-input
+          +dropdown({label:"dropdown", placeholder:"Сколько гостей",
+            value:[
+            "спальни",
+            "кровати",
+            "ванные комнаты",
+            ]})
+        .form__item-input
+          +dropdown-date({label:["masked text field"], range:false})
+        .form__item-input
+          +dropdown-date({label:["date dropdown","date dropdown"]})
+        .form__item-input
+          +dropdown-date({label:["filter date dropdown"], range:true, dateformat:"dd M"})
+        .form__item-input
+          +input({label:"subscription text field", type:"subscription", placeholder:"Email"})
       .container__three-col
-        .item-group
+        .form__item
           +input({label:"checkbox buttons", type:"checkbox", value:
             [
             "Можно курить",
             "Можно с питомцами",
             "Можно пригласить гостей (до 10 человек)"
             ]})
-        .item-group
+        .form__item
           +input({label:"radio buttons", type:"radio",
             value:[
             "Мужчина",
             "Женщина",
             ]})
-        .item-group
+        .form__item
           +input({label:"toggle", type:"toggle", value:"Получать спецпредложения"})
         //- ------Like button -----------
-        .item-group
-          label.form__label.label like button
+        .form__item
+          label.input__label-like-button.label like button
           include ./../../blocks/like-button/like-button.pug
           +like-button(12)
         //- ------Rate button -----------
-        .item-group
-          label.form__label.label rate button
+        .form__item
+          label.input__label-rate-button.label rate button
           include ./../../blocks/rate-button/rate-button.pug
           +rate-button(2.5,5)
           +rate-button(4,5)
       .container__three-col
-        //- ------Range button -----------
-        label.form__label.label range slider
-        include ./../../blocks/range-slider/range-slider.pug
+        .form__item
+          //- ------Range button -----------
+          label.input__label-range-slider.label range slider
+          include ./../../blocks/range-slider/range-slider.pug
         //- ------Buttons -----------
-        label.form__label.label buttons
+        label.input__label-buttons.label buttons
         include ./../../blocks/button/button.pug
         .buttons-container
           .buttons-container__row
@@ -74,12 +82,14 @@ form.form
               +link({name:"click me"})
             .buttons-container__item
               +link({name:"click me", active:"false"})
-        //- ------Submit -----------
-        +input({type:"submit", value:"Перейти к оплате"})
-        //- ------pagination -----------
-        label.form__label.label pagination
-        include ./../../blocks/pagination/pagination.pug
-        +pagination(10)
+        .form__item
+          //- ------Submit -----------
+          +input({type:"submit", value:"Перейти к оплате"})
+        .form__item
+          //- ------pagination -----------
+          label.input__label-pagination.label pagination
+          include ./../../blocks/pagination/pagination.pug
+          +pagination(10)
     .container__row
       .container__three-col
         include ./../../blocks/expandable-list/expandable-list.pug

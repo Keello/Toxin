@@ -1,12 +1,14 @@
 mixin find-room(title, button)
-  .card-find-room
-    h1.find-room-title.card-title= title
-    +dropdown-date(['прибытие','выезд'])
-    +dropdown("Гости", "Сколько гостей",
-      [
-      'Взрослые',
-      'дети',
-      'младенцы'
-      ])
-    .card__button.find-room-button
-      +input("", "submit", button)
+  .card-find-room.card
+    h1.card__title= title
+    .card__row-with-label
+      +dropdown-date({label:['прибытие','выезд']})
+    .card__row-with-label
+      +dropdown({label:"Гости", placeholder:"Сколько гостей",
+        value:[
+        'Взрослые',
+        'дети',
+        'младенцы'
+        ]})
+    .card-find-room__button
+      +input({type:"submit", value:"Подобрать номер"})

@@ -1,15 +1,26 @@
 mixin sign-up(title, button)
   .card-sign-up
-    h1.card-title= title
-    +input("", "textfield", "Имя")
-    +input("", "textfield", "Фамилия")
-    +input("", "radio", "",['Мужчина','Женщина',])
-    +dropdown-date(['дата рождения'], false)
-    +input("данные для входа в сервис", "textfield", "Email")
-    +input("", "textfield", "Пароль")
-    +input("", "toggle", "", "Получать спецпредложения")
+    h1.card__title= title
+    .card__row
+      +input({type:"textfield", placeholder:"Имя"})
+    .card__row
+      +input({type:"textfield", placeholder:"Фамилия"})
+    .card__row
+      +input({type:"radio",
+            value:[
+            "Мужчина",
+            "Женщина",
+            ]})
+    .card__row-with-label
+      +dropdown-date({label:["дата рождения"], range:false})
+    .card__row-with-label
+      +input({label:"данные для входа в сервис", type:"textfield", placeholder:"Email"})
+    .card__row
+      +input({type:"textfield", placeholder:"Пароль"})
+    .card__row
+      +input({type:"toggle", value:"Получать спецпредложения"})
     .card__button
-      +input("", "submit", button)
-    .card-sign-up-sign-in
+      +input({type:"submit", value:"Перейти к оплате"})
+    .card-sign-up__sign-in
       p Уже есть аккаунт на Toxin
       button.button Войти

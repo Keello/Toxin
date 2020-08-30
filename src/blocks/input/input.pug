@@ -16,19 +16,22 @@ mixin input(param)
           svg.input__wrapper-icon
             use(xlink:href="#icon-arrow_forward")
       when "checkbox"
-        label.input__label-checkbox.label= param.label
+        if(param.label)
+          label.input__label-checkbox.label= param.label
         each val in param.value
           label.input__checkbox-wrapper
             input.input__checkbox(type=param.type name=param.type)
             .input__checkbox-text.text= val
       when "radio"
-        label.input__label-radio.label= param.label
+        if(param.label)
+          label.input__label-radio.label= param.label
         each val in param.value
           label.input__radio-wrapper
             input.input__radio(type=param.type name=param.type)
             .input__radio-text.text= val
       when "rich-checkbox"
-        label.input__label-rich.label= param.label
+        if(param.label)
+          label.input__label-rich.label= param.label
         each val,key in param.value
           label.input__checkbox-wrapper
             input.input__checkbox(type="checkbox" name="checkbox")
@@ -36,7 +39,8 @@ mixin input(param)
               span.text__title= key
               p.input__richCheckboxText= val
       when "toggle"
-        label.input__label-toggle.label= param.label
+        if(param.label)
+          label.input__label-toggle.label= param.label
         label.input__toggle-wrapper
           input.input__toggle(type="checkbox")
           .input__toggle-text.text= param.value

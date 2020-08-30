@@ -16,16 +16,19 @@ mixin room-reservation(options)
       .room-reservation__header-price-body
         span.price.price_bold= options.price
         span.room-reservation__header-price-text в сутки
-    +dropdown-date(['прибытие','выезд'])
-    +dropdown("Гости", "Сколько гостей",
-    [
-    'Взрослые',
-    'дети',
-    'младенцы'
-    ])
-    +reservation-option({name:"9 990₽ х 4 суток", price:"39 960"})
-    +reservation-option({name:"Сбор за услуги: скидка 2 179₽", price:"0", theme:"info"})
-    +reservation-option({name:"Сбор за дополнительные услуги", price:"300", theme:"info"})
+    .card__row-with-label
+      +dropdown-date({label:['прибытие','выезд']})
+    .card__row-with-label
+      +dropdown({label:"Гости", placeholder:"Сколько гостей",
+        value:[
+        'Взрослые',
+        'дети',
+        'младенцы'
+      ]})
+    .card__row-with-label
+      +reservation-option({name:"9 990₽ х 4 суток", price:"39 960"})
+      +reservation-option({name:"Сбор за услуги: скидка 2 179₽", price:"0", theme:"info"})
+      +reservation-option({name:"Сбор за дополнительные услуги", price:"300", theme:"info"})
     .room-reservation__total
       .room-reservation__total-text
         |Итого
@@ -33,4 +36,4 @@ mixin room-reservation(options)
       .room-reservation__total-price.price
         |38 081
     .card__button.room-reservation-button
-      +input("", "submit", "Забронировать")
+      +input({type:"submit", value:"Забронировать"})

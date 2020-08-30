@@ -4,41 +4,48 @@ include ./../../blocks/rate-button/rate-button.pug
 include ./../../blocks/carousel/carousel.pug
 
 include ./../../blocks/card-room/card-room.pug
-//----------------------------------------------------------------
+//-------------------------------------------------------
 
 .cards-container
-  .card
-    include ./../../blocks/find-room/find-room.pug
-    +find-room("Найдем номера под ваши пожелания", "Подобрать номер")
-  .card
-    include ./../../blocks/sign-up/sign-up.pug
-    +sign-up("Регистрация аккаунта", "Перейти к оплате")
-  .card
-    include ./../../blocks/room-reservation/room-reservation.pug
-    +room-reservation({
-      number:888,
-      type:"люкс",
-      price:"9 990",
-      })
-  .card
-    include ./../../blocks/sign-in/sign-in.pug
-    +sign-in("Войти", "Войти")
-  .datepicker-here
-  .card
-    +card-room({
-      photos:["img1.jpg", "img2.jpg", "img3.jpg", "img2.jpg"],
-      alt:["слайд1","слайд2","слайд3","слайд4"],
-      number:888,
-      type:"люкс",
-      price:"9 990",
-      rate:5, maxRate:5,
-      feedbacks:145 })
-  .card
-    +card-room({
-      photos:["img2.jpg", "img3.jpg", "img2.jpg"],
-      alt:["слайд1","слайд2"],
-      number:840,
-      type:"",
-      price:"9 900",
-      rate:4, maxRate:5,
-      feedbacks:65 })
+  .cards-wrapper
+    .card
+      include ./../../blocks/find-room/find-room.pug
+      +find-room("Найдем номера под ваши пожелания", "Подобрать номер")
+  .cards-wrapper
+    .card
+      include ./../../blocks/sign-up/sign-up.pug
+      +sign-up("Регистрация аккаунта", "Перейти к оплате")
+  .cards-wrapper
+    .card
+      include ./../../blocks/room-reservation/room-reservation.pug
+      +room-reservation({
+        number:888,
+        type:"люкс",
+        price:"9 990",
+        })
+  .cards-wrapper
+    .card
+      include ./../../blocks/sign-in/sign-in.pug
+      +sign-in("Войти", "Войти")
+  .cards-wrapper
+    .datepicker-here
+  .cards-wrapper
+    .card
+      +card-room({
+        photos:["img1.jpg", "img2.jpg", "img3.jpg", "img2.jpg"],
+        alt:["слайд1","слайд2","слайд3","слайд4"],
+        number:888,
+        type:"люкс",
+        price:"9 990",
+        rate:5, maxRate:5,
+        feedbacks:145 })
+  .cards-wrapper
+    .card
+      +card-room({
+        photos:["img2.jpg", "img3.jpg", "img2.jpg"],
+        alt:["слайд1","слайд2"],
+        number:840,
+        type:"",
+        price:"9 900",
+        rate:4, maxRate:5,
+        feedbacks:65 })

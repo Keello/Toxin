@@ -1,10 +1,7 @@
 .card-find-room{
   padding: 30px;
-}
 
-.find-room-title{
-  margin-bottom: 0;
-}
-.find-room-button{
-  margin-top: 30px;
+  &__button{
+    margin-top: 30px;
+  }
 }

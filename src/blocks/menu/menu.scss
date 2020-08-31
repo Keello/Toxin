@@ -7,7 +7,7 @@
   &__item{
     display: inline-block;
     position: relative;
-    padding: 0 14px;
+    padding: 0 10px;
     list-style: none;
     i{
       position: relative;
@@ -30,7 +30,7 @@
   }
 
   &__item:last-child{
-    padding-right: 29px;
+    padding-right: 20px;
   }
 
   &__link{

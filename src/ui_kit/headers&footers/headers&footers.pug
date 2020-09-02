@@ -1,0 +1,20 @@
+.body__wrapper
+  header.header
+    include ./../../blocks/header/header.pug
+    +header({
+      menu:{"О нас":[""],
+        "Услуги":["1"],
+        "Вакансии":[""],
+        "Новости":[""],
+        "Соглашения":["1"]},
+      user:""})
+    +header({
+      menu:{"О нас":[""],
+        "Услуги":["1"],
+        "Вакансии":[""],
+        "Новости":[""],
+        "Соглашения":["1"]},
+      user:"Юлий Цезарь"})
+  .main
+  footer.footer
+    include ./../../blocks/footer/footer.pug

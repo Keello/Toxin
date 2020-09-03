@@ -1,0 +1,25 @@
+.main{
+  position: relative;
+  padding-top:70px;
+  padding-bottom: 20px;
+  &__img{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  &__form{
+    width: 380px;
+  }
+  &__description{
+    display: flex;
+    justify-content:flex-end;
+    margin-top: 320px;
+  }
+  &__text{
+    width: 270px;
+    text-align: right;
+  }
+}

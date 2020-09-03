@@ -1,14 +1,15 @@
 mixin header(options)
-  .header__container.container
-    .header__logo.logo
-      a(href="index.pug")
-        img.logo__img(src=require("./img/logo.svg").default alt="logo")
-      p.logo__text T<i class="icon-not_interested"></i>xin
-    .header__actions
-      include ./../menu/menu.pug
-      +menu(options.menu)
-      if(options.user != "" && options.user != null)
-        p.header__user-text= options.user
-      else
-        button.header__button.button Войти
-        button.header__button.button.button_colorful Зарегистрироваться
+  header.header
+    .header__container.container
+      .header__logo.logo
+        a(href="index.pug")
+          img.logo__img(src=require("./img/logo.svg").default alt="logo")
+        p.logo__text T<i class="icon-not_interested"></i>xin
+      .header__actions
+        include ./../menu/menu.pug
+        +menu(options.menu)
+        if(options.user != "" && options.user != null)
+          p.header__user-text= options.user
+        else
+          button.header__button.button Войти
+          button.header__button.button.button_colorful Зарегистрироваться

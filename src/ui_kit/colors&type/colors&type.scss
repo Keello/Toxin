@@ -1,93 +1,127 @@
 //------------------Шрифты---------------------
 @font-face {
-    font-family: "Quicksand";
-    src: url("./fonts/Quicksand-Regular.otf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
+  font-family: "Quicksand";
+  src: url("./fonts/Quicksand-Regular.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: "Quicksand";
-    src: url("./fonts/Quicksand-Bold.otf") format("truetype");
-    font-style: normal;
-    font-weight: bold;
+  font-family: "Quicksand";
+  src: url("./fonts/Quicksand-Bold.otf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
 }
 
 @font-face {
-    font-family: "Montserrat";
-    src: url("./fonts/Montserrat-Medium.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: "Montserrat";
-    src: url("./fonts/Montserrat-Bold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: bold;
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
 }
 @font-face {
-    font-family: "Montserrat";
-    src: url("./fonts/Montserrat-Bold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: bold;
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
 }
 
 @font-face {
-    font-family: "OpenSans";
-    src: url("./fonts/OpenSans-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
+  font-family: "OpenSans";
+  src: url("./fonts/OpenSans-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
 @font-face {
-    font-family: "OpenSans";
-    src: url("./fonts/OpenSans-Bold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: bold;
+  font-family: "OpenSans";
+  src: url("./fonts/OpenSans-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
 }
 
 //------------------Текст и заголовки---------------------
 
 body{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
-    color: rgba(31, 32, 65, 0.75);
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $mainFontSize;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  @media (max-width: $full_with){
+    @include font($mobFontSize,$mainFontSize);
+  }
+  @media (max-width: $smPhone){
+    font-size: $mobFontSize;
+  }
 }
 
 h1{
-    font-family: Quicksand, OpenSans;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
+  font-family: Quicksand, OpenSans;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  @media (max-width: $full_with){
+    @include font(18px,24px);
+  }
+  @media (max-width: $smPhone){
+    font-size: 18px;
+  }
 }
 
 h2{
-    font-family: Quicksand, OpenSans;
-    font-weight: bold;
-    font-size: 19px;
-    line-height: 24px;
+  font-family: Quicksand, OpenSans;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  @media (max-width: $full_with){
+    @include font(14px,19px);
+  }
+  @media (max-width: $smPhone){
+    font-size: 14px;
+  }
 }
 
 h3{
-    font-family: Montserrat;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 15px;
+  text-transform: uppercase;
+  @media (max-width: $full_with){
+    @include font(9px,12px);
+  }
+  @media (max-width: $smPhone){
+    font-size: 9px;
+  }
 }
 
-
-//------------------Цвета---------------------
-$dark100:  rgba(31, 32, 65, 1);
-$dark75:  rgba(31, 32, 65, .75);
-$dark50:  rgba(31, 32, 65, .5);
-$dark25:  rgba(31, 32, 65, .25);
-$dark5:  rgba(31, 32, 65, .05);
-$purple: #BC9CFF;
-$green:  #6FCF97;
+.text{
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  color: $dark50;
+  &__title{
+    font-weight: bold;
+    display: block;
+    color: $dark75;
+  }
+  @media (max-width: $full_with){
+    @include font($mobFontSize,$mainFontSize);
+  }
+  @media (max-width: $smPhone){
+    font-size: $mobFontSize;
+  }
+}
 
 /*---------------layout-----------*/
 .blocks{

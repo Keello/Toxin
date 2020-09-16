@@ -1,4 +1,6 @@
-@import "reset.scss";
+@import "./scss/reset.scss";
+@import "./scss/vars.scss";
+@import "./scss/mixins.scss";
 /*-----------------UI_KIT---------------------*/
 @import "./ui_kit/colors&type/colors&type.scss";
 @import "./ui_kit/formElements/formElements.scss";
@@ -6,28 +8,55 @@
 /*-----------------Pages---------------------*/
 @import "./pages/landing/landing.scss";
 
+/*----------------Blocks---------------------*/
+@import "./blocks/header/header.scss";
+@import "./blocks/footer/footer.scss";
+@import "./blocks/logo/logo.scss";
+@import "./blocks/menu/menu.scss";
+@import "./blocks/burger/burger.scss";
 
-$full_with: 1440px;
-
+/*-----------------Layout-------------------*/
+html{
+  font-size: $mainFontSize;
+}
+@media (max-width: $laptop){
+  html{
+    
+  }
+}
+/*-------------------------------------------*/
 .body{
+  position: relative;
   &__wrapper{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction:column;
-    min-height: 100%;
   }
 }
 .page{
-  flex:1 1 auto;
+  flex: 1 0 100%;
 }
 .container{
   margin: 0 auto;
   width:$full_with;
   max-width:90%;
 }
-
-@import "./blocks/header/header.scss";
-@import "./blocks/footer/footer.scss";
-@import "./blocks/logo/logo.scss";
-@import "./blocks/menu/menu.scss";
 /*------------------------------------------------*/
 
+.ibg{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.ibg img{
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}

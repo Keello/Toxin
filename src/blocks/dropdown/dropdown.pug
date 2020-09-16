@@ -5,7 +5,7 @@
 mixin dropdown(param)
   .dropdown
     .dropdown__backdrop(data-type="backdrop")
-    label.dropdown__label.label= param.label
+    h3.dropdown__label.label= param.label
     .input__wrapper
       input.dropdown__input.input__textfield(type="dropdown" placeholder=param.placeholder data-type="input")
       svg.dropdown__icon.input__wrapper-icon(data-type="input")
@@ -30,7 +30,7 @@ mixin dropdown-date(param)
     .dropdown-container
       -for (var i = 0; i < param.label.length; i++)
         .dropdown
-          label.dropdown__label.label= param.label[i]
+          h3.dropdown__label.label= param.label[i]
           .input__wrapper
             if(i==0)
               input.dropdown__input.input__textfield.start_date.datepicker-here(
@@ -51,7 +51,7 @@ mixin dropdown-date(param)
               </svg>
   else
     .dropdown
-      label.dropdown__label.label= param.label
+      h3.dropdown__label.label= param.label
       .input__wrapper
         input.dropdown__input.input__textfield.datepicker-here(
           type="dropdown"

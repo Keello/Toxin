@@ -30,20 +30,6 @@
 }
 /*--------------------------------*/
 
-.text{
-  font-family: Montserrat;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  color: $dark50;
-
-  &__title{
-    font-weight: bold;
-    display: block;
-    color: $dark75;
-  }
-}
-
 @import './../../blocks/label/label.scss';
 @import './../../blocks/input/input.scss';
 @import "./../../blocks/expandable-list/expandable-list.scss";

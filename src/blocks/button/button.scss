@@ -1,13 +1,12 @@
 $border: 2px;
 .button{
   font-family: Montserrat;
-  font-size: 12px;
+  font-size: rem(12);
   font-weight: bold;
   font-style: normal;
-  line-height: 15px;
+  line-height: rem(15);
   position: relative;
-  height: 44px;
-  padding: 5px 18px;
+  padding: rem(13) rem(20);
   cursor: pointer;
   text-transform: uppercase;
   color: $purple;

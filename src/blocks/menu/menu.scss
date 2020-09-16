@@ -1,9 +1,5 @@
 .menu{
   display: flex;
-  flex:1 1 auto;
-  justify-content: flex-end;
-  line-height: 17px;
-
   &__item{
     display: inline-block;
     position: relative;
@@ -42,5 +38,27 @@
     letter-spacing: -.09px;
     text-decoration: none;
     color: rgba(31, 32, 65, .5);
+  }
+}
+
+@media (max-width: $tablet){
+  .menu{
+    &__item{
+      display: block;
+      position: relative;
+      margin-bottom: 25px;
+      text-align: center;
+      i{
+        position: absolute;
+        top:-5px;
+      }
+    }
+    &__item:last-child{
+      padding-right: 10px;
+    }
+    &__link{
+      text-transform: uppercase;
+      font-size: 18px;
+    }
   }
 }

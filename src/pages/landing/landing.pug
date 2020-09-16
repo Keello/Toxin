@@ -15,6 +15,7 @@ html(lang="ru")
     include ./../../blocks/find-room/find-room.pug
     include ./../../blocks/dropdown/dropdown.pug
     include ./../../blocks/input/input.pug
+    include ./../../blocks/burger/burger.pug
 
     title Landing page
 
@@ -29,12 +30,12 @@ html(lang="ru")
           "Соглашения":["1"]},
         user:""})
       main.page
-        section.main
-          img.main__img(src=require("./img/main_bg.png").default alt="main_bg")
+        section.main.ibg
+          img.main__image(src=require("./img/main_bg.png").default alt="main_bg")
           .main__container.container
             .main__form
               +find-room("Найдем номера под ваши пожелания", "Подобрать номер")
             .main__description
               p.main__text Лучшие номера для вашей работы, отдыха и просто вдохновения
-        include ./../../blocks/footer/footer.pug
-        +footer()
+      include ./../../blocks/footer/footer.pug
+      +footer()

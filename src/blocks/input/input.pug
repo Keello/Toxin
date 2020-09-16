@@ -2,7 +2,7 @@ mixin input(param)
   .input
     if(param.label)
       if(param.type === "textfield" || param.type === "subscription")
-        label.input__label.label= param.label
+        h3.input__label.label= param.label
 
     case param.type
       when "textfield"
@@ -17,21 +17,21 @@ mixin input(param)
             use(xlink:href="#icon-arrow_forward")
       when "checkbox"
         if(param.label)
-          label.input__label-checkbox.label= param.label
+          h3.input__label-checkbox.label= param.label
         each val in param.value
           label.input__checkbox-wrapper
             input.input__checkbox(type=param.type name=param.type)
             .input__checkbox-text.text= val
       when "radio"
         if(param.label)
-          label.input__label-radio.label= param.label
+          h3.input__label-radio.label= param.label
         each val in param.value
           label.input__radio-wrapper
             input.input__radio(type=param.type name=param.type)
             .input__radio-text.text= val
       when "rich-checkbox"
         if(param.label)
-          label.input__label-rich.label= param.label
+          h3.input__label-rich.label= param.label
         each val,key in param.value
           label.input__checkbox-wrapper
             input.input__checkbox(type="checkbox" name="checkbox")
@@ -40,7 +40,7 @@ mixin input(param)
               p.input__richCheckboxText= val
       when "toggle"
         if(param.label)
-          label.input__label-toggle.label= param.label
+          h3.input__label-toggle.label= param.label
         label.input__toggle-wrapper
           input.input__toggle(type="checkbox")
           .input__toggle-text.text= param.value

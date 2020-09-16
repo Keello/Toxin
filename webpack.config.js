@@ -70,7 +70,6 @@ const joinPlugins = () => {
     }),
     new CleanWebpackPlugin(),
     new MiniCssExctractPlugin({
-      //filename: `css/${filename('css')}`, не подключает иконки
       filename: `${filename('css')}`,
     }),
     new CopyWebpackPlugin({
@@ -112,7 +111,7 @@ module.exports = {
   },
   output: {
     filename: `js/${filename('js')}`,
-    path: PATHS.dist
+    path: PATHS.dist,
   },
   optimization: optimization(),
   devtool: 'cheap-module-eval-source-map',

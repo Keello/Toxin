@@ -48,22 +48,22 @@ form.form
           +input({label:"toggle", type:"toggle", value:"Получать спецпредложения"})
         //- ------Like button -----------
         .form__item
-          label.input__label-like-button.label like button
+          h3.input__label-like-button.label like button
           include ./../../blocks/like-button/like-button.pug
           +like-button(12)
         //- ------Rate button -----------
         .form__item
-          label.input__label-rate-button.label rate button
+          h3.input__label-rate-button.label rate button
           include ./../../blocks/rate-button/rate-button.pug
           +rate-button(2.5,5)
           +rate-button(4,5)
       .container__three-col
         .form__item
           //- ------Range button -----------
-          label.input__label-range-slider.label range slider
+          h3.input__label-range-slider.label range slider
           include ./../../blocks/range-slider/range-slider.pug
         //- ------Buttons -----------
-        label.input__label-buttons.label buttons
+        h3.input__label-buttons.label buttons
         include ./../../blocks/button/button.pug
         .buttons-container
           .buttons-container__row
@@ -87,7 +87,7 @@ form.form
           +input({type:"submit", value:"Перейти к оплате"})
         .form__item
           //- ------pagination -----------
-          label.input__label-pagination.label pagination
+          h3.input__label-pagination.label pagination
           include ./../../blocks/pagination/pagination.pug
           +pagination(10)
     .container__row

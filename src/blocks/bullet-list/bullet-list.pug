@@ -1,5 +1,5 @@
 mixin bullet-list(param)
-  label.label= param.label
+  h3.label= param.label
   ul.form__bullet-list.bullet-list
     -for(var i=0; i<param.value.length; i++)
       li.bullet-list__item= param.value[i]

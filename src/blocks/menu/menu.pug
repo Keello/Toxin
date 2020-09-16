@@ -1,7 +1,8 @@
-mixin menu(values)
-  nav.menu
-    ul
-      each val,key in values
+mixin menu(options)
+  +burger({class:"header__burger"})
+  nav(class = options.class + " menu")
+    ul.menu__list
+      each val,key in options.values
         if(val=="")
           li.menu__item
             a.menu__link(href="empty.pug")= key

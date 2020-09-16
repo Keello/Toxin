@@ -6,16 +6,32 @@
     display: flex;
     justify-content: space-between;
     padding: 100px 0;
+    @media (max-width: $tablet){
+      justify-content:center;
+      padding: 0;
+    }
   }
   &__title{
     text-transform: uppercase;
   }
   &__description{
-    max-width: 24%;
+    flex:0 1 24%;
     &-text{
       margin-top: 20px;
       line-height: 24px;
       color: $dark75;
+      @media (max-width: $tablet){
+        display: none;
+      }
+    }
+    @media (max-width: $tablet){
+      display: flex;
+      justify-content:center;
+    }
+  }
+  &__logo{
+    @media (max-width: $tablet){
+      margin-bottom: 20px;
     }
   }
   &__list{
@@ -24,9 +40,15 @@
       line-height: 17px;
       margin-top: 20px;
     }
+    @media (max-width: $tablet){
+      display: none;
+    }
   }
   &__subscribe{
     max-width: 23%;
+    @media (max-width: $tablet){
+      display: none;
+    }
     &-input{
       margin-top: 20px;
     }
@@ -45,10 +67,21 @@
       display: flex;
       align-items:center;
       justify-content: space-between;
+      @media (max-width: $tablet){
+        display: block;
+        text-align: center;
+      }
     }
     &-text{
       color: $dark75;
       line-height: 17px;
+      @media (max-width: $tablet){
+        margin-bottom: 25px;
+      }
+    }
+    @media (max-width: $tablet){
+      border:none;
+      box-shadow: none;
     }
   }
   &__icon{
@@ -58,5 +91,9 @@
     margin-left: 20px;
     cursor: pointer;
     fill: $purple;
+  }
+
+  @media (max-width: $tablet){
+    padding: 120px 0;
   }
 }

@@ -2,7 +2,7 @@ mixin list(options)
   .footer__list
     h3.footer__title= options.title
     each val in options.items
-      p.footer__list-item.text= val
+      a.footer__list-item.text= val
 
 mixin footer()
   footer.footer

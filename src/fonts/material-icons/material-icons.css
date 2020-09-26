@@ -66,3 +66,6 @@
 .icon-keyboard_arrow_right:before {
   content: "\e90d";
 }
+.icon-whatshot:before {
+  content: "\e90e";
+}

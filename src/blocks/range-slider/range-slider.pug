@@ -1,6 +1,8 @@
-.wrapper
-  .slider-container
-    .slider-wrapper
-      #slider-range
-      .range-wrapper
-        .range
+mixin range(options)
+  .wrapper
+    .slider-container
+      .slider-wrapper
+        #slider-range
+        .range-wrapper
+          .range
+      p.slider-description=options.description

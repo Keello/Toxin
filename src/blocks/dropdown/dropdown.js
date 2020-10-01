@@ -55,7 +55,21 @@ export class Dropdown{
     let sum = 0;
     let numbers = this.$el.querySelectorAll('.dropdown__number');
     numbers.forEach(number => sum+= +number.value);
-    this.$el.querySelector('.dropdown__input').value = "Сумма счетчиков: " + sum;
+    if(sum===0){
+      this.$el.querySelector('.dropdown__input').value = "Не указано количество гостей";
+    }
+    else if(sum===11||sum===12||sum===13||sum===14){
+      this.$el.querySelector('.dropdown__input').value = sum + " гостей";
+    }
+    else if(sum%10===1){
+      this.$el.querySelector('.dropdown__input').value = sum + " гость";
+    }
+    else if(sum%10>=5||sum%10===0){
+       this.$el.querySelector('.dropdown__input').value = sum + " гостей";
+    }
+    else if(sum%10<5){
+       this.$el.querySelector('.dropdown__input').value = sum + " гостя";
+    }
   }
 
   clear(){

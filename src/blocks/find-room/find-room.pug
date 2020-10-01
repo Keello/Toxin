@@ -1,6 +1,6 @@
-mixin find-room(title, button)
+mixin find-room(options)
   .card-find-room.card
-    h1.card__title= title
+    h1.card__title= options.title
     .card__row-with-label
       +dropdown-date({label:['прибытие','выезд']})
     .card__row-with-label
@@ -11,4 +11,4 @@ mixin find-room(title, button)
         'младенцы'
         ]})
     .card-find-room__button
-      +input({type:"submit", value:"Подобрать номер"})
+      +input({type:"submit", value:options.button})

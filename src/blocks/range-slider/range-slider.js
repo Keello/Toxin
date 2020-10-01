@@ -3,10 +3,10 @@ $(function() {
   // Initiate Slider
   $('#slider-range').slider({
     range: true,
-    min: 10000,
-    max: 100000,
-    step: 500,
-    values: [10000, 50000]
+    min: 5000,
+    max: 10000,
+    step: 100,
+    values: [5000, 10000]
   });
 
   // Apply initial values to the range container

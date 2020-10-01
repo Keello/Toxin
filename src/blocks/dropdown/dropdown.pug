@@ -13,7 +13,7 @@ mixin dropdown(param)
     .dropdown__menu.input
       -for(let i=0; i<param.value.length; i++)
         .dropdown__menu-item
-          p.dropdown__text= param.value[i]
+          h3.dropdown__text= param.value[i]
           .dropdown__menu-item-counter
             button.dropdown__counter-button(type="button" data-type="counter-minus") -
             input.dropdown__number(type="number" value="1" data-type="counter")

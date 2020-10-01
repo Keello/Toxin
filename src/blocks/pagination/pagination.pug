@@ -1,12 +1,13 @@
 mixin pagination(pages)
-  ul.pagination
-    li.pagination__item.pagination__item-prev
-    -for(var i=1; i<=pages; i++)
-      if(i==1)
-        li.pagination__item.pagination__item_active(data-page=i)
-          a.pagination__button= i
-      else
-        li.pagination__item(data-page=i)
-          a.pagination__button= i
-    li.pagination__item.pagination__item-next
-  p.pagination__info-text.text 1 – 12 из 100+ вариантов аренды
+  .pagination
+    ul.pagination__list
+      li.pagination__item.pagination__item-prev
+      -for(let i=1; i<=pages; i++)
+        if(i==1)
+          li.pagination__item.pagination__item_active(data-page=i)
+            a.pagination__button= i
+        else
+          li.pagination__item(data-page=i)
+            a.pagination__button= i
+      li.pagination__item.pagination__item-next
+    p.pagination__info-text.text 1 – 12 из 100+ вариантов аренды

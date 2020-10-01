@@ -1,0 +1,18 @@
+.banner{
+  display: flex;
+  height: 500px;
+  &__column_big{
+    flex-direction:column;
+    flex: 0 0 68%;
+  }
+  &__column_small{
+    flex: 0 0 32%;
+    flex-direction:column;
+  }
+  &__row{
+    height: 100%;
+  }
+  &__two-row{
+    height: 50%;
+  }
+}

@@ -70,6 +70,12 @@
       appearance: none;
       margin: 0;
     }
+    @media (max-width: $full_with){
+      @include font(10px,12px);
+    }
+    @media (max-width: $smPhone){
+      font-size: 10px;
+    }
   }
   &__counter-button{
     width: 30px;
@@ -90,9 +96,5 @@
 
   &__text{
     margin: 0;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
   }
 }

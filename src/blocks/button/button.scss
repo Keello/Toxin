@@ -43,4 +43,10 @@ $border: 2px;
   &_disabled{
     color: $dark50;
   }
+  @media (max-width: $full_with){
+    @include font(10px,12px);
+  }
+  @media (max-width: $smPhone){
+    font-size: 10px;
+  }
 }

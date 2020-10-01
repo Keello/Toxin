@@ -4,8 +4,8 @@ mixin slider(options)
       .slider__items
         each photo,number in options.photos
           if(options.alt[number]==null)
-            img.slider__item(src=require("./blocks/card-room/img/"+photo).default, alt="фото номера")
+            img.slider__item(src=require("./../blocks/card-room/img/"+photo).default, alt="фото номера")
           else
-            img.slider__item(src=require("./blocks/card-room/img/"+photo).default, alt= options.alt[number])
+            img.slider__item(src=require("./../blocks/card-room/img/"+photo).default, alt= options.alt[number])
     a.slider__control.slider__control_prev(role="button")
     a.slider__control.slider__control_next.slider__control_show(role="button")

@@ -3,7 +3,7 @@ mixin header(options)
     .header__container.container
       .header__logo.logo
         a(href="index.pug")
-          img.logo__img(src=require("./img/logo.svg").default alt="logo")
+          img.logo__img(src=require("./../img/logo.svg").default alt="logo")
         .logo__text T<i class="icon-not_interested"></i>xin
       include ./../menu/menu.pug
       +menu({class:"header__menu", values:options.menu})

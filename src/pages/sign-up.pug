@@ -1,0 +1,42 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="keywords", content="")
+    meta(name="description", content="")
+
+
+    include ./../fonts/material-icons/svg/all-icons.svg
+    include ./../fonts/font-awesome/svg/all-icons.svg
+
+    //-------------IMPORTS------------------------
+    include ./../blocks/find-room/find-room.pug
+    include ./../blocks/dropdown/dropdown.pug
+    include ./../blocks/input/input.pug
+    include ./../blocks/burger/burger.pug
+    include ./../blocks/sign-up/sign-up.pug
+    include ./../blocks/sign-in/sign-in.pug
+
+    title Registration
+
+  body.body
+    .body__wrapper
+      include ./../blocks/header/header.pug
+      +header({
+        menu:{"О нас":[""],
+          "Услуги":["1"],
+          "Вакансии":[""],
+          "Новости":[""],
+          "Соглашения":["1"]},
+        user:""})
+      main.page
+        section.sign-up.ibg
+          img.main__image(src=require("./../img/bg.png").default alt="main_bg")
+          .sign-up__container.container
+            .main__form.main__form_center
+              +sign-up("Регистрация аккаунта", "Перейти к оплате")
+              //+sign-in("Войти", "Войти")
+      include ./../blocks/footer/footer.pug
+      +footer()

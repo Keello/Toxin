@@ -2,7 +2,7 @@ import '../node_modules/jquery-ui/ui/widgets/slider'
 
 import '~fonts/material-icons/material-icons.css'
 import '~blocks/calendar/datepicker.css'
-import './main.scss'
+import './scss/main.scss'
 
 import '~blocks/calendar/datepicker'
 import '~blocks/menu/menu'
@@ -12,6 +12,7 @@ import '~blocks/pagination/pagination'
 import '~blocks/carousel/carousel'
 import '~blocks/range-slider/range-slider'
 import '~blocks/burger/burger'
+import '~blocks/diagram/diagram'
 
 
 function ibg(){

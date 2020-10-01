@@ -1,0 +1,194 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="keywords", content="")
+    meta(name="description", content="")
+
+
+    include ./../fonts/material-icons/svg/all-icons.svg
+    include ./../fonts/font-awesome/svg/all-icons.svg
+
+    //-------------IMPORTS------------------------
+    include ./../blocks/header/header.pug
+    include ./../blocks/footer/footer.pug
+    include ./../blocks/find-room/find-room.pug
+    include ./../blocks/dropdown/dropdown.pug
+    include ./../blocks/input/input.pug
+    include ./../blocks/burger/burger.pug
+    include ./../blocks/rate-button/rate-button.pug
+    include ./../blocks/pagination/pagination.pug
+
+    include ./../blocks/card-room/card-room.pug
+    include ./../blocks/carousel/carousel.pug
+
+    title Search room
+
+  body.body
+    .body__wrapper
+      +header({
+        menu:{"О нас":[""],
+          "Услуги":["1"],
+          "Вакансии":[""],
+          "Новости":[""],
+          "Соглашения":["1"]},
+        user:""})
+      main.page
+        .search.container
+          .search__filters-button
+            p.search__filters-text Фильтры
+            svg.search__icon(data-type="input")
+              use(xlink:href="#icon-expand_more" data-type="input")
+          aside.search__filters
+            .search__filter-item
+              +dropdown-date({label:["даты пребывания в отеле"], range:true, dateformat:"dd M"})
+            .search__filter-item
+              +dropdown({label:"Гости", placeholder:"Сколько гостей",
+                value:[
+                "Взрослые",
+                "Дети",
+                "Младенцы",
+                ]})
+            .search__filter-item
+              h3.input__label-range-slider.label Диапазон цены
+              include ./../blocks/range-slider/range-slider.pug
+              +range({description:"Стоимость за сутки пребывания в номере"})
+            .search__filter-item
+              +input({label:"checkbox buttons", type:"checkbox", value:
+                [
+                "Можно курить",
+                "Можно с питомцами",
+                "Можно пригласить гостей (до 10 человек)"
+                ]})
+            .search__filter-item
+              +input({label:"rich checkbox buttons", type:"rich-checkbox",
+                value:{
+                "Широкий корридор":"Ширина коридоров в номере не менее 91 см.",
+                "Помощник для инвалидов": "На 1 этаже вас встретит специалист и проводит до номера.",
+                }})
+            .search__filter-item
+              +dropdown({label:"удобства номера", placeholder:"удобства номера",
+                value:[
+                "спальни",
+                "кровати",
+                "ванные комнаты",
+                ]})
+            .search__filter-item
+              include ./../blocks/expandable-list/expandable-list.pug
+              +expandable-list({label:"дополнительные удобства", value:["Завтрак", "Письменный стол","Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]})
+          .search__content
+            h1.search__title Номера, которые мы для вас подобрали
+            .search__rooms
+              .card
+                +card-room({
+                  photos:["img1.jpg", "img2.jpg", "img3.jpg", "img2.jpg"],
+                  alt:["слайд1","слайд2","слайд3","слайд4"],
+                  number:888,
+                  type:"люкс",
+                  price:"9 990",
+                  rate:5, maxRate:5,
+                  feedbacks:145 })
+              .card
+                +card-room({
+                  photos:["img1.jpg", "img2.jpg", "img3.jpg", "img2.jpg"],
+                  alt:["слайд1","слайд2","слайд3","слайд4"],
+                  number:888,
+                  type:"люкс",
+                  price:"9 990",
+                  rate:5, maxRate:5,
+                  feedbacks:145 })
+              .card
+                +card-room({
+                  photos:["img1.jpg", "img2.jpg", "img3.jpg", "img2.jpg"],
+                  alt:["слайд1","слайд2","слайд3","слайд4"],
+                  number:888,
+                  type:"люкс",
+                  price:"9 990",
+                  rate:5, maxRate:5,
+                  feedbacks:145 })
+              .card
+                +card-room({
+                  photos:["img1.jpg", "img2.jpg", "img3.jpg", "img2.jpg"],
+                  alt:["слайд1","слайд2","слайд3","слайд4"],
+                  number:888,
+                  type:"люкс",
+                  price:"9 990",
+                  rate:5, maxRate:5,
+                  feedbacks:145 })
+              .card
+                +card-room({
+                  photos:["img1.jpg", "img2.jpg", "img3.jpg", "img2.jpg"],
+                  alt:["слайд1","слайд2","слайд3","слайд4"],
+                  number:888,
+                  type:"люкс",
+                  price:"9 990",
+                  rate:5, maxRate:5,
+                  feedbacks:145 })
+              .card
+                +card-room({
+                  photos:["img1.jpg", "img2.jpg", "img3.jpg", "img2.jpg"],
+                  alt:["слайд1","слайд2","слайд3","слайд4"],
+                  number:888,
+                  type:"люкс",
+                  price:"9 990",
+                  rate:5, maxRate:5,
+                  feedbacks:145 })
+              .card
+                +card-room({
+                  photos:["img1.jpg", "img2.jpg", "img3.jpg", "img2.jpg"],
+                  alt:["слайд1","слайд2","слайд3","слайд4"],
+                  number:888,
+                  type:"люкс",
+                  price:"9 990",
+                  rate:5, maxRate:5,
+                  feedbacks:145 })
+              .card
+                +card-room({
+                  photos:["img1.jpg", "img2.jpg", "img3.jpg", "img2.jpg"],
+                  alt:["слайд1","слайд2","слайд3","слайд4"],
+                  number:888,
+                  type:"люкс",
+                  price:"9 990",
+                  rate:5, maxRate:5,
+                  feedbacks:145 })
+              .card
+                +card-room({
+                  photos:["img1.jpg", "img2.jpg", "img3.jpg", "img2.jpg"],
+                  alt:["слайд1","слайд2","слайд3","слайд4"],
+                  number:888,
+                  type:"люкс",
+                  price:"9 990",
+                  rate:5, maxRate:5,
+                  feedbacks:145 })
+              .card
+                +card-room({
+                  photos:["img1.jpg", "img2.jpg", "img3.jpg", "img2.jpg"],
+                  alt:["слайд1","слайд2","слайд3","слайд4"],
+                  number:888,
+                  type:"люкс",
+                  price:"9 990",
+                  rate:5, maxRate:5,
+                  feedbacks:145 })
+              .card
+                +card-room({
+                  photos:["img1.jpg", "img2.jpg", "img3.jpg", "img2.jpg"],
+                  alt:["слайд1","слайд2","слайд3","слайд4"],
+                  number:888,
+                  type:"люкс",
+                  price:"9 990",
+                  rate:5, maxRate:5,
+                  feedbacks:145 })
+              .card
+                +card-room({
+                  photos:["img1.jpg", "img2.jpg", "img3.jpg", "img2.jpg"],
+                  alt:["слайд1","слайд2","слайд3","слайд4"],
+                  number:888,
+                  type:"люкс",
+                  price:"9 990",
+                  rate:5, maxRate:5,
+                  feedbacks:145 })
+            .search__pagination
+              +pagination(5)
+      +footer()

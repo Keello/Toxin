@@ -8,20 +8,20 @@ html(lang="ru")
     meta(name="description", content="")
 
 
-    include ./../../fonts/material-icons/svg/all-icons.svg
-    include ./../../fonts/font-awesome/svg/all-icons.svg
+    include ./../fonts/material-icons/svg/all-icons.svg
+    include ./../fonts/font-awesome/svg/all-icons.svg
 
     //-------------IMPORTS------------------------
-    include ./../../blocks/find-room/find-room.pug
-    include ./../../blocks/dropdown/dropdown.pug
-    include ./../../blocks/input/input.pug
-    include ./../../blocks/burger/burger.pug
+    include ./../blocks/find-room/find-room.pug
+    include ./../blocks/dropdown/dropdown.pug
+    include ./../blocks/input/input.pug
+    include ./../blocks/burger/burger.pug
 
     title Landing page
 
   body.body
     .body__wrapper
-      include ./../../blocks/header/header.pug
+      include ./../blocks/header/header.pug
       +header({
         menu:{"О нас":[""],
           "Услуги":["1"],
@@ -31,11 +31,11 @@ html(lang="ru")
         user:""})
       main.page
         section.main.ibg
-          img.main__image(src=require("./img/main_bg.png").default alt="main_bg")
+          img.main__image(src=require("./../img/main_bg.png").default alt="main_bg")
           .main__container.container
             .main__form
-              +find-room("Найдем номера под ваши пожелания", "Подобрать номер")
+              +find-room({title:"Найдем номера под ваши пожелания", button:"Подобрать номер"})
             .main__description
               p.main__text Лучшие номера для вашей работы, отдыха и просто вдохновения
-      include ./../../blocks/footer/footer.pug
+      include ./../blocks/footer/footer.pug
       +footer()

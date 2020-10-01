@@ -1,0 +1,13 @@
+.sign-up{
+  height: 100%;
+  &__container{
+    display: flex;
+    height: 100%;
+    align-items:center;
+    justify-content:center;
+    padding: 20px 0;
+  }
+  &__form_center{
+    margin: 0 auto;
+  }
+}

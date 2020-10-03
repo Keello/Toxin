@@ -15,6 +15,7 @@ const PATHS = {
   src: path.join(__dirname, './src'),
   dist: path.join(__dirname, './dist'),
   blocks: path.join(__dirname, './blocks'),
+  pages: path.join(__dirname, './pages'),
 }
 
 const optimization = () => {
@@ -66,7 +67,24 @@ const cssLoaders = preproc => {
 const joinPlugins = () => {
   const plugins = [
     new HTMLWebpackPlugin({
-      template: './index.pug',
+      filename: 'index.html',
+      template: path.resolve(__dirname, 'src/pages/index.pug'),
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'ui-kit.html',
+      template: path.resolve(__dirname, 'src/pages/ui-kit.pug'),
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'search-room.html',
+      template: path.resolve(__dirname, 'src/pages/search-room.pug'),
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'room-details.html',
+      template: path.resolve(__dirname, 'src/pages/room-details.pug'),
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'sign-up.html',
+      template: path.resolve(__dirname, 'src/pages/sign-up.pug'),
     }),
     new CleanWebpackPlugin(),
     new MiniCssExctractPlugin({
@@ -127,6 +145,7 @@ module.exports = {
   resolve:{
     alias:{
       '~': 'src',
+      '~pages': path.resolve(__dirname, 'src/pages'),
       '~blocks': path.resolve(__dirname, 'src/blocks'),
       '~fonts': path.resolve(__dirname, 'src/fonts'),
       "jquery-ui": "jquery-ui/jquery-ui.js",

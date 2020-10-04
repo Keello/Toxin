@@ -1,13 +1,9 @@
 mixin pagination(pages)
   .pagination
     ul.pagination__list
-      li.pagination__item.pagination__item-prev
+      li.pagination__item.pagination__item_prev.pagination__item_hide(data-type="prev")
       -for(let i=1; i<=pages; i++)
-        if(i==1)
-          li.pagination__item.pagination__item_active(data-page=i)
-            a.pagination__button= i
-        else
-          li.pagination__item(data-page=i)
-            a.pagination__button= i
-      li.pagination__item.pagination__item-next
+        li.pagination__item(data-type="page" data-page=i)
+          a.pagination__button(data-type="page" data-page=i)= i
+      li.pagination__item.pagination__item_next(data-type="next")
     p.pagination__info-text.text 1 – 12 из 100+ вариантов аренды

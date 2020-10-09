@@ -1,5 +1,10 @@
 mixin room-info(options)
-  .room-info
+  -let className
+  if(options.class)
+    -className = options.class + " room-info"
+  else
+    -className = "room-info"
+  div(class = className)
     svg.room-info__icon
       use(xlink:href="#icon-" + options.icon)
     p.room-info__text.text

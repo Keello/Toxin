@@ -1,5 +1,5 @@
 mixin find-room(options)
-  .card-find-room.card
+  form.card-find-room.card(action=options.action)
     h1.card__title= options.title
     .card__row-with-label
       +dropdown-date({label:['прибытие','выезд']})

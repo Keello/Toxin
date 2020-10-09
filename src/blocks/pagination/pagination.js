@@ -2,7 +2,7 @@ export class Pagingation {
   constructor(elem){
     this.$el = elem;
     this.init({
-      pages: 10,
+      pages: 15,
       curPageNumber: 1,
       pagesRange: 2,
       itemsOnPage: 12,

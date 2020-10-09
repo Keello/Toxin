@@ -1,51 +1,42 @@
-include ./../../blocks/input/input.pug
-include ./../../blocks/dropdown/dropdown.pug
-include ./../../blocks/rate-button/rate-button.pug
 include ./../../blocks/carousel/carousel.pug
 
 include ./../../blocks/card-room/card-room.pug
+include ./../../blocks/find-room/find-room.pug
+include ./../../blocks/sign-up/sign-up.pug
+include ./../../blocks/room-reservation/room-reservation.pug
+include ./../../blocks/sign-in/sign-in.pug
 //-------------------------------------------------------
 
 .cards-container
   .cards-wrapper
-    .card
-      include ./../../blocks/find-room/find-room.pug
-      +find-room("Найдем номера под ваши пожелания", "Подобрать номер")
+      +find-room({title:"Найдем номера под ваши пожелания", button:"Подобрать номер"})
   .cards-wrapper
-    .card
-      include ./../../blocks/sign-up/sign-up.pug
       +sign-up("Регистрация аккаунта", "Перейти к оплате")
   .cards-wrapper
-    .card
-      include ./../../blocks/room-reservation/room-reservation.pug
       +room-reservation({
         number:888,
         type:"люкс",
         price:"9 990",
         })
   .cards-wrapper
-    .card
-      include ./../../blocks/sign-in/sign-in.pug
       +sign-in("Войти", "Войти")
   .cards-wrapper
     .datepicker-here
   .cards-wrapper
-    .card
-      +card-room({
-        photos:["img1.jpg", "img2.jpg", "img3.jpg", "img2.jpg"],
-        alt:["слайд1","слайд2","слайд3","слайд4"],
-        number:888,
-        type:"люкс",
-        price:"9 990",
-        rate:5, maxRate:5,
-        feedbacks:145 })
+    +card-room({
+      photos:["img1.jpg", "img2.jpg", "img3.jpg", "img2.jpg"],
+      alt:["слайд1","слайд2","слайд3","слайд4"],
+      number:888,
+      type:"люкс",
+      price:"9 990",
+      rate:5, maxRate:5,
+      feedbacks:145 })
   .cards-wrapper
-    .card
-      +card-room({
-        photos:["img2.jpg", "img3.jpg", "img2.jpg"],
-        alt:["слайд1","слайд2"],
-        number:840,
-        type:"",
-        price:"9 900",
-        rate:4, maxRate:5,
-        feedbacks:65 })
+    +card-room({
+      photos:["img2.jpg", "img3.jpg", "img2.jpg"],
+      alt:["слайд1","слайд2"],
+      number:840,
+      type:"",
+      price:"9 900",
+      rate:4, maxRate:5,
+      feedbacks:65 })

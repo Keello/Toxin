@@ -1,6 +1,6 @@
-//label - надпись над элементом
-//placeholder - текст если ничего не выбрано
-//value - массив значений выпадающего меню
+//- label - надпись над элементом
+//- placeholder - текст если ничего не выбрано
+//- value - массив значений выпадающего меню
 
 mixin dropdown(param)
   .dropdown
@@ -23,8 +23,8 @@ mixin dropdown(param)
         button.dropdown_confirm.link(data-type="confirm") применить
 
 
-//range =true - выбрать диапазон дат, =false - выбрать 1 дату
-//dateformat - формат отображения даты. Например "dd-M-yyyy"
+//- range =true - выбрать диапазон дат, =false - выбрать 1 дату
+//- dateformat - формат отображения даты. Например "dd-M-yyyy"
 mixin dropdown-date(param)
   if(param.label.length == 2)
     .dropdown-container

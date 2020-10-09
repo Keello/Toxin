@@ -5,4 +5,5 @@ mixin range(options)
         #slider-range
         .range-wrapper
           .range
-      p.slider-description=options.description
+      if(options.description)
+        p.slider-description= options.description

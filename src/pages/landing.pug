@@ -11,6 +11,7 @@ html(lang="ru")
     include ./../fonts/material-icons/svg/all-icons.svg
     include ./../fonts/font-awesome/svg/all-icons.svg
 
+
     //-------------IMPORTS------------------------
     include ./../blocks/find-room/find-room.pug
     include ./../blocks/dropdown/dropdown.pug
@@ -34,7 +35,7 @@ html(lang="ru")
           img.main__image(src=require("./../img/main_bg.png").default alt="main_bg")
           .main__container.container
             .main__form
-              +find-room({title:"Найдем номера под ваши пожелания", button:"Подобрать номер"})
+              +find-room({title:"Найдем номера под ваши пожелания", button:"Подобрать номер", action:"search-room.html"})
             .main__description
               p.main__text Лучшие номера для вашей работы, отдыха и просто вдохновения
       include ./../blocks/footer/footer.pug

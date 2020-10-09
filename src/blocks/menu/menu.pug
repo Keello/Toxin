@@ -5,8 +5,8 @@ mixin menu(options)
       each val,key in options.values
         if(val=="")
           li.menu__item
-            a.menu__link(href="empty.pug")= key
+            a.menu__link(href="index.html")= key
         else
           li.menu__item
-            a.menu__link(href="empty.pug")= key
+            a.menu__link(href="index.html")= key
             i.icon-expand_more

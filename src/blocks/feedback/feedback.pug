@@ -1,6 +1,12 @@
 mixin feedback(options)
-  .feedback
-    .feedback__user-logo
+  -let className
+  if(options.class)
+    -className = options.class + " feedback"
+  else
+    -className = "feedback"
+  div(class = className)
+    .feedback__user-logo.ibg
+      img(src="./../img/"+options.image alt="user_logo")
     p.feedback__user-name.text
       span.text__title= options.title
       =options.subtitle

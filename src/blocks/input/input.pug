@@ -1,5 +1,10 @@
 mixin input(param)
-  .input
+  -let className
+  if(param.class)
+    -className = param.class + " input"
+  else
+    -className = "input"
+  div(class = className)
     if(param.label)
       if(param.type === "textfield" || param.type === "subscription")
         h3.input__label.label= param.label

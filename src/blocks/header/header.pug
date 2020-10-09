@@ -6,6 +6,7 @@ mixin header(options)
           img.logo__img(src=require("./../img/logo.svg").default alt="logo")
         .logo__text T<i class="icon-not_interested"></i>xin
       include ./../menu/menu.pug
+      include ./../burger/burger.pug
       +menu({class:"header__menu", values:options.menu})
       if(options.user != "" && options.user != null)
         p.header__user-text= options.user

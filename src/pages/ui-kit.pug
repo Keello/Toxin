@@ -9,21 +9,28 @@ html(lang="ru")
 
 
     include ./../fonts/material-icons/svg/all-icons.svg
-    include ./../fonts/font-awesome/svg/all-icons.svg
 
     //-------------IMPORTS------------------------
-    include ./../blocks/header/header.pug
-    include ./../blocks/footer/footer.pug
-
-    include ./../blocks/find-room/find-room.pug
-    include ./../blocks/dropdown/dropdown.pug
-    include ./../blocks/input/input.pug
-    include ./../blocks/burger/burger.pug
-    include ./../blocks/sign-up/sign-up.pug
-    include ./../blocks/sign-in/sign-in.pug
 
     title UI Kit
 
   body.body
     .body__wrapper
       main.page
+        section.colorsType
+          .container
+            h2 Colors and Type section
+          include ./../ui_kit/colors&type/colors&type.pug
+        section.formElements
+          .container
+            h2 Form elements section
+          include ./../ui_kit/formElements/formElements.pug
+        section.cards
+          .container
+            h2 Cards section
+            include ./../ui_kit/cards/cards.pug
+        section.headersFooters
+          .container
+            h2 Headers and footers section
+          include ./../ui_kit/headers&footers/headers&footers.pug
+

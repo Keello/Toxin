@@ -1,5 +1,13 @@
 mixin expandable-list(param)
-  .expandable-list
+  -let className
+    if(param.class)
+      -className = param.class + " expandable-list"
+    else
+      -className = "expandable-list"
+
+  if(param.status=="open")
+    -className += " open"
+  div(class = className)
     .expandable-list__wrapper(data-type="input")
       h3.expandable-list__label.label(data-type="input")= param.label
       svg.expandable-list__icon.input__wrapper-icon(data-type="input")

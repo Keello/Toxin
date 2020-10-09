@@ -1,12 +1,23 @@
-//label - надпись над элементом
-//type - тип инпута
-//placeholder - текст в пустом инпуте
-//value - значение или массив значений
+//- label - надпись над элементом
+//- type - тип инпута
+//- placeholder - текст в пустом инпуте
+//- value - значение или массив значений
 
-include ./../../blocks/dropdown/dropdown.pug
+
+//----------------------- IMPORTS ------------------------------
 include ./../../blocks/input/input.pug
+include ./../../blocks/dropdown/dropdown.pug
+include ./../../blocks/like-button/like-button.pug
+include ./../../blocks/rate-button/rate-button.pug
+include ./../../blocks/range-slider/range-slider.pug
+include ./../../blocks/button/button.pug
+include ./../../blocks/pagination/pagination.pug
+include ./../../blocks/expandable-list/expandable-list.pug
+include ./../../blocks/bullet-list/bullet-list.pug
+include ./../../blocks/room-info/room-info.pug
+include ./../../blocks/feedback/feedback.pug
 
-// ----------------------------------------------------------------
+//- ----------------------------------------------------------------
 form.form
   .container.form__container
     .container__row
@@ -49,22 +60,19 @@ form.form
         //- ------Like button -----------
         .form__item
           h3.input__label-like-button.label like button
-          include ./../../blocks/like-button/like-button.pug
           +like-button(12)
         //- ------Rate button -----------
         .form__item
           h3.input__label-rate-button.label rate button
-          include ./../../blocks/rate-button/rate-button.pug
           +rate-button(2.5,5)
           +rate-button(4,5)
       .container__three-col
         .form__item
           //- ------Range button -----------
           h3.input__label-range-slider.label range slider
-          include ./../../blocks/range-slider/range-slider.pug
+          +range({description:"1-2 of 2342344"})
         //- ------Buttons -----------
         h3.input__label-buttons.label buttons
-        include ./../../blocks/button/button.pug
         .buttons-container
           .buttons-container__row
             .buttons-container__item
@@ -88,13 +96,11 @@ form.form
         .form__item
           //- ------pagination -----------
           h3.input__label-pagination.label pagination
-          include ./../../blocks/pagination/pagination.pug
           +pagination(10)
     .container__row
       .container__three-col
-        include ./../../blocks/expandable-list/expandable-list.pug
         +expandable-list({label:"expandable checkbox list", value:["Телевизор", "Завтрак", "Кроватка"]})
-        +expandable-list({label:"expandable checkbox list", value:["Телевизор", "Завтрак", "Кроватка"]})
+        +expandable-list({label:"expandable checkbox list", value:["Телевизор", "Завтрак", "Кроватка"], status:"open"})
       .container__three-col
         +input({label:"rich checkbox buttons", type:"rich-checkbox",
           value:{
@@ -102,20 +108,19 @@ form.form
           "Помощник для инвалидов": "На 1 этаже вас встретит специалист и проводит до номера.",
           }})
       .container__three-col
-        include ./../../blocks/bullet-list/bullet-list.pug
         +bullet-list({label:"bullet list", value:[
             "Нельзя с питомцами",
             "Без вечеринок и мероприятий",
             "Время прибытия — после 13:00, а выезд до 12:00"]})
+  .container
     .container__row
       .container__two-col
-        include ./../../blocks/room-info/room-info.pug
         +room-info({icon:"insert_emoticon", title:"Комфорт", text:"Шумопоглощающие стены"})
         +room-info({icon:"location_city", title:"Удобство", text:"Окно в каждой из спален"})
       .container__two-col
-        include ./../../blocks/feedback/feedback.pug
         +feedback({
           title:"Мурад Сарафанов",
+          image:"user-logo.png",
           subtitle:"5 дней назад",
           description:"Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
           likes:1002})

@@ -86,6 +86,10 @@ const joinPlugins = () => {
       filename: 'sign-up.html',
       template: path.resolve(__dirname, 'src/pages/sign-up.pug'),
     }),
+    new HTMLWebpackPlugin({
+      filename: 'sign-in.html',
+      template: path.resolve(__dirname, 'src/pages/sign-in.pug'),
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExctractPlugin({
       filename: `${filename('css')}`,

@@ -2,7 +2,7 @@ mixin header(options)
   header.header
     .header__container.container
       .header__logo.logo
-        a(href="index.pug")
+        a(href="index.html")
           img.logo__img(src=require("./../img/logo.svg").default alt="logo")
         .logo__text T<i class="icon-not_interested"></i>xin
       include ./../menu/menu.pug
@@ -11,5 +11,5 @@ mixin header(options)
       if(options.user != "" && options.user != null)
         p.header__user-text= options.user
       else
-        button.header__button.button Войти
-        button.header__button.button.button_colorful Зарегистрироваться
+        a(href="sign-in.html").header__button.button Войти
+        a(href="sign-up.html").header__button.button.button_colorful Зарегистрироваться

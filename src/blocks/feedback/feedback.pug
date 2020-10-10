@@ -6,7 +6,7 @@ mixin feedback(options)
     -className = "feedback"
   div(class = className)
     .feedback__user-logo.ibg
-      img(src="./../img/"+options.image alt="user_logo")
+      img(src=require("./../img/"+options.image).default alt="user_logo")
     p.feedback__user-name.text
       span.text__title= options.title
       =options.subtitle

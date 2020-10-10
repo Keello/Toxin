@@ -1,6 +1,6 @@
 .bullet-list{
   font-family: Montserrat;
-  font-size: 14px;
+  font-size: rem(14);
   font-weight: normal;
   font-style: normal;
   line-height: 24px;
@@ -10,6 +10,8 @@
   max-width: 100%;
   overflow: hidden;
   &__item{
+    display: flex;
+    align-items:center;
     margin-bottom: 5px;
     &:before{
       display: inline-block;

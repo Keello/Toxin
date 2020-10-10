@@ -1,5 +1,10 @@
-mixin banner()
-  .banner
+mixin banner(param)
+  -let className
+    if(param.class)
+      -className = param.class + " banner"
+    else
+      -className = "banner"
+  div(class = className)
     .banner__column.banner__column_big
       .banner__row.ibg
         img.banner__photo(src=require("./../img/banner.png").default alt="room photo")

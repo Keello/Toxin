@@ -1,5 +1,5 @@
 .card-room-reservation{
-  padding: 40px 30px 30px 30px;
+  padding: rem(40) rem(30) rem(30) rem(30);
 }
 
 .room-reservation__header{
@@ -9,24 +9,24 @@
 
 .room-reservation__number{
   font-family: OpenSans;
-  font-size: 22px;
+  font-size: rem(22);
   font-weight: bold;
   font-style: normal;
-  line-height: 17px;
+  line-height: rem(17);
   color: $dark100;
   &:before{
     content: "\2116";
-    font-size: 14px;
+    font-size: rem(14);
     margin-right: 5px;
     font-family: Montserrat;
   }
 }
 .room-reservation__type{
   font-family: Montserrat;
-  font-size: 12px;
+  font-size: rem(12);
   font-weight: bold;
   font-style: normal;
-  line-height: 15px;
+  line-height: rem(15);
   margin-left: 5px;
   text-transform: uppercase;
   color: $purple;
@@ -47,7 +47,7 @@
 }
 .room-reservation__header-price-text{
   margin-left: 5px;
-  font-size: 12px;
+  font-size: rem(12);
 
 }
 .room-reservation__price-body{
@@ -88,10 +88,10 @@
 
 .room-reservation__total{
     font-family: Opensans;
-    font-size: 19px;
+    font-size: rem(19);
     font-weight: bold;
     font-style: normal;
-    line-height: 24px;
+    line-height: rem(24);
 
     display: flex;
 

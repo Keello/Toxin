@@ -29,7 +29,7 @@ html(lang="ru")
     include ./../blocks/bullet-list/bullet-list.pug
     include ./../blocks/diagram/diagram.pug
 
-    title Room room
+    title Room details
 
   body.body
     .body__wrapper
@@ -42,55 +42,54 @@ html(lang="ru")
         user:""})
       main.page
         .room
-          +banner()
-        .room__content.container
-          .room__row
-            .room__column.room__column_big
-              .room__row
-                .room__column
-                  .room__details
-                    h2.room__title Сведения о номере
-                    +room-info({icon:"insert_emoticon", title:"Комфорт", text:"Шумопоглощающие стены"})
-                    +room-info({icon:"location_city", title:"Удобство", text:"Окно в каждой из спален"})
-                    +room-info({icon:"whatshot", title:"Уют", text:"Номер оснащен камином"})
-                .room__column
-                  .room__impressions
-                    h2.room__title.room__title_margin Впечатления от номера
-                    +diagram()
-              .room__feedbacks
-                .room__feedback-title
-                  h2.room__title Отзывы посетителей номера
-                  span.room__feedback-count 2 отзыва
-                +feedback({
-                  title:"Мурад Сарафанов",
-                  image:"user-logo.png",
-                  subtitle:"5 дней назад",
-                  description:"Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
-                  likes:12})
-                +feedback({
-                  title:"Патрисия Стёклышкова",
-                  image:"user-logo2.png",
-                  subtitle:"Неделю назад",
-                  description:"Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент",
-                  likes:2})
-              .room__row
-                .room__column
-                  .room__rules
-                    h2.room__title.room__title_margin Правила
-                     +bullet-list({value:[
-                      "Нельзя с питомцами",
-                      "Без вечеринок и мероприятий",
-                      "Время прибытия — после 13:00, а выезд до 12:00"]})
-                .room__column
-                  .room__cancel
-                    h2.room__title.room__title_margin Отмена
-                    p.text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-            .room__column.room__column_small
-              .card
-                +room-reservation({
-                  number:888,
-                  type:"люкс",
-                  price:"9 990",
-                  })
-
+          +banner({class:"room__banner"})
+          .room__content.container
+            .room__row.room__row_mobile
+              .room__column.room__column_big
+                .room__row
+                  .room__column
+                    .room__details
+                      h2.room__title Сведения о номере
+                      +room-info({icon:"insert_emoticon", title:"Комфорт", text:"Шумопоглощающие стены"})
+                      +room-info({icon:"location_city", title:"Удобство", text:"Окно в каждой из спален"})
+                      +room-info({icon:"whatshot", title:"Уют", text:"Номер оснащен камином"})
+                  .room__column
+                    .room__impressions
+                      h2.room__title.room__title_margin Впечатления от номера
+                      +diagram()
+                .room__feedbacks
+                  .room__feedback-title
+                    h2.room__title Отзывы посетителей номера
+                    span.room__feedback-count 2 отзыва
+                  +feedback({
+                    title:"Мурад Сарафанов",
+                    image:"user-logo.png",
+                    subtitle:"5 дней назад",
+                    description:"Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
+                    likes:12})
+                  +feedback({
+                    title:"Патрисия Стёклышкова",
+                    image:"user-logo2.png",
+                    subtitle:"Неделю назад",
+                    description:"Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент",
+                    likes:2})
+                .room__row
+                  .room__column
+                    .room__rules
+                      h2.room__title.room__title_margin Правила
+                       +bullet-list({value:[
+                        "Нельзя с питомцами",
+                        "Без вечеринок и мероприятий",
+                        "Время прибытия — после 13:00, а выезд до 12:00"]})
+                  .room__column
+                    .room__cancel
+                      h2.room__title.room__title_margin Отмена
+                      p.text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+              .room__column.room__column_small
+                .card
+                  +room-reservation({
+                    number:888,
+                    type:"люкс",
+                    price:"9 990",
+                    })
       +footer()

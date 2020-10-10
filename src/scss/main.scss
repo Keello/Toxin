@@ -1,6 +1,7 @@
 @import "./reset.scss";
 @import "./vars.scss";
 @import "./mixins.scss";
+@import "./../fonts/material-icons/material-icons.css";
 /*-----------------UI_KIT---------------------*/
 @import "./../ui_kit/colors&type/colors&type.scss";
 @import "./../ui_kit/formElements/formElements.scss";
@@ -13,12 +14,9 @@
 
 /*----------------Blocks---------------------*/
 @import "./../blocks/header/header.scss";
-@import "./../blocks/footer/footer.scss";
 @import "./../blocks/logo/logo.scss";
-@import "./../blocks/menu/menu.scss";
-@import "./../blocks/burger/burger.scss";
-@import "./../blocks/banner/banner.scss";
-@import "./../blocks/diagram/diagram.scss";
+@import "./../blocks/calendar/datepicker.css";
+@import "./../blocks/footer/footer.scss";
 
 /*-----------------Layout-------------------*/
 html{

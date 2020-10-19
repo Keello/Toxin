@@ -94,12 +94,15 @@
   }
   &__icons{
     display: flex;
+    @media (max-width: $tablet){
+      justify-content:center;
+    }
   }
 
   &__icons a{
     display: flex;
   }
-  
+
   &__icon{
     position: relative;
     width: 24px;

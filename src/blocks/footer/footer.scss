@@ -12,10 +12,12 @@
     }
   }
   &__title{
+    padding-top: 6px;
     text-transform: uppercase;
+    color:$dark100;
   }
   &__description{
-    flex:0 1 24%;
+    flex:0 1 22.5%;
     &-text{
       margin-top: 20px;
       line-height: 24px;
@@ -39,7 +41,7 @@
     &-item{
       display: block;
       line-height: 17px;
-      margin-top: 20px;
+      margin-top: 21px;
       cursor: pointer;
       &:hover{
         color: rgba(31, 32, 65, .75);
@@ -51,7 +53,7 @@
     }
   }
   &__subscribe{
-    max-width: 23%;
+    max-width: 22.5%;
     @media (max-width: $tablet){
       display: none;
     }
@@ -61,12 +63,12 @@
     &-text{
       margin-top: 20px;
       color: $dark75;
-      line-height: 24px;
+      line-height: 23px;
     }
   }
   &__copyright{
     display: flex;
-    height: 70px;
+    height: 75px;
     border-top:1px solid $dark25;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     &-container{
@@ -90,6 +92,14 @@
       box-shadow: none;
     }
   }
+  &__icons{
+    display: flex;
+  }
+
+  &__icons a{
+    display: flex;
+  }
+  
   &__icon{
     position: relative;
     width: 24px;

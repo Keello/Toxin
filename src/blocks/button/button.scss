@@ -1,12 +1,12 @@
 $border: 2px;
-.button{
+.button {
   font-family: Montserrat;
   font-size: rem(12);
   font-weight: bold;
   font-style: normal;
   line-height: rem(15);
   position: relative;
-  padding: rem(13) rem(20);
+  padding: rem(9) rem(18);
   cursor: pointer;
   text-transform: uppercase;
   color: $purple;
@@ -16,18 +16,18 @@ $border: 2px;
   background-image: linear-gradient(white, white), linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   background-clip: padding-box, border-box;
   background-origin: border-box;
-  &_disabled{
-    opacity: .5;
+  &_disabled {
+    opacity: 0.5;
   }
 }
-.button_colorful{
+.button_colorful {
   color: white;
   background: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
   background-clip: border-box;
 }
-.link{
+.link {
   background: none;
-  border:none;
+  border: none;
   margin: 0;
   padding: 0;
   outline: none;
@@ -40,13 +40,13 @@ $border: 2px;
   text-decoration: none;
   text-transform: uppercase;
   color: $purple;
-  &_disabled{
+  &_disabled {
     color: $dark50;
   }
-  @media (max-width: $full_with){
-    @include font(10px,12px);
+  @media (max-width: $full_with) {
+    @include font(10px, 12px);
   }
-  @media (max-width: $smPhone){
+  @media (max-width: $smPhone) {
     font-size: 10px;
   }
 }

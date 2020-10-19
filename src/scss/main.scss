@@ -43,15 +43,12 @@ html {
   }
 }
 
-.verylongname {
-  font-size: 15px;
-}
 .page {
   flex: 1 0 100%;
 }
 .container {
   margin: 0 auto;
-  width: $full_with;
+  width: 1160px;
   max-width: 87%;
 }
 /*------------------------------------------------*/

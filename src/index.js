@@ -14,14 +14,13 @@ import '~blocks/diagram/diagram'
 import './js/search-room'
 
 
-function ibg(){
-  let ibg=document.querySelectorAll(".ibg");
+function ibg() {
+  let ibg = document.querySelectorAll(".ibg");
   ibg.forEach(elem => {
-    if(elem.querySelector('img')){
+    if (elem.querySelector('img')) {
       let src = (elem.querySelector('img').getAttribute('src')).slice(2);
-      elem.style.backgroundImage = 'url('+src+')';
+      elem.style.backgroundImage = 'url(' + src + ')';
     }
   });
 }
 ibg();
-

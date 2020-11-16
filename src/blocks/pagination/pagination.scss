@@ -1,13 +1,13 @@
-.pagination{
+.pagination {
   display: flex;
-  flex-direction:column;
-  align-items:center;
-  &__list{
+  flex-direction: column;
+  align-items: center;
+  &__list {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     padding: 0;
   }
-  &__item{
+  &__item {
     font-family: Montserrat;
     font-size: 12px;
     font-weight: normal;
@@ -20,30 +20,31 @@
     border-radius: 22px;
     justify-content: center;
     align-items: center;
-    &_active{
+    &_active {
       color: white;
       background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     }
-    &_prev, &_next{
-      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-      &:after{
-        font-family: 'Material icons';
-        content: '\e90b';
+    &_prev,
+    &_next {
+      background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+      &:after {
+        font-family: "Material icons";
+        content: "\e90b";
         font-size: rem(24);
         line-height: 20px;
         color: white;
       }
     }
-    &_hide{
+    &_hide {
       display: none;
     }
-    &_next{
-      &:after{
-        content: '\e900';
+    &_next {
+      &:after {
+        content: "\e900";
       }
     }
   }
-  &__info-text{
+  &__info-text {
     color: $dark75;
     margin-left: 5px;
   }

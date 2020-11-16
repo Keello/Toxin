@@ -1,109 +1,109 @@
-.footer{
+.footer {
   background: white;
-  border-top:1px solid $dark25;
+  border-top: 1px solid $dark25;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  &__container{
+  &__container {
     display: flex;
     justify-content: space-between;
     padding: 100px 0;
-    @media (max-width: $tablet){
-      justify-content:center;
+    @media (max-width: $tablet) {
+      justify-content: center;
       padding: 0;
     }
   }
-  &__title{
-    padding-top: 6px;
+  &__title {
+    padding-top: 4px;
     text-transform: uppercase;
-    color:$dark100;
+    color: $dark100;
   }
-  &__description{
-    flex:0 1 22.5%;
-    &-text{
-      margin-top: 20px;
+  &__description {
+    flex: 0 1 22.5%;
+    &-text {
+      margin-top: 18px;
       line-height: 24px;
       color: $dark75;
-      @media (max-width: $tablet){
+      @media (max-width: $tablet) {
         display: none;
       }
     }
-    @media (max-width: $tablet){
+    @media (max-width: $tablet) {
       display: flex;
-      justify-content:center;
+      justify-content: center;
     }
   }
-  &__logo{
-    @media (max-width: $tablet){
+  &__logo {
+    @media (max-width: $tablet) {
       margin-bottom: 20px;
     }
   }
-  &__list{
-    width: 14%;
-    &-item{
+  &__list {
+    width: 13.8%;
+    &-item {
       display: block;
       line-height: 17px;
       margin-top: 21px;
       cursor: pointer;
-      &:hover{
-        color: rgba(31, 32, 65, .75);
-        text-shadow: 0 0 .8px rgba(31, 32, 65, .75), 0 0 .8px rgba(31, 32, 65, .75);
+      &:hover {
+        color: rgba(31, 32, 65, 0.75);
+        text-shadow: 0 0 0.8px rgba(31, 32, 65, 0.75), 0 0 0.8px rgba(31, 32, 65, 0.75);
       }
     }
-    @media (max-width: $tablet){
+    @media (max-width: $tablet) {
       display: none;
     }
   }
-  &__subscribe{
+  &__subscribe {
     max-width: 22.5%;
-    @media (max-width: $tablet){
+    @media (max-width: $tablet) {
       display: none;
     }
-    &-input{
-      margin-top: 20px;
+    &-input {
+      margin-top: 22px;
     }
-    &-text{
+    &-text {
       margin-top: 20px;
       color: $dark75;
       line-height: 23px;
     }
   }
-  &__copyright{
+  &__copyright {
     display: flex;
     height: 75px;
-    border-top:1px solid $dark25;
+    border-top: 1px solid $dark25;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-    &-container{
+    &-container {
       display: flex;
-      align-items:center;
+      align-items: center;
       justify-content: space-between;
-      @media (max-width: $tablet){
+      @media (max-width: $tablet) {
         display: block;
         text-align: center;
       }
     }
-    &-text{
+    &-text {
       color: $dark75;
       line-height: 17px;
-      @media (max-width: $tablet){
+      @media (max-width: $tablet) {
         margin-bottom: 25px;
       }
     }
-    @media (max-width: $tablet){
-      border:none;
+    @media (max-width: $tablet) {
+      border: none;
       box-shadow: none;
     }
   }
-  &__icons{
+  &__icons {
     display: flex;
-    @media (max-width: $tablet){
-      justify-content:center;
+    @media (max-width: $tablet) {
+      justify-content: center;
     }
   }
 
-  &__icons a{
+  &__icons a {
     display: flex;
   }
 
-  &__icon{
+  &__icon {
     position: relative;
     width: 24px;
     height: 24px;
@@ -112,7 +112,7 @@
     fill: $purple;
   }
 
-  @media (max-width: $tablet){
+  @media (max-width: $tablet) {
     padding: 120px 0;
   }
 }

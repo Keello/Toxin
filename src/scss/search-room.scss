@@ -1,71 +1,78 @@
-.search{
+.search {
   display: flex;
   height: 100%;
   margin: 0 -30px;
-  padding-bottom: 70px;
-  &__filters-button{
+  padding-bottom: 71px;
+  &__filters-button {
     display: none;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
     overflow: auto;
     min-height: 40px;
-    @media (max-width: $tablet){
+    @media (max-width: $tablet) {
       display: flex;
     }
   }
-  &__filters-text{
+  &__filters-text {
     font-size: 16px;
   }
-  &__icon{
+  &__icon {
     display: flex;
     width: 40px;
     height: 40px;
-    fill:$purple;
+    fill: $purple;
   }
-  &__filters{
-    flex:0 0 25.5%;
-    padding-right:30px;
+  &__filters {
+    flex: 0 0 25.5%;
+    padding-right: 30px;
     background-color: white;
-    @media (max-width: $tablet){
+    @media (max-width: $tablet) {
       position: absolute;
-      top:-1000px;
+      top: -1000px;
       z-index: 10;
-      transition:all .7s ease-out 0s;
+      transition: all 0.7s ease-out 0s;
     }
   }
-  &__filter-item{
+  &__filter-item {
     margin-top: 30px;
+    &_offset_small {
+      margin-top: 21px;
+    }
+    &_offset_special {
+      margin-top: 29px;
+    }
   }
-  &__content{
-    flex:0 1 79.5%;
+  &__content {
+    flex: 0 1 79.5%;
     height: 100%;
-    padding-left:30px;
+    padding-left: 30px;
   }
-  &__title{
+  &__title {
     margin-top: 30px;
     margin-bottom: 20px;
   }
-  &__rooms{
+  &__rooms {
     display: grid;
-    justify-content:center;
-    justify-items:center;
-    grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
-    grid-gap:12px;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-row-gap: 20px;
+    grid-column-gap: 12px;
   }
-  &__pagination{
+  &__pagination {
     margin-top: 40px;
   }
 }
 
-@media (max-width: $tablet){
-  .search{
+@media (max-width: $tablet) {
+  .search {
     display: flex;
-    flex-direction:column;
-    &__filters{
+    flex-direction: column;
+    &__filters {
       max-width: 400px;
     }
   }
-  .search__filters.active{
+  .search__filters.active {
     position: relative;
     top: 0;
   }

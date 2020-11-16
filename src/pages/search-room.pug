@@ -9,6 +9,7 @@ html(lang="ru")
 
 
     include ./../fonts/material-icons/svg/all-icons.svg
+    include ./../fonts/font-awesome/svg/all-icons.svg
 
     //-------------IMPORTS------------------------
     include ./../blocks/header/header.pug
@@ -43,7 +44,7 @@ html(lang="ru")
           aside.search__filters
             .search__filter-item
               +dropdown-date({label:["даты пребывания в отеле"], range:true, dateformat:"dd M"})
-            .search__filter-item
+            .search__filter-item.search__filter-item_offset_small
               +dropdown({label:"Гости", placeholder:"Сколько гостей",
                 value:[
                 "Взрослые",
@@ -55,26 +56,26 @@ html(lang="ru")
               include ./../blocks/range-slider/range-slider.pug
               +range({description:"Стоимость за сутки пребывания в номере"})
             .search__filter-item
-              +input({label:"checkbox buttons", type:"checkbox", value:
+              +input({label:"правила дома", type:"checkbox", value:
                 [
                 "Можно курить",
                 "Можно с питомцами",
-                "Можно пригласить гостей (до 10 человек)"
+                "Можно пригласить гостей (до\u00A010\u00A0человек)"
                 ]})
             .search__filter-item
-              +input({label:"rich checkbox buttons", type:"rich-checkbox",
+              +input({label:"доступность", type:"rich-checkbox",
                 value:{
-                "Широкий корридор":"Ширина коридоров в номере не менее 91 см.",
+                "Широкий корридор":"Ширина коридоров в номере не\u00A0менее 91 см.",
                 "Помощник для инвалидов": "На 1 этаже вас встретит специалист и проводит до номера.",
                 }})
-            .search__filter-item
-              +dropdown({label:"удобства номера", placeholder:"удобства номера",
+            .search__filter-item.search__filter-item_offset_special
+              +dropdown({label:"удобства номера", placeholder:"2 спальни, 2 кровати ...",
                 value:[
                 "спальни",
                 "кровати",
                 "ванные комнаты",
                 ]})
-            .search__filter-item
+            .search__filter-item.search__filter-item_offset_small
               include ./../blocks/expandable-list/expandable-list.pug
               +expandable-list({label:"дополнительные удобства", value:["Завтрак", "Письменный стол","Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]})
           .search__content
@@ -95,21 +96,20 @@ html(lang="ru")
                   photos:["img1.jpg", "img2.jpg", "img3.jpg", "img2.jpg"],
                   link: "room-details.html",
                   alt:["слайд1","слайд2","слайд3","слайд4"],
-                  number:888,
-                  type:"люкс",
-                  price:"9 990",
-                  rate:5, maxRate:5,
-                  feedbacks:145 })
+                  number:840,
+                  price:"9 900",
+                  rate:4, maxRate:5,
+                  feedbacks:65 })
               .card
                 +card-room({
                   photos:["img1.jpg", "img2.jpg", "img3.jpg", "img2.jpg"],
                   link: "room-details.html",
                   alt:["слайд1","слайд2","слайд3","слайд4"],
-                  number:888,
+                  number:980,
                   type:"люкс",
-                  price:"9 990",
-                  rate:5, maxRate:5,
-                  feedbacks:145 })
+                  price:"8 500",
+                  rate:3, maxRate:5,
+                  feedbacks:35 })
               .card
                 +card-room({
                   photos:["img1.jpg", "img2.jpg", "img3.jpg", "img2.jpg"],

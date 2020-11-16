@@ -1,15 +1,15 @@
-.input{
-  &__wrapper{
+.input {
+  &__wrapper {
     display: flex;
-    align-items:center;
-    &-icon{
+    align-items: center;
+    &-icon {
       position: relative;
-      width: 28px;
-      height: 28px;
-      margin-left: -36px;
+      width: 24px;
+      height: 32px;
+      margin-left: -34px;
       cursor: pointer;
       fill: $dark50;
-      @media (max-width: $tablet){
+      @media (max-width: $tablet) {
         width: 20px;
         height: 20px;
         margin-left: -30px;
@@ -17,16 +17,24 @@
     }
   }
 
-  &__label{
+  &__label {
     margin-bottom: 5px;
-    &-checkbox, &-radio, &-rich, &-toggle,
-    &-like-button, &-rate-button, &-range-slider,
-    &-buttons, &-pagination{
+    &-checkbox,
+    &-radio,
+    &-rich,
+    &-toggle,
+    &-like-button,
+    &-rate-button,
+    &-buttons,
+    &-pagination {
       margin-bottom: 16px;
+    }
+    &-range-slider {
+      margin-bottom: 12px;
     }
   }
 
-  &__textfield{
+  &__textfield {
     font-family: Montserrat;
     font-size: 14px;
     font-weight: normal;
@@ -43,74 +51,82 @@
     outline: none;
     background: #fff;
     align-items: center;
-    @media (max-width: $tablet){
+    @media (max-width: $tablet) {
       padding: 5px 20px 5px 10px;
     }
 
-    &::placeholder{
+    &::placeholder {
       color: $dark25;
     }
-    &:hover, &:focus{
+    &:hover,
+    &:focus {
       border: 1px solid $dark50;
     }
-    &:hover::placeholder, &:focus::placeholder{
+    &:hover::placeholder,
+    &:focus::placeholder {
       color: $dark75;
     }
-    &_focus{
+    &_focus {
       border: 1px solid $dark50;
     }
-    &_focus::placeholder{
+    &_focus::placeholder {
       color: $dark75;
     }
-    @media (max-width: $full_with){
-      @include font(10px,14px);
+    @media (max-width: $full_with) {
+      @include font(10px, 14px);
     }
-    @media (max-width: $smPhone){
+    @media (max-width: $smPhone) {
       font-size: 10px;
     }
   }
 
-  &__checkbox{
+  &__checkbox-wrapper {
+    margin-bottom: 8px;
+    display: block;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__checkbox {
     position: absolute;
     z-index: -1;
     margin: 0;
     min-width: 20px;
     min-height: 20px;
     opacity: 0;
-    &:checked + &-text:after{
+    &:checked + &-text:after {
       opacity: 1;
     }
   }
 
-  &__checkbox-text{
+  &__checkbox-text {
     position: relative;
     display: block;
-    margin-right: 10px;
-    margin-bottom: 4px;
-    padding: 0 0 0 30px;
-    line-height: 24px;
+    padding: 1px 0 0 30px;
+    line-height: 18px;
+    min-height: 22px;
     text-transform: none;
     cursor: pointer;
     overflow: hidden;
-    &:before{
+    &:before {
       position: absolute;
       top: 1px;
       left: 0;
       width: 20px;
       height: 20px;
-      content: '';
+      content: "";
       border: 1px solid $purple;
       border-radius: 20%;
       background: #fff;
     }
-    &:after{
+    &:after {
       position: absolute;
       top: 6px;
       left: 7px;
       width: 6px;
       height: 8px;
-      content: '';
-      transition: .2s;
+      content: "";
+      transition: 0.2s;
       transform: rotate(45deg);
       opacity: 0;
       border-right: 2px solid $purple;
@@ -118,21 +134,21 @@
     }
   }
 
-  &__radio{
+  &__radio {
     position: absolute;
     z-index: -1;
     margin: 0;
     min-width: 20px;
     min-height: 20px;
     opacity: 0;
-    &:checked + &-text:after{
+    &:checked + &-text:after {
       opacity: 1;
     }
-    &:checked + &-text{
+    &:checked + &-text {
       color: $dark75;
     }
   }
-  &__radio-text{
+  &__radio-text {
     position: relative;
     display: inline-block;
     max-width: 100%;
@@ -141,99 +157,100 @@
     line-height: 24px;
     cursor: pointer;
     overflow: hidden;
-    &:before{
+    &:before {
       position: absolute;
       top: 2px;
       left: 0;
       width: 20px;
       height: 20px;
-      content: '';
+      content: "";
       border: 1px solid $purple;
       border-radius: 50%;
       background: #fff;
     }
-    &:after{
+    &:after {
       position: absolute;
       top: 6px;
       left: 4px;
       width: 12px;
       height: 12px;
-      content: '';
-      transition: .2s;
+      content: "";
+      transition: 0.2s;
       opacity: 0;
       border-radius: 50%;
       background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     }
   }
 
-  &__richCheckboxText{
+  &__richCheckboxText {
     font-size: 12px;
     font-weight: normal;
     line-height: 14px;
-    margin: 7px 0;
+    margin-top: 7px;
+    margin-bottom: 1px;
     overflow: hidden;
   }
 
-  &__toggle{
+  &__toggle {
     position: absolute;
     z-index: -1;
     margin: 0;
-    min-width:40px;
+    min-width: 40px;
     min-height: 20px;
     opacity: 0;
-    &:checked + &-text:before{
+    &:checked + &-text:before {
       border: 1px solid $purple;
     }
-    &:checked + &-text:after{
+    &:checked + &-text:after {
       left: 24px;
       background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     }
   }
 
-  &__toggle-text{
+  &__toggle-text {
     position: relative;
     padding: 0 0 0 50px;
     color: $dark75;
     line-height: 24px;
     cursor: pointer;
     overflow: hidden;
-    &:before{
+    &:before {
       position: absolute;
       top: 0px;
       left: 0;
       width: 40px;
       height: 20px;
-      content: '';
-      transition: .2s;
+      content: "";
+      transition: 0.2s;
       border: 1px solid $dark25;
       border-radius: 13px;
     }
-    &:after{
+    &:after {
       position: absolute;
       top: 4px;
       left: 4px;
       width: 12px;
       height: 12px;
-      content: '';
-      transition: .2s;
+      content: "";
+      transition: 0.2s;
       border-radius: 50%;
       background: $dark25;
     }
   }
 
-  &__submit{
+  &__submit {
     position: relative;
     width: 100%;
     padding: 5px 2%;
-    &:before{
-      font-family: 'Material icons';
+    &:before {
+      font-family: "Material icons";
       font-size: rem(24);
       line-height: rem(24);
       font-weight: normal;
       position: absolute;
       top: rem(9);
       right: rem(8);
-      content: '\e900';
+      content: "\e900";
     }
   }
 }

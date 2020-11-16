@@ -1,4 +1,4 @@
-.bullet-list{
+.bullet-list {
   font-family: Montserrat;
   font-size: rem(14);
   font-weight: normal;
@@ -9,38 +9,38 @@
   list-style: none;
   max-width: 100%;
   overflow: hidden;
-  &__item{
+  &__item {
     display: flex;
-    align-items:center;
-    margin-bottom: 5px;
-    &:before{
+    align-items: center;
+    margin-bottom: 10px;
+    &:before {
       display: inline-block;
       width: 10px;
       height: 10px;
-      margin-right:10px;
-      content: '';
+      margin-right: 10px;
+      content: "";
       border-radius: 50%;
       background: $dark25;
     }
-    &_color{
-      &_1{
-        &:before{
-          background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+    &_color {
+      &_1 {
+        &:before {
+          background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
         }
       }
-      &_2{
-        &:before{
-          background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      &_2 {
+        &:before {
+          background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
         }
       }
-      &_3{
-        &:before{
-          background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      &_3 {
+        &:before {
+          background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
         }
       }
-      &_4{
-        &:before{
-          background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+      &_4 {
+        &:before {
+          background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
         }
       }
     }

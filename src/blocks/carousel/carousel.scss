@@ -17,8 +17,9 @@
 /* стили для контейнера слайдов */
 .slider__items {
   display: flex;
-  height: 150px;
+  height: 151px;
   transition: transform 0.6s ease;
+  border: none;
 }
 
 /* стили для слайдов */
@@ -82,8 +83,8 @@
 /* стили для индикаторов */
 .slider__indicators {
   position: absolute;
-  right: 15px;
-  bottom: 15px;
+  right: 12px;
+  bottom: 14px;
   z-index: 15;
   display: flex;
   justify-content: center;
@@ -98,12 +99,12 @@
   flex: 0 1 auto;
   width: 8px;
   height: 8px;
-  margin-right: 3px;
-  margin-left: 3px;
+  margin-right: 2px;
+  margin-left: 2px;
   text-indent: -999px;
   cursor: pointer;
   background-color: none;
-  border:1px solid white;
+  border: 1px solid white;
   border-radius: 50%;
 }
 

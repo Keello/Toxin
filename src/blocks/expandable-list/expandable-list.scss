@@ -1,22 +1,22 @@
-.expandable-list{
+.expandable-list {
   position: relative;
-  &__wrapper{
+  &__wrapper {
     display: flex;
-    align-items:center;
+    align-items: center;
   }
-  &.open{
-    .expandable-list__items{
+  &.open {
+    .expandable-list__items {
       display: block;
     }
   }
 
-  &__items{
+  &__items {
     display: none;
     position: absolute;
     left: 0;
     right: 0;
     z-index: 999;
     background: white;
-    padding: 20px 0;
+    padding: 7px 0;
   }
 }

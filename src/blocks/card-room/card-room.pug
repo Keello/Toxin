@@ -4,11 +4,11 @@ mixin card-room(options)
     a(href=options.link).card-room__body
       .room-reservation__header
         .room-reservation__title
-          span.room-reservation__number= options.number
+          span.card-room__number.room-reservation__number= options.number
           span.room-reservation__type= options.type
         .room-reservation__header-price-body
           span.price.price_bold= options.price
-          span.room-reservation__header-price-text в сутки
+          span.card-room__header-price-text в сутки
       .card-room__feedbacks
         +rate-button(options.rate, options.maxRate)
         .card-room__feedbacks-text

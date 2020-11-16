@@ -5,10 +5,10 @@ mixin reservation-option(options)
       span.room-reservation__price.price= options.price
     else
       .room-reservation__price-text= options.name
-      span.room-reservation__price.price= options.price
+      .room-reservation__price.price= options.price
 
 mixin room-reservation(options)
-  .card-room-reservation.card
+  .room-reservation.card
     .room-reservation__header
       .room-reservation__title
         span.room-reservation__number= options.number
@@ -25,7 +25,7 @@ mixin room-reservation(options)
         'дети',
         'младенцы'
       ]})
-    .card__row-with-label
+    .room-reservation__row.card__row-with-label
       +reservation-option({name:"9 990₽ х 4 суток", price:"39 960"})
       +reservation-option({name:"Сбор за услуги: скидка 2 179₽", price:"0", theme:"info"})
       +reservation-option({name:"Сбор за дополнительные услуги", price:"300", theme:"info"})
@@ -35,5 +35,5 @@ mixin room-reservation(options)
       .room-reservation__total-separator
       .room-reservation__total-price.price
         |38 081
-    .card__button.room-reservation-button
+    .card__button.room-reservation__button
       +input({type:"submit", value:"Забронировать"})

@@ -9,15 +9,15 @@
   list-style: none;
   max-width: 100%;
   overflow: hidden;
-  &_diagram {
-  }
   &__item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 10px;
     &:before {
+      position: relative;
+      top: 7px;
       display: inline-block;
-      width: 10px;
+      min-width: 10px;
       height: 10px;
       margin-right: 10px;
       content: "";

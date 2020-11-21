@@ -9,6 +9,8 @@
   list-style: none;
   max-width: 100%;
   overflow: hidden;
+  &_diagram {
+  }
   &__item {
     display: flex;
     align-items: center;
@@ -43,6 +45,13 @@
           background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
         }
       }
+    }
+  }
+  &__item-legend {
+    @extend .bullet-list__item;
+    margin-bottom: 0;
+    &:before {
+      margin-right: 5px;
     }
   }
 }

@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Material icons";
-  src: url("fonts/Material-icons.eot?cc0gu0");
-  src: url("fonts/Material-icons.eot?cc0gu0#iefix") format("embedded-opentype"),
-    url("fonts/Material-icons.ttf?cc0gu0") format("truetype"),
-    url("fonts/Material-icons.woff?cc0gu0") format("woff"),
-    url("fonts/Material-icons.svg?cc0gu0#icomoon") format("svg");
+  src: url("fonts/material-icons.eot?cc0gu0");
+  src: url("fonts/material-icons.eot?cc0gu0#iefix") format("embedded-opentype"),
+    url("fonts/material-icons.ttf?cc0gu0") format("truetype"),
+    url("fonts/material-icons.woff?cc0gu0") format("woff"),
+    url("fonts/material-icons.svg?cc0gu0#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -14,7 +14,6 @@
 [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "Material icons" !important;
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;

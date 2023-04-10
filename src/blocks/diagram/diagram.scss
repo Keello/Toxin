@@ -24,22 +24,16 @@
   transform: translateY(0.25em);
 }
 .diagram__number {
-  @extend h1;
   line-height: 1;
   text-anchor: middle;
   transform: translateY(-0.55em);
   letter-spacing: -0.05em;
-  @media (max-width: $full_with) {
-    font-size: 0.45em;
-  }
+  font-size: 0.45em;
 }
 .diagram__subtext {
-  @extend body;
   text-transform: uppercase;
   text-anchor: middle;
   transform: translateY(0.4em);
   font-weight: bold;
-  @media (max-width: $full_with) {
-    font-size: 0.235em;
-  }
+  font-size: 0.235em;
 }
